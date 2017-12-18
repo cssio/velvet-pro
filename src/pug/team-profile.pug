@@ -1,0 +1,167 @@
+---
+title: Профиль сотрудника - Velvet-pro
+bodyClass: page-team
+---
+extends modules/_app
+block main
+
+	// Back :: Start
+	.back
+		.container-fluid
+			a(href="#").back__link
+				+sprite('icon-back')
+				| К списку сотрудников
+	// Back :: End
+	
+	// Team :: Start	
+	.team
+		.container-fluid
+
+			h1.team-heading Воробьев Михаил
+
+			.tabs.js-tabs
+
+				.tabs__ctrl
+					button.tabs__btn.js-tabs-btn.is-active Данные сотрудника
+					button.tabs__btn.js-tabs-btn Действия сотрудника сотрудника
+					.tabs__line.js-tabs-line
+				
+				.tabs__container
+					.tabs__panel.js-tabs-panel.is-active
+						.row.row-offset-10
+							.col-xl-3
+
+
+								.team-user
+									figure.team-user__photo
+									.row.row-offset-40
+										.col-sm-auto.col-xl-12
+											p.team-user__position Менеджер
+											b.team-user__name Воробьев Михаил
+											ul.team-user__contacts
+												li
+													a(href="#") m.vorobiev@velvet-pro.ru
+												li
+													a(href="#") 8 (999) 999-99-99
+										.col-sm-auto.col-xl-12
+											dl.team-user__info
+												dt Дата регистрации
+												dd 22.03.17
+												dt Последняя авторизация
+												dd 12:35	30.11.17
+										
+								.team-deactivate.is-visible-lg
+									a(href="#").btn.btn--red__empty Деактивировать аккаунт
+
+
+							.col-xl-8
+
+								.team-data
+									form(action="#")
+										.row.row-offset-70
+											.col-md-6
+												fieldset.team-data__fieldset
+
+													b.form-legend Личные данные
+
+													label.form-label.form-label--600 Имя
+													input(type="text" value="Михаил").form-input
+
+													label.form-label.form-label--600 Фамилия
+													input(type="text" value="Воробьев").form-input
+
+													label.form-label.form-label--600 Отчество
+													input(type="text" value="Игоревич").form-input
+
+													label.form-label.form-label--600 Email
+													input(type="email" value="m.vorobiev@velvet-pro.ru").form-input
+
+													label.form-label.form-label--600 Роль сотрудника
+													select.form-select
+														option Руководитель ОП
+														option Менеджер
+														option(selected) Дизайнер
+														option Бухгалтер
+														option Печатник
+														option Логист
+														option Администратор
+														option Начальник цеха обработки
+
+											.col-md-6
+												fieldset.team-data__fieldset
+
+													b.form-legend Сменить пароль
+
+													label.form-label.form-label--600 Новый пароль
+													input(type="password" value="").form-input
+
+													label.form-label.form-label--600 Повторите новый пароль
+													input(type="password" value="").form-input
+
+													.team-save
+														button.btn.btn--red Сохранить
+
+								.team-deactivate.is-hidden-lg
+									a(href="#").btn.btn--red__empty Деактивировать аккаунт
+
+
+
+					.tabs__panel.js-tabs-panel
+						
+						
+						.team-action-group
+
+							.team-action
+								span.team-action__date 12:55   22.03.2018
+								span.team-action__number Заказ <a href="#">№5642</a>
+								span.team-action__status Выполнено
+								span.team-action__title Загрузить дизайн-макеты
+								.form-upload.is-success
+									.form-upload__file
+										.form-upload__status
+											+sprite('icon-success')
+										.form-upload__icon
+											+sprite('icon-file-pdf')
+										.form-upload__name Logo.pgf
+										.form-upload__download скачать
+
+							.team-action
+								span.team-action__date 12:55   22.03.2018
+								span.team-action__number Заказ <a href="#">№5642</a>
+								span.team-action__status Выполнено
+								span.team-action__title Связаться с клиентом и подтвердить заказ
+
+							.team-action
+								span.team-action__date 12:55   22.03.2018
+								span.team-action__number Заказ <a href="#">№5642</a>
+								span.team-action__status Выполнено
+								span.team-action__title Отметить получение заказа клиентом
+								label.form-label.form-label--600 Дата получения
+								input(type="text" value="14.11.2017").form-input
+
+							.team-action
+								span.team-action__date 12:55   22.03.2018
+								span.team-action__number Заказ <a href="#">№5642</a>
+								span.team-action__status Заказ отменен
+								span.team-action__title Связаться с клиентом и подтвердить заказ
+								.team-action__comment
+									b Комментарий сотрудника	
+									p Заказ был отменен по просьбе клиента, не устроило время ожидания заказа.
+
+							.team-action
+								span.team-action__date 12:55   22.03.2018
+								span.team-action__number Заказ <a href="#">№5642</a>
+								span.team-action__status Делегировано <a href="#">дизайнеру</a>
+								span.team-action__title Подготовить графические материалы
+
+							.pagination
+								a(href="#").pagination__first Первая
+								a(href="#").pagination__link.is-active 1
+								a(href="#").pagination__link 2
+								a(href="#").pagination__link 3
+								a(href="#").pagination__link 4
+								a(href="#").pagination__link 5
+								a(href="#").pagination__link 6
+								a(href="#").pagination__last Последняя
+
+	// Team :: End		

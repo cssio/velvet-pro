@@ -1,0 +1,663 @@
+---
+title: Заказ от лица менеджера - Velvet-pro
+bodyClass: page-order
+---
+extends modules/_app
+block main
+	
+	
+	// Order :: Start
+	.order
+		.container-fluid
+			.team-user.team-user--order.js-change
+				figure.team-user__photo
+				p.team-user__position Персональный менеджер
+				b.team-user__name Воробьев Михаил
+				a(href="#").team-user__link.js-change-open Сменить специалиста
+				.change
+					button.change__cancel.js-change-close Отмена
+					p.change__text Сменить сотрудника
+					label.form-field
+						input(type="text" placeholder="Искать").form-input.form-input--small.form-input--grey
+						span.form-field__icon
+							+sprite('icon-search')
+
+
+		// Timeline :: Start
+
+		.timeline
+			.container-fluid
+
+				.timeline-ctrl.js-timeline-ctrl
+					button.timeline-ctrl__btn.is-active Новые задачи <mark>2</mark>
+					button.timeline-ctrl__btn Отложенные <mark>1</mark>
+					button.timeline-ctrl__btn В работе <mark>2</mark>
+					button.timeline-ctrl__btn Завершенные <mark>2</mark>
+					button.timeline-ctrl__btn Ожидание <mark>1</mark>
+
+				.timeline-carousel.owl-carousel.js-timeline-carousel
+					.timeline-group
+
+						h2.timeline-heading Новые задачи
+						
+						.timeline-col
+							.timeline-card
+								span.timeline-card__date 35 минут
+								span.timeline-card__number Заказ <mark>№5328</mark>
+								span.timeline-card__user ООО «Бизнес Консалтинг»
+								span.timeline-card__title Уточнить данные для доставки
+								a(href="#").timeline-card__link
+									| Подробнее
+									+sprite('icon-arrow-right')
+
+							.timeline-card
+								span.timeline-card__date 35 минут
+								span.timeline-card__number Заказ <mark>№5328</mark>
+								span.timeline-card__user ООО «Бизнес Консалтинг»
+								span.timeline-card__title Выставить счёт-договор
+								a(href="#").timeline-card__link
+									| Подробнее
+									+sprite('icon-arrow-right')
+
+					.timeline-group
+						
+						h2.timeline-heading Отложенные
+						
+						.timeline-col
+
+							.timeline-card
+								span.timeline-card__date До 12:00, 22 ноя
+								span.timeline-card__number Заказ <mark>№4532</mark>
+								span.timeline-card__user ООО «Компания по продажам»
+								span.timeline-card__title Связаться с клиентом и подтвердить заказ
+								a(href="#").timeline-card__link
+									| Подробнее
+									+sprite('icon-arrow-right')
+
+					.timeline-group
+						
+						h2.timeline-heading В работе
+						
+						.timeline-col
+
+							.timeline-card
+								span.timeline-card__date 25 минут
+								span.timeline-card__number Заказ <mark>№4532</mark>
+								span.timeline-card__user Степанова Елизавета
+								span.timeline-card__title Связаться с клиентом и подтвердить заказ
+								a(href="#").timeline-card__link
+									| Подробнее
+									+sprite('icon-arrow-right')
+
+							.timeline-card
+								span.timeline-card__date 25 минут
+								span.timeline-card__number Заказ <mark>№4532</mark>
+								span.timeline-card__user Рябов Евгений
+								span.timeline-card__title Связаться с клиентом и подтвердить заказ
+								a(href="#").timeline-card__link
+									| Подробнее
+									+sprite('icon-arrow-right')
+
+					.timeline-group
+						
+						h2.timeline-heading Завершенные
+						
+						.timeline-col
+
+							.timeline-card
+								span.timeline-card__date 25 минут
+								span.timeline-card__number Заказ <mark>№4532</mark>
+								span.timeline-card__user ООО «Компания по продажам»
+								span.timeline-card__title Связаться с клиентом и подтвердить заказ
+								a(href="#").timeline-card__link
+									| Подробнее
+									+sprite('icon-arrow-right')
+
+							.timeline-card
+								span.timeline-card__date 25 минут
+								span.timeline-card__number Заказ <mark>№4532</mark>
+								span.timeline-card__user Копылов Никита
+								span.timeline-card__title Выставить счёт-договор
+								a(href="#").timeline-card__link
+									| Подробнее
+									+sprite('icon-arrow-right')
+
+					.timeline-group
+						
+						h2.timeline-heading Ожидание
+						
+						.timeline-col
+							.timeline-card
+								span.timeline-card__date 25 минут
+								span.timeline-card__number Заказ <mark>№4532</mark>
+								span.timeline-card__user Степанова Елизавета
+								span.timeline-card__title Связаться с клиентом и подтвердить заказ
+								a(href="#").timeline-card__link
+									| Подробнее
+									+sprite('icon-arrow-right')
+
+
+
+
+
+		// Timeline :: End
+
+		
+		.order-group
+			.container-fluid
+
+				h2.order-heading Текущие заказы
+				
+				.order-grid
+					.order-grid__col
+
+						.order-card.order-card--warning
+							.order-card__content
+								.order-card__head
+
+									a(href="#").order-card__more
+										| Подробнее
+										+sprite('icon-arrow-right')
+									h3.order-card__number Заказ <b>№5881</b>
+									p.order-card__status
+										+sprite('icon-status-wait')
+										| В производстве
+									span.order-card__date 12.01.18 – 25.01.18
+
+								.order-card__body
+									table.order-card__table
+										tfoot
+											tr
+												td
+												td Доставка DPD
+												td <b>4 000 ₽</b>
+											tr
+												td(colspan="3")
+													p.order-card__payment
+														span.order-card__payment-text Оплата
+														span.order-card__payment-title Онлайн-оплата банковской картой
+														span.order-card__payment-status
+															+sprite('icon-status-success')
+															| Оплачено (13.01.2018)
+										tbody
+											tr
+												td <b>1.</b>
+												td Шторы премиум с логотипом<br>200 шт
+												td <b>145 000 ₽</b>
+											tr
+												td <b>2.</b>
+												td Шторы эконом<br>300 шт
+												td <b>120 000 ₽</b>
+
+							.order-card__ctrl
+								.row
+									.col
+										p.order-card__total
+											small Итого:
+											| 269 000 ₽
+
+					.order-grid__col
+						.order-card.order-card--danger
+							.order-card__content
+								.order-card__head
+
+									a(href="#").order-card__more
+										| Подробнее
+										+sprite('icon-arrow-right')
+									h3.order-card__number Заказ <b>№5881</b>
+									p.order-card__status
+										+sprite('icon-status-wait')
+										| Ожидается оплата
+									span.order-card__date 12.01.18 – 25.01.18
+
+								.order-card__body
+									table.order-card__table
+										tfoot
+											tr
+												td
+												td Доставка DPD
+												td.text-right <b>4 000 ₽</b>
+											tr
+												td(colspan="3")
+													p.order-card__payment
+														span.order-card__payment-text Оплата
+														span.order-card__payment-title Онлайн-оплата банковской картой
+														span.order-card__payment-status
+															+sprite('icon-status-wait')
+															| Не оплачено
+										tbody
+											tr
+												td <b>1.</b>
+												td Шторы премиум с логотипом<br>200 шт
+												td.text-right <b>145 000 ₽</b>
+											tr
+												td <b>2.</b>
+												td Шторы эконом<br>300 шт
+												td.text-right <b>120 000 ₽</b>
+
+							.order-card__ctrl
+								.row
+									.col
+										a(href="#").btn.btn--red Оплатить
+									.col
+										p.order-card__total
+											small Итого:
+											| 269 000 ₽
+
+
+				h2.order-heading Завершенные заказы
+				
+				.order-tabs
+					span.order-tabs__btn Новые <mark>2</mark>
+					span.order-tabs__btn.is-active В работе <mark>4</mark>
+					span.order-tabs__btn Завершенные <mark>2</mark>
+
+				.order-sorting
+					form(action="#")
+
+						.order-sorting-group
+							.row.row-offset-40
+								.col-auto
+
+									.form-group.form-group--number
+										label.form-label Номер заказа
+										label.form-field
+											input(type="text" placeholder="Искать").form-input.form-input--small.form-input--grey.js-autocomplete
+											span.form-field__icon
+												+sprite('icon-search')
+
+								.col-auto
+									.form-group.form-group--select
+										label.form-label Текущий статус заказа
+										select.form-select.form-select--small.form-select--grey
+											option В производстве
+											option Ожидается оплата
+
+								.col-auto
+									.form-group.form-group--calendar
+										label.form-label Дата создания
+										.row
+											.col
+												label.form-field
+													input(type="text" placeholder="дд.мм.гггг" readonly data-position="bottom right").form-input.form-input--small.form-input--grey.js-datepicker
+													span.form-field__icon
+														+sprite('icon-calendar')
+											.col-auto
+												.form-separator
+											.col
+												label.form-field
+													input(type="text" placeholder="дд.мм.гггг" readonly data-position="bottom right").form-input.form-input--small.form-input--grey.js-datepicker
+													span.form-field__icon
+														+sprite('icon-calendar')
+
+
+								.col-auto
+									.form-group.form-group--client
+										label.form-label Клиент (ФИО или компания)
+										label.form-field
+											input(type="text" placeholder="Искать").form-input.form-input--small.form-input--grey.js-autocomplete
+											span.form-field__icon
+												+sprite('icon-search')
+
+							.row.row-offset-40
+								.col-auto
+
+									.form-group.form-group--range.js-range
+										label.form-label Стоимость заказа (руб.)
+										.row
+											.col
+												input(type="text" value="-").form-input.form-input--small.form-input--grey.js-range-from
+											.col-auto
+												.form-separator
+											.col
+												input(type="text" value="-").form-input.form-input--small.form-input--grey.js-range-to
+
+										input(type="range" data-min="0" data-max="100000" hidden).js-range-input
+
+								.col-auto
+									.form-group.form-group--select
+										label.form-label Способ доставки
+										select.form-select.form-select--small.form-select--grey
+											option Самовывоз
+											option Ожидается оплата
+
+								.col-auto
+									.form-group.form-group--buttons
+										.row
+											.col
+												button(type="reset").btn.btn--small.btn--grey Сбросить
+											.col
+												button(type="submit").btn.btn--small.btn--red Применить
+						
+
+						//- .row.row-offset-40
+						//- 	.col-auto
+						//- 		label.form-label Стоимость заказа (руб.)
+						//- 		.form-range
+						//- 			.row
+						//- 				.col
+						//- 					input(type="text" value="-").form-input.form-from
+						//- 				.col-auto -
+						//- 				.col
+						//- 					input(type="text" value="-").form-input.form-to
+
+						//- 			input(type="range" data-min="0" data-max="100").form-input.form-range__input
+				                   
+
+						//- 	.col-auto
+						//- 		label.form-label Способ доставки
+						//- 		select.form-select.form-select--small.form-select--grey
+						//- 			option Самовывоз
+						//- 			option Ожидается оплата
+
+						//- 	.col-auto.align-self-end
+						//- 		.form-buttons
+						//- 			button(type="reset").btn.btn--small.btn--grey Сбросить
+						//- 			button(type="submit").btn.btn--small.btn--red Применить
+				
+				.order-grid
+					.order-grid__col
+
+						.order-card.order-card--success
+							.order-card__content
+								.order-card__head
+
+									a(href="#").order-card__more
+										| Подробнее
+										+sprite('icon-arrow-right')
+									h3.order-card__number Заказ <b>№5881</b>
+									p.order-card__status
+										+sprite('icon-status-success')
+										| Завершен
+									span.order-card__date 12.01.18 – 25.01.18
+
+								.order-card__body
+									table.order-card__table
+										tfoot
+											tr
+												td
+												td Доставка DPD
+												td <b>4 000 ₽</b>
+											tr
+												td(colspan="3")
+													p.order-card__payment
+														span.order-card__payment-text Оплата
+														span.order-card__payment-title Онлайн-оплата банковской картой
+														span.order-card__payment-status
+															+sprite('icon-status-success')
+															| Оплачено (13.01.2018)
+										tbody
+											tr
+												td <b>1.</b>
+												td Шторы премиум с логотипом<br>200 шт
+												td <b>145 000 ₽</b>
+											tr
+												td <b>2.</b>
+												td Шторы эконом<br>300 шт
+												td <b>120 000 ₽</b>
+
+							.order-card__ctrl
+								.row
+									.col
+										a(href="#").btn.btn--green Повторить заказ
+									.col
+										p.order-card__total
+											small Итого:
+											| 269 000 ₽
+
+					.order-grid__col
+						.order-card.order-card--success
+							.order-card__content
+								.order-card__head
+
+									a(href="#").order-card__more
+										| Подробнее
+										+sprite('icon-arrow-right')
+									h3.order-card__number Заказ <b>№5881</b>
+									p.order-card__status
+										+sprite('icon-status-success')
+										| Завершен
+									span.order-card__date 12.01.18 – 25.01.18
+
+								.order-card__body
+									table.order-card__table
+										tfoot
+											tr
+												td
+												td Доставка DPD
+												td.text-right <b>4 000 ₽</b>
+											tr
+												td(colspan="3")
+													p.order-card__payment
+														span.order-card__payment-text Оплата
+														span.order-card__payment-title Онлайн-оплата банковской картой
+														span.order-card__payment-status
+															+sprite('icon-status-wait')
+															| Не оплачено
+										tbody
+											tr
+												td <b>1.</b>
+												td Шторы премиум с логотипом<br>200 шт
+												td.text-right <b>145 000 ₽</b>
+											tr
+												td <b>2.</b>
+												td Шторы эконом<br>300 шт
+												td.text-right <b>120 000 ₽</b>
+
+							.order-card__ctrl
+								.row
+									.col
+										a(href="#").btn.btn--green Повторить заказ
+									.col
+										p.order-card__total
+											small Итого:
+											| 269 000 ₽
+
+					.order-grid__col
+
+						.order-card.order-card--success
+							.order-card__content
+								.order-card__head
+
+									a(href="#").order-card__more
+										| Подробнее
+										+sprite('icon-arrow-right')
+									h3.order-card__number Заказ <b>№5881</b>
+									p.order-card__status
+										+sprite('icon-status-success')
+										| Завершен
+									span.order-card__date 12.01.18 – 25.01.18
+
+								.order-card__body
+									table.order-card__table
+										tfoot
+											tr
+												td
+												td Доставка DPD
+												td <b>4 000 ₽</b>
+											tr
+												td(colspan="3")
+													p.order-card__payment
+														span.order-card__payment-text Оплата
+														span.order-card__payment-title Онлайн-оплата банковской картой
+														span.order-card__payment-status
+															+sprite('icon-status-success')
+															| Оплачено (13.01.2018)
+										tbody
+											tr
+												td <b>1.</b>
+												td Шторы премиум с логотипом<br>200 шт
+												td <b>145 000 ₽</b>
+											tr
+												td <b>2.</b>
+												td Шторы эконом<br>300 шт
+												td <b>120 000 ₽</b>
+
+							.order-card__ctrl
+								.row
+									.col
+										a(href="#").btn.btn--green Повторить заказ
+									.col
+										p.order-card__total
+											small Итого:
+											| 269 000 ₽
+
+					.order-grid__col
+						.order-card.order-card--success
+							.order-card__content
+								.order-card__head
+
+									a(href="#").order-card__more
+										| Подробнее
+										+sprite('icon-arrow-right')
+									h3.order-card__number Заказ <b>№5881</b>
+									p.order-card__status
+										+sprite('icon-status-success')
+										| Завершен
+									span.order-card__date 12.01.18 – 25.01.18
+
+								.order-card__body
+									table.order-card__table
+										tfoot
+											tr
+												td
+												td Доставка DPD
+												td.text-right <b>4 000 ₽</b>
+											tr
+												td(colspan="3")
+													p.order-card__payment
+														span.order-card__payment-text Оплата
+														span.order-card__payment-title Онлайн-оплата банковской картой
+														span.order-card__payment-status
+															+sprite('icon-status-wait')
+															| Не оплачено
+										tbody
+											tr
+												td <b>1.</b>
+												td Шторы премиум с логотипом<br>200 шт
+												td.text-right <b>145 000 ₽</b>
+											tr
+												td <b>2.</b>
+												td Шторы эконом<br>300 шт
+												td.text-right <b>120 000 ₽</b>
+
+							.order-card__ctrl
+								.row
+									.col
+										a(href="#").btn.btn--green Повторить заказ
+									.col
+										p.order-card__total
+											small Итого:
+											| 269 000 ₽
+					
+					.order-grid__col
+
+						.order-card.order-card--success
+							.order-card__content
+								.order-card__head
+
+									a(href="#").order-card__more
+										| Подробнее
+										+sprite('icon-arrow-right')
+									h3.order-card__number Заказ <b>№5881</b>
+									p.order-card__status
+										+sprite('icon-status-success')
+										| Завершен
+									span.order-card__date 12.01.18 – 25.01.18
+
+								.order-card__body
+									table.order-card__table
+										tfoot
+											tr
+												td
+												td Доставка DPD
+												td <b>4 000 ₽</b>
+											tr
+												td(colspan="3")
+													p.order-card__payment
+														span.order-card__payment-text Оплата
+														span.order-card__payment-title Онлайн-оплата банковской картой
+														span.order-card__payment-status
+															+sprite('icon-status-success')
+															| Оплачено (13.01.2018)
+										tbody
+											tr
+												td <b>1.</b>
+												td Шторы премиум с логотипом<br>200 шт
+												td <b>145 000 ₽</b>
+											tr
+												td <b>2.</b>
+												td Шторы эконом<br>300 шт
+												td <b>120 000 ₽</b>
+
+							.order-card__ctrl
+								.row
+									.col
+										a(href="#").btn.btn--green Повторить заказ
+									.col
+										p.order-card__total
+											small Итого:
+											| 269 000 ₽
+
+					.order-grid__col
+						.order-card.order-card--success
+							.order-card__content
+								.order-card__head
+
+									a(href="#").order-card__more
+										| Подробнее
+										+sprite('icon-arrow-right')
+									h3.order-card__number Заказ <b>№5881</b>
+									p.order-card__status
+										+sprite('icon-status-success')
+										| Завершен
+									span.order-card__date 12.01.18 – 25.01.18
+
+								.order-card__body
+									table.order-card__table
+										tfoot
+											tr
+												td
+												td Доставка DPD
+												td.text-right <b>4 000 ₽</b>
+											tr
+												td(colspan="3")
+													p.order-card__payment
+														span.order-card__payment-text Оплата
+														span.order-card__payment-title Онлайн-оплата банковской картой
+														span.order-card__payment-status
+															+sprite('icon-status-wait')
+															| Не оплачено
+										tbody
+											tr
+												td <b>1.</b>
+												td Шторы премиум с логотипом<br>200 шт
+												td.text-right <b>145 000 ₽</b>
+											tr
+												td <b>2.</b>
+												td Шторы эконом<br>300 шт
+												td.text-right <b>120 000 ₽</b>
+
+							.order-card__ctrl
+								.row
+									.col
+										a(href="#").btn.btn--green Повторить заказ
+									.col
+										p.order-card__total
+											small Итого:
+											| 269 000 ₽
+
+				.pagination
+					a(href="#").pagination__first Первая
+					a(href="#").pagination__link.is-active 1
+					a(href="#").pagination__link 2
+					a(href="#").pagination__link 3
+					a(href="#").pagination__link 4
+					a(href="#").pagination__link 5
+					a(href="#").pagination__link 6
+					a(href="#").pagination__last Последняя
+
+
+
+	// Order :: End
+			

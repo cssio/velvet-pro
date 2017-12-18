@@ -1,0 +1,193 @@
+---
+title: Сотрудники - Velvet-pro
+bodyClass: page-team
+---
+extends modules/_app
+block main
+
+	// Team :: Start
+	.team
+		.container-fluid
+
+			h1.team-heading Сотрудники
+
+			.team-sorting
+				form(action="#")
+					.team-sorting__search
+						label.form-label Поиск по имени
+						label.form-field
+							input(type="text").form-input.form-input--small.form-input--grey.js-autocomplete
+							span.form-field__icon
+								+sprite('icon-search')
+					.team-sorting__buttons
+						.row
+							.col-auto
+								label.btn-check
+									input(type="radio" name="radioTeam").btn-check__input
+									span.btn.btn--small.btn--grey Все
+							.col-auto
+								label.btn-check
+									input(type="radio" name="radioTeam").btn-check__input
+									span.btn.btn--small.btn--grey Руководители ОП
+							.col-auto
+								label.btn-check
+									input(type="radio" checked).btn-check__input
+									span.btn.btn--small.btn--grey Менеджеры
+							.col-auto
+								label.btn-check
+									input(type="radio" name="radioTeam").btn-check__input
+									span.btn.btn--small.btn--grey Дизайнеры
+							.col-auto
+								label.btn-check
+									input(type="radio" name="radioTeam").btn-check__input
+									span.btn.btn--small.btn--grey Бухгалтеры
+							.col-auto
+								label.btn-check
+									input(type="radio" name="radioTeam").btn-check__input
+									span.btn.btn--small.btn--grey Печатники
+							.col-auto
+								label.btn-check
+									input(type="radio" name="radioTeam").btn-check__input
+									span.btn.btn--small.btn--grey Логисты
+							.col-auto
+								label.btn-check
+									input(type="radio" name="radioTeam").btn-check__input
+									span.btn.btn--small.btn--grey Администраторы
+							.col-auto
+								label.btn-check
+									input(type="radio" name="radioTeam").btn-check__input
+									span.btn.btn--small.btn--grey Начальники цеха обработки
+
+			.team-grid
+				.team-grid__col
+
+					.team-user
+						figure.team-user__photo
+						p.team-user__position Менеджер
+						b.team-user__name Воробьев Михаил
+						ul.team-user__contacts
+							li
+								a(href="#") m.vorobiev@velvet-pro.ru
+							li
+								a(href="#") 8 (999) 999-99-99
+						a(href="#").btn.btn--small.btn--grey Редактировать
+
+				.team-grid__col
+
+					.team-user
+						figure.team-user__photo
+						p.team-user__position Менеджер
+						b.team-user__name Семён Зимин
+						ul.team-user__contacts
+							li
+								a(href="#") m.vorobiev@velvet-pro.ru
+							li
+								a(href="#") 8 (999) 999-99-99
+						a(href="#").btn.btn--small.btn--grey Редактировать
+
+				.team-grid__col
+
+					.team-user
+						figure.team-user__photo
+						p.team-user__position Менеджер
+						b.team-user__name Анастасия Ефимова
+						ul.team-user__contacts
+							li
+								a(href="#") m.vorobiev@velvet-pro.ru
+							li
+								a(href="#") 8 (999) 999-99-99
+						a(href="#").btn.btn--small.btn--grey Редактировать
+
+				.team-grid__col
+
+					.team-user
+						figure.team-user__photo
+						p.team-user__position Менеджер
+						b.team-user__name Николай Куликов
+						ul.team-user__contacts
+							li
+								a(href="#") m.vorobiev@velvet-pro.ru
+							li
+								a(href="#") 8 (999) 999-99-99
+						a(href="#").btn.btn--small.btn--grey Редактировать
+
+				.team-grid__col
+
+					.team-user
+						figure.team-user__photo
+						p.team-user__position Менеджер
+						b.team-user__name Авдотья Ершова
+						ul.team-user__contacts
+							li
+								a(href="#") m.vorobiev@velvet-pro.ru
+							li
+								a(href="#") 8 (999) 999-99-99
+						a(href="#").btn.btn--small.btn--grey Редактировать
+
+				.team-grid__col
+
+					.team-user
+						figure.team-user__photo
+						p.team-user__position Менеджер
+						b.team-user__name Милена Макарова
+						ul.team-user__contacts
+							li
+								a(href="#") m.vorobiev@velvet-pro.ru
+							li
+								a(href="#") 8 (999) 999-99-99
+						a(href="#").btn.btn--small.btn--grey Редактировать
+
+				.team-grid__col
+
+					.team-user
+						figure.team-user__photo
+						p.team-user__position Менеджер
+						b.team-user__name Динар Румянцев
+						ul.team-user__contacts
+							li
+								a(href="#") m.vorobiev@velvet-pro.ru
+							li
+								a(href="#") 8 (999) 999-99-99
+						a(href="#").btn.btn--small.btn--grey Редактировать
+
+				.team-grid__col
+
+					.team-user
+						figure.team-user__photo
+						p.team-user__position Менеджер
+						b.team-user__name Игнат Жуков
+						ul.team-user__contacts
+							li
+								a(href="#") m.vorobiev@velvet-pro.ru
+							li
+								a(href="#") 8 (999) 999-99-99
+						a(href="#").btn.btn--small.btn--grey Редактировать
+
+				.team-grid__col
+
+					.team-user
+						figure.team-user__photo
+						p.team-user__position Менеджер
+						b.team-user__name Олеся Фролова
+						ul.team-user__contacts
+							li
+								a(href="#") m.vorobiev@velvet-pro.ru
+							li
+								a(href="#") 8 (999) 999-99-99
+						a(href="#").btn.btn--small.btn--grey Редактировать
+
+				.team-grid__col
+
+					.team-user
+						figure.team-user__photo
+						p.team-user__position Менеджер
+						b.team-user__name Кристина Гриднева
+						ul.team-user__contacts
+							li
+								a(href="#") m.vorobiev@velvet-pro.ru
+							li
+								a(href="#") 8 (999) 999-99-99
+						a(href="#").btn.btn--small.btn--grey Редактировать
+
+			
+	// Team :: End

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="16px" viewBox="0 0 17 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Chat button</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="1920-Заказ-от-лица-менеджера" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-782.000000, -3536.000000)">
+        <g id="card-3" transform="translate(360.000000, 3217.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Manager" transform="translate(36.000000, 198.000000)">
+                <g id="Chat-button" transform="translate(364.000000, 108.000000)">
+                    <g transform="translate(22.000000, 13.000000)" id="Shape">
+                        <polygon points="5 5 5 13.369828 12.4603048 13.369828 15.1538286 16 15.1538286 13.369828 17 13.369828 17 5"></polygon>
+                        <polygon points="12 3.77293248 12 0 0 0 0 8.36982804 1.84617143 8.36982804 1.84617143 11 4.19047619 8.71083343 4.19047619 4.88890956 4.19047619 3.77293248 5.33333333 3.77293248"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

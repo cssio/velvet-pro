@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 9</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="1920-Заказ-от-лица-менеджера" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-694.000000, -245.000000)">
+        <g id="add" transform="translate(360.000000, 232.000000)" fill="#F0605F" fill-rule="nonzero">
+            <g id="Group-12" transform="translate(334.000000, 12.000000)">
+                <g id="Group-9" transform="translate(0.000000, 1.000000)">
+                    <g id="rounded-add-button">
+                        <path d="M8.8,4 L7.2,4 L7.2,7.2 L4,7.2 L4,8.8 L7.2,8.8 L7.2,12 L8.8,12 L8.8,8.8 L12,8.8 L12,7.2 L8.8,7.2 L8.8,4 Z M8,0 C3.6,0 0,3.6 0,8 C0,12.4 3.6,16 8,16 C12.4,16 16,12.4 16,8 C16,3.6 12.4,0 8,0 Z M8,14.4 C4.48,14.4 1.6,11.52 1.6,8 C1.6,4.48 4.48,1.6 8,1.6 C11.52,1.6 14.4,4.48 14.4,8 C14.4,11.52 11.52,14.4 8,14.4 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

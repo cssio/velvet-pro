@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="30px" viewBox="0 0 36 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="1920-Заказ-от-лица-менеджера" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1203.000000, -850.000000)">
+        <g id="Files" transform="translate(1180.000000, 820.000000)" fill-rule="nonzero">
+            <g id="Group-2" transform="translate(23.000000, 30.000000)">
+                <g id="folder-8">
+                    <path d="M28.7528276,29.6875 L0.97137931,29.6875 C0.332068966,29.6875 -0.132827586,29.07625 0.034137931,28.454375 L6.34406897,11.035 C6.45827586,10.60875 6.84248276,10.3125 7.28131034,10.3125 L35.0627586,10.3125 C35.702069,10.3125 36,10.9275 36,11.545625 L29.690069,28.965 C29.5758621,29.39125 29.1916552,29.6875 28.7528276,29.6875 Z" id="Shape" fill="#EFCE4A"></path>
+                    <path d="M6.34406897,11.035 C6.45827586,10.608125 6.84248276,10.3125 7.28131034,10.3125 L32.8965517,10.3125 L32.8965517,4.6875 L5.5862069,4.6875 L1.86206897,8.4375 L1.86206897,23.408125 L6.34406897,11.035 Z" id="Shape" fill="#F4EFDC"></path>
+                    <path d="M1.86206897,8.4375 L5.5862069,4.6875 L15.5172414,4.6875 L12.4137931,0.3125 L1.07503448,0.3125 C0.481655172,0.3125 0,0.796875 0,1.395 L0,28.1 C0.0428275862,28.10125 0.0856551724,28.10375 0.127241379,28.10625 L1.86206897,23.343125 L1.86206897,8.4375 Z" id="Shape" fill="#EBBA16"></path>
+                    <g id="Group" transform="translate(8.689655, 7.500000)" fill="#D1BF86">
+                        <rect id="Rectangle-path" x="8.68965517" y="0.3125" width="1.24137931" height="2.5"></rect>
+                        <rect id="Rectangle-path" x="13.0344828" y="0.3125" width="1.24137931" height="2.5"></rect>
+                        <rect id="Rectangle-path" x="17.3793103" y="0.3125" width="1.24137931" height="2.5"></rect>
+                        <rect id="Rectangle-path" x="0" y="0.3125" width="1.24137931" height="2.5"></rect>
+                        <rect id="Rectangle-path" x="4.34482759" y="0.3125" width="1.24137931" height="2.5"></rect>
+                    </g>
+                    <polygon id="Shape" fill="#D1BF86" points="5.5862069 8.4375 5.5862069 4.6875 1.86206897 8.4375"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

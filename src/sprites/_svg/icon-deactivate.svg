@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37px" height="45px" viewBox="0 0 37 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Деактивация-аккаунта-1920" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-947.000000, -386.000000)">
+        <g id="Group-3" transform="translate(947.000000, 386.000000)" fill-rule="nonzero">
+            <g id="user-28">
+                <ellipse id="Oval" fill="#B6B6B6" style="fill: #B6B6B6;" cx="12.8134187" cy="7.78377193" rx="7.85453349" ry="7.78377193"></ellipse>
+                <path d="M0.0860382775,36.5375439 L0.0860382775,24.9741228 C0.0959521531,21.6514035 2.81138038,18.9604386 6.16430622,18.950614 L19.4625311,18.950614 C22.8154569,18.9604386 25.5308852,21.6514035 25.540799,24.9741228 L25.540799,36.5375439 L0.0860382775,36.5375439 Z" id="Shape" fill="#B6B6B6" style="fill: #B6B6B6;"></path>
+                <ellipse id="Oval" fill="#D64544" style="fill: #D64544;" cx="26.6449569" cy="34.7357895" rx="10.2697129" ry="10.177193"></ellipse>
+                <g id="Group" transform="translate(21.775120, 29.912281)" fill="#FFFFFF" style="fill: #ffffff;">
+                    <rect id="Rectangle-path" transform="translate(4.867472, 4.822979) rotate(-45.000000) translate(-4.867472, -4.822979) " x="-0.862559937" y="3.77018214" width="11.4600647" height="2.10559384"></rect>
+                    <rect id="Rectangle-path" transform="translate(4.866529, 4.823145) rotate(-45.000000) translate(-4.866529, -4.823145) " x="3.80416132" y="-0.855265407" width="2.1247356" height="11.3568209"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

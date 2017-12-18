@@ -1,0 +1,526 @@
+//- --------------------------------------------------------------------------
+//- Popups
+//- --------------------------------------------------------------------------
+include _mixins
+
+
+// Deactivate
+
+.mfp-popup.mfp-popup--info.mfp-hide#popup-deactivate
+	button.mfp-popup-close(data-mfp-close)
+		+sprite('icon-close')
+
+	figure.mfp-popup__icon
+		+sprite('icon-deactivate')
+	span.mfp-popup__heading Деактивация аккаунта
+	p.mfp-popup__text Вы уверены что хотите деактивировать аккаунт сотрудника Воробьев Михаил?
+	.mfp-popup__action
+		a(href="#").btn.btn--red__empty Деактивировать аккаунт
+		br
+		a(href="#" data-mfp-close).btn.btn--cancel Отмена
+
+
+// Change
+
+.mfp-popup.mfp-popup--info.mfp-hide#popup-change
+	button.mfp-popup-close(data-mfp-close)
+		+sprite('icon-close')
+
+	figure.mfp-popup__icon
+		+sprite('icon-change')
+	span.mfp-popup__heading Смена сотрудника
+	p.mfp-popup__text Вы уверены что хотите назначит дизайнером сотрудника <b>Воробьев Михаил</b>?
+	.mfp-popup__action
+		a(href="#").btn.btn--red__empty Назначить
+		br
+		a(href="#" data-mfp-close).btn.btn--cancel Отмена
+
+
+// Add
+
+.mfp-popup.mfp-popup--add.mfp-hide#popup-add
+	button.mfp-popup-close(data-mfp-close)
+		+sprite('icon-close')
+
+	.add
+		span.add__heading Добавление товара
+		
+		.js-scrollbar
+			.add__container
+				.add__sidebar
+
+					.add__filter
+
+						form(action="#")
+
+							.form-group
+								label.form-label Поиск по артикулу
+								label.form-field
+									input(type="text" placeholder="Искать").form-input.form-input--small.form-input--grey
+									span.form-field__icon
+										+sprite('icon-search')
+
+							.form-group
+								label.form-label
+									b Тип коврика
+								
+								.form-type-group
+									label.form-type
+										input(type="radio" name="type" checked).form-type__input
+										.form-type__btn Все
+									label.form-type
+										input(type="radio" name="type").form-type__input
+										.form-type__btn С логотипом
+									label.form-type
+										input(type="radio" name="type").form-type__input
+										.form-type__btn Однотонные
+										
+
+							.form-group
+								label.form-label
+									b Размер
+								select.form-select
+									option Другой размер
+									option Option 2
+									option Option 3
+									option Option 4
+									option Option 5
+								.row
+									.col
+										input(type="text" placeholder="Длина").form-input
+									.col-auto
+										+sprite('icon-size')
+									.col
+										input(type="text" placeholder="Ширина").form-input
+
+							.form-group
+								label.form-label
+									b Количество
+								.row
+									.col
+										input(type="number" value="100").form-number
+									.col-auto
+										label.form-label.form-label--grey шт.
+							
+							.add__filter-ctrl
+
+								button(type="button").btn.btn--red.btn--block Применить
+								
+								button(type="reset").btn.btn--reset.btn--block Сбросить
+						
+
+				.add__content
+
+					ul.add__list
+						li
+							.add__product
+
+								.add__product-title Софтскрейп
+
+								.add__product-group
+									mark.add__product-mark
+										+sprite('icon-photo')
+										| С лого
+
+									mark.add__product-mark
+										+sprite('icon-basis')
+										| На резиновой основе
+
+									mark.add__product-mark
+										+sprite('icon-heels')
+										| Эффект щетки
+								
+								.add__product-ctrl
+									.row
+										.col-auto
+											span.add__product-label Цвет
+											span.add__product-color Любой на заказ
+
+										.col-auto
+											p.add__product-total
+												small Итого:
+												| 229 700 ₽
+										.col-auto
+											a(href="#").btn.btn--red.btn--large В корзину
+						li
+							.add__product
+
+								.add__product-title Саксони
+
+								.add__product-group
+									mark.add__product-mark
+										+sprite('icon-photo')
+										| С лого
+
+									mark.add__product-mark
+										+sprite('icon-basis')
+										| На резиновой основе
+
+									mark.add__product-mark
+										+sprite('icon-heels')
+										| Эффект щетки
+
+								
+								.add__product-ctrl
+									.row
+										.col-auto
+											span.add__product-label Цвет
+											span.add__product-color Любой на заказ
+
+										.col-auto
+											p.add__product-total
+												small Итого:
+												| 229 700 ₽
+										.col-auto
+											a(href="#").btn.btn--red.btn--large В корзину
+						li
+							.add__product
+
+								.add__product-title Деко
+
+								.add__product-group
+									mark.add__product-mark
+										+sprite('icon-photo')
+										| С лого
+
+									mark.add__product-mark
+										+sprite('icon-basis')
+										| На резиновой основе
+
+									mark.add__product-mark
+										+sprite('icon-heels')
+										| Эффект щетки
+
+								
+								.add__product-ctrl
+									.row
+										.col-auto
+											span.add__product-label Цвет
+											span.add__product-color Любой на заказ
+
+										.col-auto
+											p.add__product-total
+												small Итого:
+												| 229 700 ₽
+										.col-auto
+											a(href="#").btn.btn--red.btn--large В корзину
+
+
+// Task
+
+.mfp-popup.mfp-popup--add.mfp-hide#popup-task
+	button.mfp-popup-close(data-mfp-close)
+		+sprite('icon-close')
+
+	.task
+		a(href="#").task__date
+			| 25 минут назад
+			span.task__date-tooltip 12:55 22.03.2018
+
+		span.task__heading Согласовать графические материалы
+
+		.task__container
+			.task__sidebar
+
+				.tabs.js-tabs
+
+					.tabs__ctrl
+						button.tabs__btn.js-tabs-btn.is-active Данные заказа
+						button.tabs__btn.js-tabs-btn Данные клиента
+						.tabs__line.js-tabs-line
+					
+					.tabs__container
+						.tabs__panel.js-tabs-panel.is-active
+
+							.js-scrollbar
+
+								.task-order
+
+									a(href="#").task-order__more
+										| Подробнее
+										+sprite('icon-arrow-right')
+
+									span.task-order__number Заказ <mark>№4532</mark>
+
+									span.task-order__status
+										+sprite('icon-status-wait')
+										| Согласование граф. материалов
+
+									span.task-order__date 12.01.18 – 25.01.18
+
+									table.task-order__table
+										tfoot
+											tr
+												td
+												td Доставка DPD
+												td.text-right <b>4 000 ₽</b>
+											tr
+												td(colspan="3")
+													p.task-order__payment
+														span.task-order__payment-text Оплата
+														span.task-order__payment-title Онлайн-оплата банковской картой
+														span.task-order__payment-status
+															+sprite('icon-status-success')
+															| Оплачено (13.01.2018)
+										tbody
+											tr
+												td <b>1.</b>
+												td Шторы премиум с логотипом<br>200 шт
+												td.text-right <b>145 000 ₽</b>
+											tr
+												td <b>2.</b>
+												td Шторы эконом<br>300 шт
+												td.text-right <b>120 000 ₽</b>
+
+									p.task-order__total
+										small Итого:
+										| 269 000 ₽
+
+						.tabs__panel.js-tabs-panel
+							
+							.js-scrollbar
+								dl.task-client
+									dt Email
+									dd
+										a(href="#") A.perepelov@vevlet-pro.ru
+									dt Телефон
+									dd
+										a(href="#") 8 (999) 999 99 99
+									dt Название организации
+									dd ООО "Компания по продажам"
+									dt Юридический адрес
+									dd ул. Красная Пресня, 23с1А, Офис 200
+									dt ИНН
+									dd 5936602749
+									dt КПП
+									dd 459274512
+									dt Расчетный счет
+									dd 456.13.655.9678.23165678
+									dt Наименование банка 
+									dd ОАО "Сбербанк"
+									dt БИК
+									dd 12.6453.8765.234.654
+									dt Должность руководителя
+									dd Генеральный директор
+									dt ФИО руководителя
+									dd Соболев Михаил Юрьевич
+									dt Юридический адрес
+									dd ул. Красная Пресня, 23с1А, Офис 200
+
+
+			.task__content
+
+				.js-scrollbar
+				
+					form(action="#")
+
+						.task__dl
+							dt Контактное лицо
+							dd <b>Антон Перепелов</b>
+							dt Email
+							dd
+								a(href="#") A.perepelov@vevlet-pro.ru
+							dt Телефон
+							dd
+								a(href="#") 8 (999) 999 99 99
+							dt Название организации
+							dd ООО "Компания по продажам"
+
+						hr
+
+						label.form-label.form-label--large Загрузить файлы
+
+						
+						.form-upload-group
+
+							.form-upload.is-success
+								.form-upload__file
+									.form-upload__status
+										+sprite('icon-success')
+									.form-upload__icon
+										+sprite('icon-file-cdr')
+									.form-upload__name 01-19-17 a3boots 130x200pl 2шт…
+									.form-upload__download скачать
+									.form-upload__delete удалить
+
+							.form-upload.is-success
+								.form-upload__file
+									.form-upload__status
+										+sprite('icon-success')
+									.form-upload__icon
+										+sprite('icon-file-jpg')
+									.form-upload__name 01-19-17 a3boots 130x200pl 2шт…
+									.form-upload__download скачать
+									.form-upload__delete удалить
+
+							.form-upload.is-loading
+								.form-upload__file
+									.form-upload__status
+										+sprite('icon-success')
+									.form-upload__icon
+										+sprite('icon-file-xlsx')
+									.form-upload__name 01-19-17 a3boots 130x200pl 2шт…
+									.form-upload__download скачать
+									.form-upload__delete удалить
+
+							.form-upload
+								label.form-upload__drop
+									input(type="file").form-upload__input
+									p.form-upload__text <mark>Выбрать файлы (до 10 мб)</mark> Нажмите или перетащите файлы
+
+
+						hr
+
+						label.form-label.form-label--large Данные об оплате
+
+						.form-group
+							label.form-label
+								b Дата оплаты
+							label.form-field
+								input(type="text" placeholder="" readonly data-position="bottom right").form-input.js-datepicker
+								span.form-field__icon
+									+sprite('icon-calendar')
+
+						.form-group
+							label.form-label
+								b Номер документа оплаты
+							label.form-field
+								input(type="text" value="457479365").form-input
+
+						hr
+
+						label.form-label.form-label--large Комментарий от менеджера
+
+						p Файл Backgroundimage.pdf не открывается нормально, пишет что фаайл был создан в более новой версии программы
+
+						hr
+
+						.form-check-group.js-check
+
+							label.form-check.form-check--trigger
+								input(type="radio" name="radioName1").form-check__input.js-check-trigger
+								span.form-radio
+								span.form-check__btn Заказ отклонен
+
+						
+						.form-check-group.js-check
+
+							label.form-check.form-check--trigger
+								input(type="radio" name="radioName1").form-check__input.js-check-trigger
+								span.form-radio
+								span.form-check__btn Заказ подтвержден
+							
+						hr
+
+						.form-check-group.js-check
+
+							label.form-check.form-check--trigger
+								input(type="radio" name="radioName2").form-check__input.js-check-trigger
+								span.form-radio
+								span.form-check__btn Делегировать
+
+						
+						.form-check-group.js-check
+
+							label.form-check.form-check--trigger
+								input(type="radio" name="radioName2").form-check__input.js-check-trigger
+								span.form-radio
+								span.form-check__btn Делегировать
+
+							.form-check-content.js-check-content
+								select.form-select.form-select--small
+									option ООО «Вельвет-про»
+									option ООО «Вельвет-про»
+									option ООО «Вельвет-про»
+								p.form-check__caption Будет изменено ответственное лицо по данной задаче, сотрудник получит соответствующее уведомление, ему будет доступен ваш комментарий
+
+
+						hr
+
+						.form-check-group.js-check
+
+							label.form-check.form-check--trigger
+								input(type="radio" name="radioName3").form-check__input.js-check-trigger
+								span.form-radio
+								span.form-check__btn Связаться с клиентом снова
+
+						
+						.form-check-group.js-check
+
+							label.form-check.form-check--trigger
+								input(type="radio" name="radioName3").form-check__input.js-check-trigger
+								span.form-radio
+								span.form-check__btn Связаться с клиентом снова
+
+							.form-check-content.js-check-content
+								
+								.form-buttons
+									label.btn-check
+										input(type="radio" name="radioDate").btn-check__input
+										span.btn.btn--small.btn--grey Завтра
+
+									label.btn-check
+										input(type="radio" name="radioDate").btn-check__input
+										span.btn.btn--small.btn--grey Через неделю
+
+									label.btn-check
+										input(type="radio" name="radioDate").btn-check__input
+										span.btn.btn--small.btn--grey
+											+sprite('icon-calendar')
+										span.form-datepicker.js-datepicker
+
+								label.form-check
+									input(type="checkbox").form-check__input
+									span.form-checkbox
+										+sprite('icon-check')
+									span.form-check__text Отправить ссылку на оплату
+
+						hr
+
+						.form-comments
+
+							label.form-label.form-label--large Комментарий
+
+							textarea.form-textarea.form-textarea--grey
+
+							button.btn.btn--red Завершить
+
+						hr
+
+						.history
+							span.history__heading История изменений
+							ul.history__list
+								li
+									.history__item
+										span.history__item-date 01.11.2017  19:03
+										span.history__item-title Загружены графические материалы
+										.history__item-content
+
+											a(href="#").btn-download
+												+sprite('icon-download')
+												span.btn-download__name Backgroundimage.pdf
+												span.btn-download__size (12 mb)
+
+											a(href="#").btn-download
+												+sprite('icon-download')
+												span.btn-download__name Backgroundimage.pdf
+												span.btn-download__size (12 mb)
+
+										span.history__item-title Комментарий
+										.history__item-content
+											p Содержимое файла Logo должно находиться поверх содержимого файла Background строго по центру 
+								li
+									.history__item
+										span.history__item-date 01.11.2017  19:03
+										span.history__item-title Графические материалы отправлены на доработку
+										.history__item-content
+											p Содержащееся в файле Background.pdf изображение не соответствует требованиям печати, dpi 120, а должен быть не меньше 300
+								li
+									.history__item
+										span.history__item-date 01.11.2017  19:03
+										span.history__item-title Графические материалы отправлены на доработку
+										.history__item-content
+											p Содержащееся в файле Background.pdf изображение не соответствует требованиям печати, dpi 120, а должен быть не меньше 300
+
+
+		

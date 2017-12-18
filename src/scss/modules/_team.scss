@@ -1,0 +1,295 @@
+// --------------------------------------------------------------------------
+// Team
+// --------------------------------------------------------------------------
+
+.team {
+
+}
+
+.team-heading {
+	display: block;
+}
+
+.team-sorting {
+	padding: 0 0 20px;
+}
+
+.team-sorting__search {
+	padding: 0 0 10px;
+	@include breakpoint(sm) {
+		max-width: 300px;
+	}
+}
+
+.team-sorting__buttons {
+	.row {
+		margin: 0 -5px;
+		& > [class^="col-"] {
+			padding: 0 5px 10px;
+		}
+	}
+}
+
+
+// ------
+
+.team-grid {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -10px;
+	.team-user {
+		min-height: 100%;
+		margin: 0;
+	}
+}
+
+.team-grid__col {
+	padding: 0 10px;
+	margin: 0 0 20px;
+	width: 100%;
+	@include breakpoint(sm) {
+		width: 50%;
+	}
+	@include breakpoint(md) {
+		width: 33.333%;
+	}
+	@include breakpoint(lg) {
+		width: 25%;
+	}
+}
+
+// ------
+
+
+.team-user {
+	padding: 15px 20px 20px 90px;
+	position: relative;
+	background: #fff;
+	border-radius: 4px;
+	display: block;
+	margin: 0 0 20px;
+	@include breakpoint(sm) {
+		max-width: 520px;
+	}
+}
+
+.team-user--order {
+	@include breakpoint(sm) {
+		max-width: 300px;
+	}
+}
+
+.team-user__photo {
+	display: block;
+	margin: 0;
+	position: absolute;
+	top: 15px;
+	left: 20px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: #EEF1F1;
+	overflow: hidden;
+	img {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.team-user__position {
+	display: block;
+	font-size: 14px;
+	line-height: 18px;
+	margin: 0 0 2px;
+	opacity: 0.8;
+}
+
+.team-user__name {
+	display: block;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 700;
+	margin: 0 0 5px;
+}
+
+.team-user__contacts {
+	margin: 0;
+	padding: 0 0 10px;
+	list-style: none;
+	font-weight: 600;
+	& > li {
+		margin: 0 0 5px;
+	}
+}
+
+.team-user__info {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 12px;
+	line-height: 15px;
+	dt {
+		display: block;
+		font-weight: 600;
+		margin: 0 0 5px;
+		text-transform: uppercase;
+	}
+	dd {
+		margin: 0 0 20px;
+		padding: 0;
+		&:last-child {
+			margin: 0;
+		}
+	}
+}
+
+
+// ------
+
+
+.team-data {
+	position: relative;
+	margin: 0 -10px;
+	max-width: 840px;
+	.row {
+		& > [class^="col-"] {
+			position: static;
+		}
+	}
+	@include breakpoint(sm) {
+		border-radius: 4px;
+		margin: 0 0 20px;
+		padding: 25px 20px 100px;
+		background: #ffffff;
+	}
+	@include breakpoint(lg) {
+		padding-left: 30px;
+	}
+}
+
+.team-data__fieldset {
+	background: #ffffff;
+	padding: 20px 10px;
+	margin: 0 0 20px;
+	& > *:last-child {
+		margin: 0;
+	}
+	@include breakpoint(sm) {
+		background: none;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+// -----
+
+
+.team-save {
+	.btn {
+		min-width: 120px;
+	}
+	@include breakpoint(sm) {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+	}
+}
+
+.team-deactivate {
+	margin: 0 0 20px;
+	.btn {
+		width: 100%;
+	}
+	@include breakpoint(sm) {
+		.btn {
+			width: auto;
+		}
+	}
+	@include breakpoint(lg) {
+		.btn {
+			width: 100%;
+		}
+	}
+}
+
+// ------
+
+.team-action-group {
+	@include breakpoint(md) {
+		max-width: 700px;
+	}
+}
+
+
+.team-action {
+	padding: 20px 10px 20px;
+	background: #fff;
+	margin: 0 -10px 20px;
+	&:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+	.form-input, .form-upload {
+		max-width: 360px;
+	}
+	& > *:last-child {
+		margin: 0;
+	}
+	@include breakpoint(sm) {
+		margin: 0 0 20px;
+		padding: 25px 30px 30px;
+		border-radius: 4px;
+	}
+}
+
+.team-action__date {
+	float: right;
+	opacity: 0.6;
+	line-height: 17px;
+	margin: 0 0 0 10px;
+}
+
+.team-action__number {
+	display: block;
+	font-size: 12px;
+	line-height: 17px;
+	font-weight: 600;
+	color: #b0b0b0;
+	margin: 0 0 10px;
+}
+
+.team-action__status {
+	display: block;
+	margin: 0 0 5px;
+}
+
+.team-action__title {
+	display: block;
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 700;
+	margin: 0 0 20px;
+}
+
+.team-action__comment {
+	font-size: 14px;
+	line-height: 17px;
+	color: rgba(#232221,0.8);
+	b {
+		display: block;
+		color: #232221;
+		margin: 0 0 5px;
+	}
+	p {
+		margin: 0 0 10px;
+		&:last-child {
+			margin: 0;
+		}
+	}
+}

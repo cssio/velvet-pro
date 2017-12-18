@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="16px" viewBox="0 0 9 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>right-arrow-angle</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="1920-Заказ-от-лица-менеджера" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-361.000000, -98.000000)">
+        <g id="Back-button" transform="translate(361.000000, 98.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="right-arrow-angle" transform="translate(4.500000, 8.000000) rotate(-180.000000) translate(-4.500000, -8.000000) ">
+                <path d="M8.81482352,7.49254339 L1.10591677,0.196052623 C0.852950187,-0.0653508743 0.442691524,-0.0653508743 0.189724939,0.196052623 C-0.0632416463,0.457435919 -0.0632416463,0.881560063 0.189724939,1.14296356 L7.4338158,8.00001768 L0.190366789,14.8570516 C-0.0625997966,15.1184551 -0.0625997966,15.5425792 0.190366789,15.8039625 C0.443333374,16.0653458 0.853592037,16.0653458 1.10653917,15.8039625 L8.81546537,8.50747176 C8.95029271,8.3681239 9.00809808,8.18338395 8.99909274,8.00068432 C9.00747568,7.81729784 8.94968976,7.63257809 8.81482352,7.49254339 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

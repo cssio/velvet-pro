@@ -1,0 +1,689 @@
+---
+title: Заказ от лица менеджера - Velvet-pro
+bodyClass: page-order
+---
+extends modules/_app
+block main
+	
+	// Back :: Start
+	.back
+		.container-fluid
+			a(href="#").back__link
+				+sprite('icon-back')
+				| К списку заказов
+	// Back :: End
+
+	// Order :: Start
+
+	.order
+		form(action="#")
+			.container-fluid
+
+				.order-head
+					.row
+						.col-xl-8
+							h1.order-heading Заказ №<b>5880</b>
+							p.order-total
+								small Итого:
+								| 265 000 ₽
+
+					
+				.order-body
+					.row
+						.col-xl-8
+
+							.order-add
+								a(href="#").btn.btn--white.btn--block
+									+sprite('icon-add')
+									| Добавить товар
+							
+							.order-panel
+								.order-panel-in
+
+									.order-item
+										.row
+											.col-lg-8
+												.order-item__image
+													img(src="images/img-1.png", alt="")
+												.order-item__desc
+													h2.order-item__title Шторы премиум с логотипом
+													.order-item__details
+														button.order-item__details-trigger Характеристики
+														.order-item__details-content
+															table.order-item__table
+																tr
+																	th <span>Цвет</span>
+																	td Заказной цвет
+																tr
+																	th <span>Крепление</span>
+																	td Петли
+																tr
+																	th <span>Размер шторы (см)</span>
+																	td 145х200
+																tr
+																	th <span>Размер логотипа (см)</span>
+																	td 
+
+											.col-lg-4
+												.order-item__ctrl
+
+													.order-item__price
+														input(type="text" value="145 000").order-item__input.order-item__input--price.js-autosize
+														label.order-item__label ₽
+
+													.order-item__count
+														input(type="text" value="200").order-item__input.order-item__input--count.js-autosize
+														label.order-item__label шт
+
+													p.order-item__cost 725 ₽/шт
+
+													.order-item__action
+														button.btn.btn--small.btn--grey Изменить
+														button.btn.btn--small.btn--red__empty Удалить
+													.order-item__edit
+														button.btn.btn--small.btn--red Сохранить
+														button.btn.btn--small.btn--grey Отмена
+
+									.order-item
+										.row
+											.col-lg-8
+												.order-item__image
+													img(src="images/img-1.png", alt="")
+												.order-item__desc
+													h2.order-item__title Шторы эконом
+													.order-item__details
+														button.order-item__details-trigger Характеристики
+														.order-item__details-content
+															table.order-item__table
+																tr
+																	th <span>Цвет</span>
+																	td Бежевый
+																tr
+																	th <span>Крепление</span>
+																	td Люверсы
+																tr
+																	th <span>Размер шторы (см)</span>
+																	td 145х200
+
+											.col-lg-4
+												.order-item__ctrl
+
+													.order-item__price
+														input(type="text" value="120 000" disabled).order-item__input.order-item__input--price.js-autosize
+														label.order-item__label ₽
+
+													.order-item__count
+														input(type="text" value="300" disabled).order-item__input.order-item__input--count.js-autosize
+														label.order-item__label шт
+
+													p.order-item__cost 400 ₽/шт
+
+													.order-item__action
+														button.btn.btn--small.btn--grey Изменить
+														button.btn.btn--small.btn--red__empty Удалить
+													.order-item__edit
+														button.btn.btn--small.btn--red Сохранить
+														button.btn.btn--small.btn--grey Отмена
+
+
+									.order-item
+										.row
+											.col-lg-8
+												.order-item__image
+													img(src="images/img-dpd.png", alt="")
+												.order-item__desc
+													h2.order-item__title Доставка DPD
+													p.order-item__text Казань, Университетская улица, 13
+
+											.col-lg-4
+												.order-item__ctrl
+
+													.order-item__price
+														input(type="text" value="4 576" disabled).order-item__input.order-item__input--price.js-autosize
+														label.order-item__label ₽
+
+													.order-item__action
+														button.btn.btn--small.btn--grey Изменить
+													.order-item__edit
+														button.btn.btn--small.btn--red Сохранить
+														button.btn.btn--small.btn--grey Отмена
+
+							.order-panel
+
+								.order-private
+									.row
+										.col-lg-8
+
+											
+												label.form-label Юридическое лицо
+												.form-group
+													.row
+														.col
+															select.form-select.form-select--small.form-select--grey
+																option ООО «Вельвет-про»
+																option ООО «Вельвет-про»
+																option ООО «Вельвет-про»
+														.col
+															button.btn.btn--small.btn--red Применить
+
+										.col-lg-4
+											p.order-total
+												small Итого:
+												| 265 000 ₽
+
+							.order-panel
+
+								.order-payments
+									.row
+										.col-lg-8
+											figure.order-payments__image
+												img(src="images/img-yandex.png", alt="")
+											p.order-payments__text Онлайн-оплата через Яндекс.Кассу
+											
+										.col-lg-4
+											button.btn.btn--small.btn--grey Изменить
+							
+							.order-panel
+
+								h2.order-heading-sub Данные о компании
+
+								hr
+
+								label.form-label
+									b Файл с реквизитами
+
+								label.form-file
+									+sprite('icon-file')
+									input(type="file").form-file__input
+									span.form-file__selected Выбрать файл
+									span.form-file__text (не более 10 МБ)
+
+								.help
+									+sprite('icon-help')
+									p.help__text Прикрепите файл с реквизитами вашей компании и наши менеджеры самостоятельно заполнят все необходимые данные
+								
+								.form-group
+									label.form-label
+										b Название организации
+									input(type="text" value="ООО Компания по продажам").form-input
+
+								.form-group
+									label.form-label
+										b Должность руководителя
+									input(type="text" placeholder="Укажите должность руководителя вашей организации").form-input
+
+								button.btn.btn--grey Сохранено
+
+
+						.col-xl-4
+							.order-sidebar
+
+								.order-panel
+
+									.order-user
+										figure.order-user__photo
+										p.order-user__position ООО «Компания по продажам»
+										b.order-user__name Антон Перепелов
+										dl.order-user__contacts
+											dt Email
+											dd
+												a(href="#") A.vorobiev@vevlet-pro.ru
+											dt Телефон
+											dd
+												a(href="#") 8 (999) 999 99 99
+
+									a(href="#").btn.btn--red.btn--chat Онлайн чат <mark>2</mark>
+
+
+								.order-panel
+
+									.order-user-group
+
+										.order-user.js-change
+											figure.order-user__photo
+											p.order-user__position ООО «Компания по продажам»
+											b.order-user__name Антон Перепелов
+											button.order-user__change.js-change-open Сменить
+											.change
+												button.change__cancel.js-change-close Отмена
+												p.change__text Сменить сотрудника
+												label.form-field
+													input(type="text" placeholder="Искать").form-input.form-input--small.form-input--grey
+													span.form-field__icon
+														+sprite('icon-search')
+
+										.order-user.js-change
+											figure.order-user__photo
+											p.order-user__position ООО «Компания по продажам»
+											b.order-user__name Антон Перепелов
+											button.order-user__change.js-change-open Сменить
+											.change
+												button.change__cancel.js-change-close Отмена
+												p.change__text Сменить сотрудника
+												label.form-field
+													input(type="text" placeholder="Искать").form-input.form-input--small.form-input--grey
+													span.form-field__icon
+														+sprite('icon-search')
+
+										.order-user.js-change
+											figure.order-user__photo
+											p.order-user__position ООО «Компания по продажам»
+											b.order-user__name Антон Перепелов
+											button.order-user__change.js-change-open Сменить
+											.change
+												button.change__cancel.js-change-close Отмена
+												p.change__text Сменить сотрудника
+												label.form-field
+													input(type="text" placeholder="Искать").form-input.form-input--small.form-input--grey
+													span.form-field__icon
+														+sprite('icon-search')
+
+
+								.order-info
+									figure.order-info__icon
+										img(src="svg/icon-files.svg", alt="")
+									.order-info__desc
+										span.order-info__title Файлы макетов
+
+										.order-file
+											figure.order-file__icon
+												+sprite('icon-file-pdf')
+											span.order-file__name Backgroundimage.pdf
+											span.order-file__action
+												a(href="#").order-file__link скачать
+												a(href="#").order-file__link удалить
+
+										label.btn.btn--red.btn--file
+											input(type="file")
+											| Добавить файл
+
+								.order-info
+									figure.order-info__icon
+										img(src="svg/icon-docs.svg", alt="")
+									.order-info__desc
+										span.order-info__title Документы
+										label.form-check
+											input(type="checkbox").form-check__input
+											span.form-checkbox
+												+sprite('icon-check')
+											span.form-check__text Требуется отдельный договор
+
+								.order-info
+									figure.order-info__icon
+										img(src="svg/icon-docs.svg", alt="")
+									.order-info__desc
+										span.order-info__title Документы
+										.order-file
+											figure.order-file__icon
+												+sprite('icon-file-doc')
+											span.order-file__name Договор_13114.doc
+											span.order-file__action
+												a(href="#").order-file__link скачать
+										.order-info__ctrl
+											a(href="#").btn.btn--small.btn--grey Принять
+											a(href="#").btn.btn--small.btn--grey На доработку
+
+								.order-info
+									figure.order-info__icon
+										img(src="svg/icon-package.svg", alt="")
+									.order-info__desc
+										span.order-info__title Отслеживание заказа
+										p.order-info__text Отслеживайте выполнение ваших заказов на странице списка заказов. Хотите узнать на каком этапе производства сейчас ваш товар? Откройте страница заказа с наглядной схемой произсводства
+
+
+
+
+	// Order :: End
+
+	// Tracking :: Start
+
+	.tracking
+		.container-fluid
+
+			h2.tracking-heading Отслеживание заказа
+
+			.tracking-group
+
+				.tracking-step.is-active
+
+					h3.tracking-step__title
+						small Ожидается
+						| Подготовка
+
+					span.tracking-step__progress
+						span.tracking-step__circle
+
+					.row
+						.col-md-auto.col-xl-5
+							ul.tracking-step__list
+								li.is-active Заказ принят
+								li.is-active Ожидание оплаты
+								li Выставление счета-договора
+						.col-md-auto.col-xl-7
+							ul.tracking-step__list
+								li Ожидание графических материалов
+								li Согласование графических материалов
+								li Подготовка дизайн-макетов
+								li Согласование дизайн-макетов
+
+
+				.tracking-step
+
+					h3.tracking-step__title
+						small Ожидается
+						| Производство
+
+					span.tracking-step__progress
+						span.tracking-step__circle
+
+					.row
+						.col-md-auto.col-xl-12
+							
+							ul.tracking-step__list
+								li Производство полуфабрикатов
+								li Постобработка готовых изделий
+
+						.col-md-auto.col-xl-12
+							
+							ul.tracking-step__list
+								li Упаковка
+								li Передача на склад
+
+				.tracking-step
+
+					h3.tracking-step__title
+						small Ожидается
+						| Отправка
+
+					span.tracking-step__progress
+						span.tracking-step__circle
+
+					.row
+						.col-md-auto.col-xl-12
+							
+							ul.tracking-step__list
+								li Подготовка отгрузочных документов
+								li Заказ транспортной компании
+
+						.col-md-auto.col-xl-12
+							
+							ul.tracking-step__list
+								li Отправка
+							
+
+				.tracking-step
+					
+					h3.tracking-step__title
+						small Ожидается
+						| Отправка
+
+					span.tracking-step__progress
+						span.tracking-step__circle
+							
+					ul.tracking-step__list
+						li Доставка заказа
+		
+
+
+	// Tracking :: End
+
+
+	// Events :: Start
+
+	.events
+		.container-fluid
+
+			h1.events-heading События
+
+			.events-group
+
+				.events-card.events-card--danger
+
+					span.events-card__date 12:55   22.03.2018
+
+					span.events-card__type Оплата заказа
+
+					span.events-card__title
+						small Задача
+						| Оплатите заказ
+
+					p.events-card__method
+						b Способ оплаты
+						| Яндекс.Касса
+
+					p.events-card__total
+						small Итого:
+						| 265 000 ₽
+
+					.events-card__payments
+						img(src="svg/icon-mastercard.svg", alt="")
+						img(src="svg/icon-visa.svg", alt="")
+						img(src="svg/icon-mir.svg", alt="")
+						img(src="svg/icon-applepay.svg", alt="")
+						img(src="svg/icon-yamoney.svg", alt="")
+
+
+				
+				.events-card.events-card--primary
+
+					span.events-card__date 12:55   22.03.2018
+
+					span.events-card__type Оплата заказа
+
+					span.events-card__title.text-success
+						small Смена статуса заказа
+						+sprite('icon-check')
+						| Заказ оплачен
+
+					p.events-card__method
+						b Способ оплаты
+						| Яндекс.Касса
+
+					p.events-card__total
+						small Итого:
+						| 265 000 ₽
+
+					.events-card__payments
+						img(src="svg/icon-mastercard.svg", alt="")
+						img(src="svg/icon-visa.svg", alt="")
+						img(src="svg/icon-mir.svg", alt="")
+						img(src="svg/icon-applepay.svg", alt="")
+						img(src="svg/icon-yamoney.svg", alt="")
+
+
+
+				.events-card
+
+					span.events-card__date 12:55   22.03.2018
+
+					span.events-card__type Смена статуса заказа
+
+					span.events-card__title
+						small Смена статуса заказа
+						| Готово к отправке
+
+					ul.events-card__list
+						li Постобработка готовыйх изделий завершена
+						li Заказ произведен
+						li Упаковано
+						li Передано на склад
+
+
+				.events-card
+
+					span.events-card__date 12:55   22.03.2018
+
+					span.events-card__title Добро пожаловать в личный кабинет Velvet-Pro
+
+					.events-card__text
+						p Добро пожаловать в личный кабинет Velvet-Pro. На этой странице вы можете управлять заказом и отслеживать его выполнение, связываться с менеджером и добавлять файлы макетов. Если у вас возникли вопросы, вы можете начать чат с менеджером, написать на электронную почту или связаться по телефону, указанному ниже.
+
+					.events-user
+						figure.events-user__photo
+						.row
+							.col-6
+								p.events-user__position Ваш персональный менеджер
+								b.events-user__name Воробьев Алексей
+							.col-6
+								dl.events-user__contacts
+									dt Email
+									dd
+										a(href="#") A.vorobiev@vevlet-pro.ru
+									dt Телефон
+									dd
+										a(href="#") 8 (999) 999 99 99
+
+								a(href="#").btn.btn--red
+									+sprite('icon-chat')
+									| Чат с менеджером
+
+
+
+				.events-card.events-card--danger
+
+					span.events-card__date 12:55   22.03.2018
+
+					span.events-card__type Согласование графических материалов
+
+					span.events-card__title
+						small Задача
+						| Загрузите графические материалы
+
+					.events-card__text
+						p Мы настоятельно рекомендуем по возможности строго придерживаться <a href="#">этих требований</a>, чтобы избежать разного рода проблем, на этапе допечатного процесса. Мы принимаем файлы следующих форматов: *.indd,  *.idml,  *.ai,  *.eps,  *.tif,  *.eps,  *.psd,  *.cdr.
+
+					.events-card__form
+						form(action="#")
+
+							fieldset.events-card__upload
+
+								.form-upload.is-success
+									label.form-upload__drop
+										input(type="file").form-upload__input
+										p.form-upload__text <mark>Выбрать файлы</mark> Нажмите или перетащите файлы
+									.form-upload__file
+										.form-upload__status
+											+sprite('icon-success')
+										.form-upload__icon
+											+sprite('icon-file-pdf')
+										.form-upload__name Backgroundimage.pdf
+										.form-upload__download скачать
+										.form-upload__delete удалить
+
+								.form-upload
+									label.form-upload__drop
+										input(type="file").form-upload__input
+										p.form-upload__text <mark>Выбрать файлы</mark> Нажмите или перетащите файлы
+									.form-upload__file
+										.form-upload__status
+											+sprite('icon-success')
+										.form-upload__icon
+											+sprite('icon-file-pdf')
+										.form-upload__name Backgroundimage.pdf
+										.form-upload__download скачать
+										.form-upload__delete удалить
+
+
+							fieldset.events-card__comments
+
+								label.form-label.form-label--large Комментарий
+								textarea.form-textarea.form-textarea--small.form-textarea--grey
+								button.btn.btn--red Отправить
+
+
+
+
+				.events-card.events-card--warning
+
+					span.events-card__date 12:55   22.03.2018
+
+					span.events-card__type Согласование дизайн-макетов
+
+					span.events-card__title
+						small Задача
+						| Согласуйте дизайн-макет
+					
+					.events-card__upload
+						.form-upload.is-success
+							label.form-upload__drop
+								input(type="file").form-upload__input
+								p.form-upload__text <mark>Выбрать файлы</mark> Нажмите или перетащите файлы
+							.form-upload__file
+								.form-upload__status
+									+sprite('icon-success')
+								.form-upload__icon
+									+sprite('icon-file-pdf')
+								.form-upload__name Макет_15332.pdf
+								.form-upload__download скачать
+								.form-upload__delete удалить
+					
+					span.events-card__title Комментарий дизайнера
+
+					.events-card__text
+						p Файл макета содержит несколько страниц, по одной на каждую единицу в заказе
+
+					hr
+
+					.events-card__form
+						form(action="#")
+
+							fieldset.events-card__upload
+								
+									
+									.form-check-group.js-check
+
+										label.form-check.form-check--trigger
+											input(type="radio" name="radioName").form-check__input.js-check-trigger
+											span.form-radio
+											span.form-check__btn Принять
+
+									
+									.form-check-group.js-check
+
+										label.form-check.form-check--trigger
+											input(type="radio" name="radioName").form-check__input.js-check-trigger
+											span.form-radio
+											span.form-check__btn На доработку
+
+										.form-check-content.js-check-content
+
+											.form-upload.is-success
+												label.form-upload__drop
+													input(type="file").form-upload__input
+													p.form-upload__text <mark>Выбрать файлы</mark> Нажмите или перетащите файлы
+												.form-upload__file
+													.form-upload__status
+														+sprite('icon-success')
+													.form-upload__icon
+														+sprite('icon-file-pdf')
+													.form-upload__name Backgroundimage.pdf
+													.form-upload__download скачать
+													.form-upload__delete удалить
+
+											.form-upload
+												label.form-upload__drop
+													input(type="file").form-upload__input
+													p.form-upload__text <mark>Выбрать файлы</mark> Нажмите или перетащите файлы
+												.form-upload__file
+													.form-upload__status
+														+sprite('icon-success')
+													.form-upload__icon
+														+sprite('icon-file-pdf')
+													.form-upload__name Backgroundimage.pdf
+													.form-upload__download скачать
+													.form-upload__delete удалить
+
+
+							fieldset.events-card__comments
+
+								b.form-label.form-label--large Комментарий
+								textarea.form-textarea.form-textarea--small.form-textarea--grey
+								button.btn.btn--red Отправить
+
+								p.form-caption Будьте внимательны, после того, как вы нажмёте кнопку «Принять», заказ отправляется на этап производства, дальнейшее внесение изменений в макет будет проблематичным. Тщательно проверяйте дизайн-макет перед утверждением
+
+					
+
+
+	// Events :: End
+			

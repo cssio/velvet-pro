@@ -1,0 +1,47 @@
+// --------------------------------------------------------------------------
+// Icons
+// --------------------------------------------------------------------------
+
+[class^="icon-"], [class*=" icon-"] {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	top: -1px;
+	fill: currentColor;
+}
+
+
+.icon-check {
+	fill: none;
+	stroke: currentColor;
+}
+
+.icon-success {
+	color: #01c21e;
+}
+
+.icon-loading {
+	display: block;
+	width: 22px;
+	height: 22px;
+	border: 2px solid currentColor;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -10px 0 0 -10px;
+	border-left-color: transparent;
+	animation: loading 0.5s linear infinite;
+}
+
+.icon-arrow-right {
+	transform: rotate(-90deg);
+}
+
+.icon-status-wait {
+	color: #f1c000;
+}
+
+.icon-status-success {
+	color: #00ac4f;
+}

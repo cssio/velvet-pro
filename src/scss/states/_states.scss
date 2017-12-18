@@ -1,0 +1,74 @@
+// --------------------------------------------------------------------------
+// States
+// --------------------------------------------------------------------------
+
+.is-succes {
+
+}
+
+.is-error {
+	
+}
+
+.is-disabled {
+	pointer-events: none;
+	color: #ccc;
+}
+
+.text-success {
+	color: $colorSuccess;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.is-hidden-lg {
+	@include breakpoint(lg) {
+		display: none;
+	}
+}
+
+.is-visible-lg {
+	@include breakpointMax(lg) {
+		display: none;
+	}
+}
+
+.row-offset-5 {
+    margin: 0 -2.5px;
+    align-items: center;
+    & > [class^="col"] {
+        padding: 0 2.5px;
+    }
+}
+
+.row-offset-10 {
+	margin: 0 -5px;
+	& > [class^="col-"] {
+		padding: 0 5px;
+	}
+}
+
+.row-offset-40 {
+	margin: 0 -20px;
+	& > [class^="col-"] {
+		padding: 0 20px;
+	}
+}
+
+.row-offset-70 {
+	margin: 0 -35px;
+	& > [class^="col-"] {
+		padding: 0 35px;
+	}
+}
+
+@-webkit-keyframes loading {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to { 
+		-webkit-transform: rotate(360deg);
+	}
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Drop menu</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="320-Задача-с-элементами-Copy-2" transform="translate(-68.000000, -94.000000)" fill="#4C4D4D">
+            <g id="Group-4" transform="translate(10.000000, 90.000000)">
+                <g id="Drop-menu" transform="translate(58.000000, 4.000000)">
+                    <path d="M14,28 C6.2680135,28 0,21.7319865 0,14 C0,6.2680135 6.2680135,0 14,0 C21.7319865,0 28,6.2680135 28,14 C28,21.7319865 21.7319865,28 14,28 Z M14,5 C11.7944,5 10,6.7944 10,9 C10,11.2056 11.7944,13 14,13 C16.2056,13 18,11.2056 18,9 C18,6.7944 16.2056,5 14,5 Z M19.2256089,16.1960377 C18.0757422,14.7798868 16.5513911,14 14.9333333,14 L13.0666667,14 C11.44864,14 9.92425778,14.7798868 8.77439111,16.1960377 C7.63015556,17.6052453 7,19.4653962 7,21.4339623 C7,21.746566 7.20894222,22 7.46666667,22 L20.5333333,22 C20.7910578,22 21,21.746566 21,21.4339623 C21,19.4653962 20.3698444,17.6052453 19.2256089,16.1960377 Z" id="Combined-Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+---
+title: Пустая страница - Velvet-pro
+bodyClass: page-empty
+---
+extends modules/_app
+block main
+
+	// Empty :: Start
+	.empty
+		.container-fluid
+			+sprite('icon-empty')
+			span.empty__title У вас нет текущих или завершенных заказов
+			p.empty__text Вы можете совершить заказ в каталоге
+			a(href="#").btn.btn--red Каталог
+	// Empty :: Start

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="40px" viewBox="0 0 35 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>ai</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-2286.000000, -778.000000)">
+        <g id="files-icons" transform="translate(1843.000000, 778.000000)" fill-rule="nonzero">
+            <g id="ai" transform="translate(443.000000, 0.000000)">
+                <g id="Shape">
+                    <path d="M7.5,0 C6.125,0 5,1.125 5,2.5 L5,37.5 C5,38.875 6.125,40 7.5,40 L32.5,40 C33.875,40 35,38.875 35,37.5 L35,10 L25,0 L7.5,0 Z" fill="#E2E5E7" style="fill: #E2E5E7"></path>
+                    <path d="M27.5,10 L35,10 L25,0 L25,7.5 C25,8.875 26.125,10 27.5,10 Z" fill="#B0B7BD" style="fill: #B0B7BD"></path>
+                    <polygon fill="#CAD1D8" style="fill: #CAD1D8" points="35 17.5 27.5 10 35 10"></polygon>
+                    <path d="M30,32.5 C30,33.1875 29.4375,33.75 28.75,33.75 L1.25,33.75 C0.5625,33.75 0,33.1875 0,32.5 L0,20 C0,19.3125 0.5625,18.75 1.25,18.75 L28.75,18.75 C29.4375,18.75 30,19.3125 30,20 L30,32.5 Z" fill="#F8A10F" style="fill: #F8A10F"></path>
+                    <path d="M28.75,33.75 L5,33.75 L5,35 L28.75,35 C29.4375,35 30,34.4375 30,33.75 L30,32.5 C30,33.1875 29.4375,33.75 28.75,33.75 Z" fill="#CAD1D8" style="fill: #CAD1D8"></path>
+                </g>
+                <path d="M17.6244643,29.765625 L15.8019643,29.765625 L15.3407143,28.494375 L12.1232143,28.494375 L11.6507143,29.765625 L9.82821428,29.765625 L12.7307143,22.261875 L14.7332143,22.261875 L17.6244643,29.765625 Z M14.9019643,27.088125 L13.7319643,23.859375 L12.5619643,27.088125 L14.9019643,27.088125 Z M19.64625,29.765625 L19.64625,22.261875 L18.04875,22.261875 L18.04875,29.765625 L19.64625,29.765625 Z" id="AI" fill="#FFFFFF" style="fill: #ffffff"></path>
+            </g>
+        </g>
+    </g>
+</svg>

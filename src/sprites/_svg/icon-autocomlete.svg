@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="33px" viewBox="0 0 31 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape Copy 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-8.5%" y="-7.6%" width="117.0%" height="123.5%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="9" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.140313632 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="1920-Заказ-от-лица-менеджера" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1470.000000, -871.000000)">
+        <g id="Group-19" filter="url(#filter-1)" transform="translate(1210.000000, 666.000000)" fill="#F0605F" fill-rule="nonzero">
+            <g id="Group-18">
+                <polygon id="Shape-Copy-5" transform="translate(276.000000, 213.000000) scale(-1, 1) translate(-276.000000, -213.000000) " points="277.674089 209 273 213 277.674089 217 279 215.865218 275.651915 213 279 210.134782"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,104 @@
+// --------------------------------------------------------------------------
+// Tabs
+// --------------------------------------------------------------------------
+
+.tabs {
+	padding: 10px 0 0;
+}
+
+.tabs__ctrl {
+	position: relative;
+	// display: flex;
+	// flex-wrap: wrap;
+	margin: 0 0 10px;
+	display: inline-block;
+	vertical-align: top;
+	// width: 100%;
+	&:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+	@include breakpoint(sm) {
+		border-bottom: 1px solid #e6e6e6;
+		margin: 0 0 20px;
+	}
+}
+
+.tabs__line {
+	display: none;
+	@include breakpoint(sm) {
+		display: block;
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background: #f0605f;
+	}
+}
+
+.tabs__btn {
+	position: relative;
+	transition: 0.25s;
+	display: block;
+	font: 600 14px/19px $fontBase;
+	color: #909090;
+	padding: 6px 16px;
+	border-radius: 4px;
+	background: rgba(0, 0, 0, 0.04);
+	border: 1px solid rgba(0, 0, 0, 0.04);
+	// margin: 0 10px 10px;
+	margin: 0 20px 10px 0;
+	cursor: pointer;
+	float: left;
+	&:first-child {
+		margin-left: 0;
+	}
+	&:last-child {
+		margin-right: 0;
+	}
+	&:hover, &.is-active {
+		background: #f0605f;
+		border-color: #f0605f;
+		color: #fff;
+	}
+	@include breakpoint(sm) {
+		padding: 0 0 10px;
+		background: none;
+		border-radius: 0;
+		border: none;
+		color: rgba(0,0,0,0.4);
+		margin-bottom: 0;
+		&:hover {
+			background: none;
+			color: rgba(0,0,0, 0.6);
+		}
+		&.is-active {
+			background: none;
+			color: #f0605f;
+		}
+		
+	}
+}
+
+
+.tabs__container {
+	position: relative;
+}
+
+
+.tabs__panel {
+	transition: 0.25s;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	&.is-active {
+		position: relative;
+		opacity: 1;
+		visibility: visible;
+	}
+}

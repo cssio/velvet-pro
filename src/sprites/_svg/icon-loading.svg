@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1544.000000, -993.000000)">
+        <g id="loading" transform="translate(1484.000000, 889.000000)" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="2">
+            <g id="Button-loading" transform="translate(0.000000, 95.000000)">
+                <g id="Group-2" transform="translate(60.000000, 9.000000)">
+                    <g id="success-5">
+                        <path d="M1.73331187,7.64393334 C1.2511093,8.86048047 1,10.1625442 1,11.5 C1,17.288922 5.71120306,22 11.5,22 C17.2887969,22 22,17.288922 22,11.5 C22,5.80942621 17.4475148,1.16038449 11.7940874,1.00406142 L1.73331187,7.64393334 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

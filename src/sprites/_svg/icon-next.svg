@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Triangle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-18.3%" y="-13.0%" width="136.7%" height="133.7%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="13" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.192198822 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1613.000000, -154.000000)">
+        <g id="calendar" transform="translate(1385.000000, 98.000000)" stroke="#232221">
+            <g id="calendar-active" transform="translate(75.000000, 0.000000)">
+                <g id="calendar" filter="url(#filter-1)" transform="translate(0.000000, 34.000000)">
+                    <polyline id="Triangle" transform="translate(178.000000, 37.142857) rotate(-270.000000) translate(-178.000000, -37.142857) " points="172.857143 40.1428571 178 34.1428571 178 34.1428571 183.142857 40.1428571"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

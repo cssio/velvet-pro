@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="39px" viewBox="0 0 42 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Package icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="1920-Заказ-от-лица-менеджера" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1202.000000, -1398.000000)">
+        <g id="Tracking" transform="translate(1180.000000, 1374.000000)" fill-rule="nonzero">
+            <g id="Package-icon" transform="translate(22.000000, 24.000000)">
+                <polygon id="Shape" fill="#F0DCBE" points="21.4999572 0 3 8.5 21.4999572 17 40 8.5"></polygon>
+                <path d="M38.5976905,30.5421934 L21,39 L21,16.6511185 L39,8 L39,29.8875671 C38.9999168,30.1687402 38.8429038,30.4242654 38.5976905,30.5421934 Z" id="Shape" fill="#EBD2AF"></path>
+                <path d="M3.40214492,30.5421934 L21,39 L21,16.6511185 L3,8 L3,29.8874805 C3,30.1687402 3.15701375,30.4242654 3.40214492,30.5421934 Z" id="Shape" fill="#D2B493"></path>
+                <path d="M38.7455897,8 L21,16.5635753 L24.1714276,26.5117563 C24.3000533,26.9152244 24.7356416,27.112241 25.1049483,26.9340941 L41.6034101,18.97229 C41.9191502,18.8198744 42.0748463,18.4435958 41.9648418,18.0986238 L38.7455897,8 Z" id="Shape" fill="#F0DCBE"></path>
+                <path d="M3.25447957,8 L21,16.5635753 L17.8285028,26.5117563 C17.6998776,26.9152244 17.2642909,27.112241 16.8949857,26.9340941 L0.396588304,18.9722042 C0.0808495202,18.8197886 -0.0748460401,18.4435101 0.0351580413,18.098538 L3.25447957,8 Z" id="Shape" fill="#EBD2AF"></path>
+                <polygon id="Shape" fill="#D2B493" points="39 8.5 21 0 21 17"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

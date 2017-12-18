@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="6px" viewBox="0 0 8 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-2377.000000, -976.000000)">
+        <g id="expand" transform="translate(2085.000000, 956.000000)" fill="#939495" fill-rule="nonzero">
+            <g id="client-info">
+                <polygon id="Shape-Copy" transform="translate(296.000000, 23.000000) rotate(-90.000000) translate(-296.000000, -23.000000) " points="297.674089 19 293 23 297.674089 27 299 25.8652184 295.651915 23 299 20.1347816"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,395 @@
+---
+title: Styleguide - Velvet-pro
+bodyClass: page-styleguide
+---
+extends modules/_app
+
+block main
+
+	.container-fluid
+		h1 Styleguide
+
+		p Мы настоятельно рекомендуем по возможности строго придерживаться <a href="#">этих требований</a>, чтобы избежать разного рода проблем, на этапе допечатного процесса. Мы принимаем файлы следующих форматов: *.indd,  *.idml,  *.ai,  *.eps,  *.tif,  *.eps,  *.psd,  *.cdr.
+		
+		hr
+
+		h2 Popups
+
+		ol
+			li
+				a(href="#popup-deactivate" data-mfp) Деактивация аккаунта
+			li
+				a(href="#popup-change" data-mfp) Смена сотрудника
+			li
+				a(href="#popup-add" data-mfp) Добавление товара
+			li
+				a(href="#popup-task" data-mfp) Задача с элементами
+
+		hr
+
+		div(style="background: #EEF1F1; padding: 20px 20px 0; border-radius: 6px;")
+
+			h2 Карточки заказов
+			
+			.order-grid
+				.order-grid__col
+
+					.order-card.order-card--primary
+						.order-card__content
+							.order-card__head
+
+								a(href="#").order-card__more
+									| Подробнее
+									+sprite('icon-arrow-right')
+								h3.order-card__number Заказ <b>№5881</b>
+								p.order-card__status
+									+sprite('icon-status-wait')
+									| В производстве
+								span.order-card__date 12.01.18 – 25.01.18
+
+							.order-card__body
+								table.order-card__table
+									tfoot
+										tr
+											td
+											td Доставка DPD
+											td <b>4 000 ₽</b>
+										tr
+											td(colspan="3")
+												p.order-card__payment
+													span.order-card__payment-text Оплата
+													span.order-card__payment-title Онлайн-оплата банковской картой
+													span.order-card__payment-status
+														+sprite('icon-status-success')
+														| Оплачено (13.01.2018)
+									tbody
+										tr
+											td <b>1.</b>
+											td Шторы премиум с логотипом<br>200 шт
+											td <b>145 000 ₽</b>
+										tr
+											td <b>2.</b>
+											td Шторы эконом<br>300 шт
+											td <b>120 000 ₽</b>
+
+						.order-card__ctrl
+							.row
+								.col
+									p.order-card__total
+										small Итого:
+										| 269 000 ₽
+
+				.order-grid__col
+					.order-card.order-card--danger
+						.order-card__content
+							.order-card__head
+
+								a(href="#").order-card__more
+									| Подробнее
+									+sprite('icon-arrow-right')
+								h3.order-card__number Заказ <b>№5881</b>
+								p.order-card__status
+									+sprite('icon-status-wait')
+									| Ожидается оплата
+								span.order-card__date 12.01.18 – 25.01.18
+
+							.order-card__body
+								table.order-card__table
+									tfoot
+										tr
+											td
+											td Доставка DPD
+											td.text-right <b>4 000 ₽</b>
+										tr
+											td(colspan="3")
+												p.order-card__payment
+													span.order-card__payment-text Оплата
+													span.order-card__payment-title Онлайн-оплата банковской картой
+													span.order-card__payment-status
+														+sprite('icon-status-wait')
+														| Не оплачено
+									tbody
+										tr
+											td <b>1.</b>
+											td Шторы премиум с логотипом<br>200 шт
+											td.text-right <b>145 000 ₽</b>
+										tr
+											td <b>2.</b>
+											td Шторы эконом<br>300 шт
+											td.text-right <b>120 000 ₽</b>
+
+						.order-card__ctrl
+							.row
+								.col
+									a(href="#").btn.btn--red Оплатить
+								.col
+									p.order-card__total
+										small Итого:
+										| 269 000 ₽
+
+
+
+		.row(style="margin-bottom: 20px;")
+			.col-md-3
+				
+				label Input
+				input(type="text" placeholder="").form-input
+
+				label Select
+				select.form-select
+					option Option 1
+					option Option 2
+					option Option 3
+					option Option 4
+					option Option 5
+
+				label Textarea
+				textarea.form-textarea
+				
+			.col-md-3
+				
+				label Input
+				input(type="text" placeholder="").form-input.form-input--grey
+
+				label Select
+				select.form-select.form-select--grey
+					option Option 1
+					option Option 2
+					option Option 3
+					option Option 4
+					option Option 5
+
+				label Textarea
+				textarea.form-textarea.form-textarea--grey
+				
+			
+			.col-md-3
+				
+				label Input
+				input(type="text" placeholder="").form-input.form-input--small
+
+				label Select
+				select.form-select.form-select--small
+					option Option 1
+					option Option 2
+					option Option 3
+					option Option 4
+					option Option 5
+
+				label Textarea
+				textarea.form-textarea.form-textarea--small
+				
+			.col-md-3
+				
+				label Input
+				input(type="text" placeholder="").form-input.form-input--small.form-input--grey
+
+				label Select
+				select.form-select.form-select--small.form-select--grey
+					option Option 1
+					option Option 2
+					option Option 3
+					option Option 4
+					option Option 5
+
+				label Textarea
+				textarea.form-textarea.form-textarea--small.form-textarea--grey
+
+
+		.row(style="margin-bottom: 40px;")
+			.col-md-4
+
+				label File Upload
+				.form-upload
+					label.form-upload__drop
+						input(type="file").form-upload__input
+						p.form-upload__text <mark>Выбрать файлы</mark> Нажмите или перетащите файлы
+					.form-upload__file
+						.form-upload__status
+							+sprite('icon-success')
+						.form-upload__icon
+							+sprite('icon-file-pdf')
+						.form-upload__name Backgroundimage.pdf
+						.form-upload__download скачать
+						.form-upload__delete удалить
+
+
+				label File Upload Loading
+				.form-upload.is-loading
+					label.form-upload__drop
+						input(type="file").form-upload__input
+						p.form-upload__text <mark>Выбрать файлы</mark> Нажмите или перетащите файлы
+					.form-upload__file
+						.form-upload__status
+							span.icon-loading
+						.form-upload__icon
+							+sprite('icon-file-pdf')
+						.form-upload__name Backgroundimage.pdf
+						.form-upload__download скачать
+						.form-upload__delete удалить
+
+				label File Upload Success
+				.form-upload.is-success
+					label.form-upload__drop
+						input(type="file").form-upload__input
+						p.form-upload__text <mark>Выбрать файлы</mark> Нажмите или перетащите файлы
+					.form-upload__file
+						.form-upload__status
+							+sprite('icon-success')
+						.form-upload__icon
+							+sprite('icon-file-pdf')
+						.form-upload__name Backgroundimage.pdf
+						.form-upload__download скачать
+						.form-upload__delete удалить
+		
+			.col-md-4
+
+				label File
+				label.form-file
+					+sprite('icon-file')
+					input(type="file").form-file__input
+					span.form-file__selected Выбрать файл
+					span.form-file__text (не более 10 МБ)
+
+				
+				hr(style="margin: 15px 0 20px;")
+
+				.row
+					.col-6
+
+						label.form-check
+							input(type="checkbox").form-check__input
+							span.form-checkbox
+								+sprite('icon-check')
+							span.form-check__text Checkbox 1
+
+					.col-6
+
+						label.form-check
+							input(type="checkbox").form-check__input
+							span.form-checkbox
+								+sprite('icon-check')
+							span.form-check__text Checkbox 2
+
+					.col-6
+
+						label.form-check
+							input(type="radio" name="radio").form-check__input
+							span.form-radio
+							span.form-check__text Radio 1
+
+					.col-6
+
+						label.form-check
+							input(type="radio" name="radio").form-check__input
+							span.form-radio
+							span.form-check__text Radio 2
+
+				hr(style="margin: 5px 0 15px;")
+
+
+				label.form-check.form-check--trigger
+					input(type="checkbox").form-check__input
+					span.form-checkbox
+						+sprite('icon-check')
+					span.form-check__text Принять
+
+				label.form-check.form-check--trigger
+					input(type="checkbox").form-check__input
+					span.form-checkbox
+						+sprite('icon-check')
+					span.form-check__text Не принимать
+
+
+				label.form-check.form-check--trigger
+					input(type="radio" name="radio2").form-check__input
+					span.form-radio
+					span.form-check__text Принять
+
+				label.form-check.form-check--trigger
+					input(type="radio" name="radio2").form-check__input
+					span.form-radio
+					span.form-check__text Не принимать
+
+
+			.col-md-4
+				label Datepicker
+				label.form-field
+					input(type="text" placeholder="" readonly).form-input.js-datepicker
+					span.form-field__icon
+						+sprite('icon-calendar')
+					//- .form-datepicker.js-datepicker
+
+				label.form-field
+					input(type="text" placeholder="" readonly).form-input.form-input--small.form-input--grey.js-datepicker
+					span.form-field__icon
+						+sprite('icon-calendar')
+					//- .form-datepicker.js-datepicker
+
+				hr
+
+				label Search
+				label.form-field
+					input(type="text" placeholder="Искать").form-input
+					span.form-field__icon
+						+sprite('icon-search')
+
+				label.form-field
+					input(type="text" placeholder="Искать").form-input.form-input--small.form-input--grey
+					span.form-field__icon
+						+sprite('icon-search')
+
+
+
+		.row(style="margin-bottom: 40px;")
+			.col-auto
+				a(href="#").btn.btn--red__empty Button red empty
+			.col-auto
+				a(href="#").btn.btn--red Button red
+			.col-auto
+				a(href="#").btn.btn--green Button green
+			.col-auto
+				a(href="#").btn.btn--grey Button grey
+			.col-auto
+				a(href="#").btn.btn--more Button more
+			.col-auto
+				a(href="#").btn.btn--more.is-loading Button more loading
+
+		.row(style="margin-bottom: 40px;")
+			.col-auto
+				a(href="#").btn.btn--small.btn--red__empty Button red empty
+			.col-auto
+				a(href="#").btn.btn--small.btn--red Button red
+			.col-auto
+				a(href="#").btn.btn--small.btn--green Button green
+			.col-auto
+				a(href="#").btn.btn--small.btn--grey Button grey
+			.col-auto
+				a(href="#").btn.btn--small.btn--more Button more
+			.col-auto
+				a(href="#").btn.btn--small.btn--more.is-loading Button more loading
+
+
+
+
+		.row(style="margin-bottom: 30px;")
+			.col-auto
+				+sprite('icon-file-eps')
+			.col-auto
+				+sprite('icon-file-doc')
+			.col-auto
+				+sprite('icon-file-cdr')
+			.col-auto
+				+sprite('icon-file-psd')
+			.col-auto
+				+sprite('icon-file-jpg')
+			.col-auto
+				+sprite('icon-file-tiff')
+			.col-auto
+				+sprite('icon-file-pdf')
+			.col-auto
+				+sprite('icon-file-ai')
+			.col-auto
+				+sprite('icon-file-xlsx')
+			.col-auto.align-self-center
+				+sprite('icon-file-search')

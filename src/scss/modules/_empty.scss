@@ -1,0 +1,27 @@
+// --------------------------------------------------------------------------
+// Empty
+// --------------------------------------------------------------------------
+
+.empty {
+	padding: 0 20px 40px;
+	text-align: center;
+	margin: auto;
+	[class^="icon-"] {
+		color: #F0605F;
+		display: block;
+		margin: 0 auto 40px;
+	}
+	
+}
+
+.empty__title {
+	display: block;
+	font-size: 21px;
+	line-height: 1.19047619;
+	font-weight: 400;
+	margin: 0 0 9px;
+}
+
+.empty__text {
+	margin: 0 0 40px;
+}

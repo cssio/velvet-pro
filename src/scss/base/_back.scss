@@ -1,0 +1,27 @@
+// --------------------------------------------------------------------------
+// Back
+// --------------------------------------------------------------------------
+
+.back {
+	font-size: 14px;
+	line-height: 20px;
+	position: relative;
+	top: -30px;
+	margin: 0 0 10px;
+	@include breakpoint(sm) {
+		top: -15px;
+		margin: 0 0 20px;
+	}
+}
+
+.back__link {
+	display: inline-block;
+	vertical-align: top;
+	color: #232221;
+	[class^="icon-"] {
+		margin: 0 10px 0 0;
+	}
+	&:hover {
+		color: rgba(#232221, 0.6);
+	}
+}

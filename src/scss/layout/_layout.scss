@@ -1,0 +1,24 @@
+// --------------------------------------------------------------------------
+// Layout
+// --------------------------------------------------------------------------
+
+html, body {
+	height: 100%;
+}
+
+.app {
+	position: relative;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.page-styleguide {
+	background: #fff;
+}
+
+.container-fluid {
+	max-width: 1200px;
+}

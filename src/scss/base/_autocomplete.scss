@@ -1,0 +1,41 @@
+// --------------------------------------------------------------------------
+// Autocomplete
+// --------------------------------------------------------------------------
+
+.autocomplete {
+	border-radius: 4px;
+	background-color: #ffffff;
+	border: solid 1px #dedede;
+	box-shadow: 0 6px 11px 0 rgba(0, 0, 0, 0.13);
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	transition: 0.25s;
+	display: none;
+}
+
+
+.autocomplete__item {
+	display: block;
+	position: relative;
+	font-size: 14px;
+	line-height: 17px;
+	padding: 15px 20px;
+	transition: 0.25s;
+	cursor: pointer;
+	&:hover {
+		background: #f5f5f5;
+	}
+	&:after {
+		content: '';
+		display: block;
+		width: 40px;
+		top: 100%;
+		background: url(../svg/icon-autocomplete.svg) 0 0 no-repeat;
+		position: absolute;
+		top: 50%;
+
+	}
+}

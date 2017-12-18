@@ -1,0 +1,46 @@
+// --------------------------------------------------------------------------
+// Pagination
+// --------------------------------------------------------------------------
+
+.pagination {
+	padding: 10px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.pagination__first, .pagination__last {
+	display: none;
+	
+	@include breakpoint(sm) {
+		display: block;
+		margin: 0 20px;
+		color: #232221;
+		transition: 0.25s;
+		&:hover {
+			color: #F0605F;
+		}
+	}
+}
+
+.pagination__link {
+	transition: 0.25s;
+	display: block;
+	margin: 0 5px;
+	width: 36px;
+	height: 36px;
+	font-size: 14px;
+	line-height: 36px;
+	letter-spacing: 0;
+	text-align: center;
+	color: #232221;
+	border-radius: 50%;
+	&:hover {
+		background: #dedede;
+		color: #232221;
+	}
+	&.is-active {
+		background: #f0605f;
+		color: #fff;
+	}
+}

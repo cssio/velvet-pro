@@ -6,7 +6,9 @@
 $(function() {
 
 
-	$('.js-scrollbar').scrollbar();
+	$('.js-scrollbar, .easy-autocomplete-container, .form-select ul').scrollbar({
+        // disableBodyScroll: true
+    });
 
 
 });

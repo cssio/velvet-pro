@@ -34,6 +34,10 @@
 	animation: loading 0.5s linear infinite;
 }
 
+.icon-arrow-left {
+	transform: rotate(90deg);
+}
+
 .icon-arrow-right {
 	transform: rotate(-90deg);
 }

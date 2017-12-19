@@ -14,53 +14,56 @@ include _mixins
 		a(href="tel:88009876543").contacts__phone 8 800 987-65-43
 
 	nav.nav
+
+		.notice
+				
+			button.notice__trigger.js-toggle(data-toggle=".js-toggle-notice" data-toggle-class="is-open")
+				+sprite('icon-notice')
+				mark 2
+
+			.notice__dropdown.js-toggle-notice
+
+				a(href="#").notice__item.notice__item--warning
+					button.notice__item-close
+						+sprite('icon-close-min')
+					span.notice__item-date 18.01.18
+					span.notice__item-number
+						+sprite('icon-pic')
+						| Заказ №5881
+					b.notice__item-title
+						small Новая задача
+						| Необходимо загрузить графические материалы
+
+				a(href="#").notice__item.notice__item--danger
+					button.notice__item-close
+						+sprite('icon-close-min')
+					span.notice__item-date 18.01.18
+					span.notice__item-number
+						+sprite('icon-pic')
+						| Заказ №5881
+					b.notice__item-title
+						small Новая задача
+						| Необходимо загрузить графические материалы
+
+				a(href="#").btn.btn--white.btn--block Показать все
+
 		button.nav__trigger
 			span
 			span
 			span
+
 		.nav__overlay
+
 		.nav__dropdown
+
+
+			p.info Личный кабинет <b>ООО "Компания по продажам"</b>
 			
+			.user
+				button.user__trigger.js-toggle(data-toggle=".js-toggle-user" data-toggle-class="is-open")
+					+sprite('icon-user')
 			
-			.ctrl
-				
-				.ctrl__action
-					button.ctrl__btn.js-toggle(data-toggle=".js-toggle-notice" data-toggle-class="is-open")
-						+sprite('icon-notice')
-						mark 2
-
-					button.ctrl__btn.js-toggle(data-toggle=".js-toggle-user" data-toggle-class="is-open")
-						+sprite('icon-user')
-
-				p.ctrl__text Личный кабинет <b>ООО "Компания по продажам"</b>
-			
-				.notice.js-toggle-notice
-
-					a(href="#").notice__item.notice__item--warning
-						button.notice__item-close
-							+sprite('icon-close-min')
-						span.notice__item-date 18.01.18
-						span.notice__item-number
-							+sprite('icon-pic')
-							| Заказ №5881
-						b.notice__item-title
-							small Новая задача
-							| Необходимо загрузить графические материалы
-
-					a(href="#").notice__item.notice__item--danger
-						button.notice__item-close
-							+sprite('icon-close-min')
-						span.notice__item-date 18.01.18
-						span.notice__item-number
-							+sprite('icon-pic')
-							| Заказ №5881
-						b.notice__item-title
-							small Новая задача
-							| Необходимо загрузить графические материалы
-
-					a(href="#").btn.btn--white.btn--block Показать все
-
-				.user.js-toggle-user
+				.user__dropdown.js-toggle-user
 					ul.user__menu
 						li
 							a(href="#").user__link
@@ -72,12 +75,79 @@ include _mixins
 								| Личная информация
 						li
 							a(href="#").user__link
+								+sprite('icon-team')
+								| Сотрудники
+						li
+							a(href="#").user__link
 								+sprite('icon-settings')
 								| Настройки
 						li
 							a(href="#").user__link
 								+sprite('icon-exit')
 								| Выйти
+
+			
+			
+			//- .ctrl
+				
+			//- 	.ctrl__action
+			//- 		button.ctrl__btn.ctrl__btn--notice.js-toggle(data-toggle=".js-toggle-notice" data-toggle-class="is-open")
+			//- 			+sprite('icon-notice')
+			//- 			mark 2
+
+			//- 		button.ctrl__btn.ctrl__btn--user.js-toggle(data-toggle=".js-toggle-user" data-toggle-class="is-open")
+			//- 			+sprite('icon-user')
+
+			//- 	p.ctrl__text Личный кабинет <b>ООО "Компания по продажам"</b>
+			
+			//- 	.notice.js-toggle-notice
+
+			//- 		a(href="#").notice__item.notice__item--warning
+			//- 			button.notice__item-close
+			//- 				+sprite('icon-close-min')
+			//- 			span.notice__item-date 18.01.18
+			//- 			span.notice__item-number
+			//- 				+sprite('icon-pic')
+			//- 				| Заказ №5881
+			//- 			b.notice__item-title
+			//- 				small Новая задача
+			//- 				| Необходимо загрузить графические материалы
+
+			//- 		a(href="#").notice__item.notice__item--danger
+			//- 			button.notice__item-close
+			//- 				+sprite('icon-close-min')
+			//- 			span.notice__item-date 18.01.18
+			//- 			span.notice__item-number
+			//- 				+sprite('icon-pic')
+			//- 				| Заказ №5881
+			//- 			b.notice__item-title
+			//- 				small Новая задача
+			//- 				| Необходимо загрузить графические материалы
+
+			//- 		a(href="#").btn.btn--white.btn--block Показать все
+
+			//- 	.user.js-toggle-user
+			//- 		ul.user__menu
+			//- 			li
+			//- 				a(href="#").user__link
+			//- 					+sprite('icon-chat')
+			//- 					| Связаться с менеджером
+			//- 			li
+			//- 				a(href="#").user__link
+			//- 					+sprite('icon-pencil')
+			//- 					| Личная информация
+			//- 			li
+			//- 				a(href="#").user__link
+			//- 					+sprite('icon-team')
+			//- 					| Сотрудники
+			//- 			li
+			//- 				a(href="#").user__link
+			//- 					+sprite('icon-settings')
+			//- 					| Настройки
+			//- 			li
+			//- 				a(href="#").user__link
+			//- 					+sprite('icon-exit')
+			//- 					| Выйти
 
 			
 

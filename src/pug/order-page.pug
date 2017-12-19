@@ -16,7 +16,7 @@ block main
 	// Order :: Start
 
 	.order
-		form(action="#")
+		form(action="#").js-validate
 			.container-fluid
 
 				.order-head
@@ -30,26 +30,28 @@ block main
 					
 				.order-body
 					.row
-						.col-xl-8
+						.col-lg-8
 
 							.order-add
-								a(href="#").btn.btn--white.btn--block
+								a(href="#popup-add" data-mfp).btn.btn--white.btn--block
 									+sprite('icon-add')
 									| Добавить товар
 							
 							.order-panel
 								.order-panel-in
 
-									.order-item
+									.order-item.js-change
 										.row
-											.col-lg-8
+											.col-md-8
 												.order-item__image
 													img(src="images/img-1.png", alt="")
 												.order-item__desc
 													h2.order-item__title Шторы премиум с логотипом
-													.order-item__details
-														button.order-item__details-trigger Характеристики
-														.order-item__details-content
+													.order-collapse.js-collapse
+														button.order-collapse__trigger.js-collapse-trigger
+															| Характеристики
+															+sprite('icon-arrow-down')
+														.order-collapse__content.js-collapse-content
 															table.order-item__table
 																tr
 																	th <span>Цвет</span>
@@ -62,128 +64,150 @@ block main
 																	td 145х200
 																tr
 																	th <span>Размер логотипа (см)</span>
-																	td 
+																	td 145х200
 
-											.col-lg-4
+											.col-md-4
 												.order-item__ctrl
 
 													.order-item__price
-														input(type="text" value="145 000").order-item__input.order-item__input--price.js-autosize
+														input(type="text" value="145 000" disabled).order-item__input.order-item__input--price.js-autosize.js-change-input
 														label.order-item__label ₽
 
 													.order-item__count
-														input(type="text" value="200").order-item__input.order-item__input--count.js-autosize
+														input(type="text" value="200" disabled).order-item__input.order-item__input--count.js-autosize.js-change-input
 														label.order-item__label шт
 
 													p.order-item__cost 725 ₽/шт
 
 													.order-item__action
-														button.btn.btn--small.btn--grey Изменить
-														button.btn.btn--small.btn--red__empty Удалить
+														button.btn.btn--small.btn--grey.js-change-trigger Изменить
+														button.btn.btn--small.btn--red__empty.js-change-delete Удалить
 													.order-item__edit
-														button.btn.btn--small.btn--red Сохранить
-														button.btn.btn--small.btn--grey Отмена
+														button.btn.btn--small.btn--red.js-change-save Сохранить
+														button.btn.btn--small.btn--grey.js-change-cancel Отмена
 
-									.order-item
+									.order-item.js-change
 										.row
-											.col-lg-8
+											.col-md-8
 												.order-item__image
 													img(src="images/img-1.png", alt="")
 												.order-item__desc
 													h2.order-item__title Шторы эконом
-													.order-item__details
-														button.order-item__details-trigger Характеристики
-														.order-item__details-content
+													.order-collapse.js-collapse
+														button.order-collapse__trigger.js-collapse-trigger
+															| Характеристики
+															+sprite('icon-arrow-down')
+														.order-collapse__content.js-collapse-content
 															table.order-item__table
 																tr
 																	th <span>Цвет</span>
-																	td Бежевый
+																	td Заказной цвет
 																tr
 																	th <span>Крепление</span>
-																	td Люверсы
+																	td Петли
 																tr
 																	th <span>Размер шторы (см)</span>
 																	td 145х200
+																tr
+																	th <span>Размер логотипа (см)</span>
+																	td 145х200
 
-											.col-lg-4
+											.col-md-4
 												.order-item__ctrl
 
 													.order-item__price
-														input(type="text" value="120 000" disabled).order-item__input.order-item__input--price.js-autosize
+														input(type="text" value="145 000" disabled).order-item__input.order-item__input--price.js-autosize.js-change-input
 														label.order-item__label ₽
 
 													.order-item__count
-														input(type="text" value="300" disabled).order-item__input.order-item__input--count.js-autosize
+														input(type="text" value="200" disabled).order-item__input.order-item__input--count.js-autosize.js-change-input
 														label.order-item__label шт
 
-													p.order-item__cost 400 ₽/шт
+													p.order-item__cost 725 ₽/шт
 
 													.order-item__action
-														button.btn.btn--small.btn--grey Изменить
-														button.btn.btn--small.btn--red__empty Удалить
+														button.btn.btn--small.btn--grey.js-change-trigger Изменить
+														button.btn.btn--small.btn--red__empty.js-change-delete Удалить
 													.order-item__edit
-														button.btn.btn--small.btn--red Сохранить
-														button.btn.btn--small.btn--grey Отмена
+														button.btn.btn--small.btn--red.js-change-save Сохранить
+														button.btn.btn--small.btn--grey.js-change-cancel Отмена
 
 
-									.order-item
+									.order-item.js-change
 										.row
-											.col-lg-8
+											.col-md-8
 												.order-item__image
 													img(src="images/img-dpd.png", alt="")
 												.order-item__desc
 													h2.order-item__title Доставка DPD
 													p.order-item__text Казань, Университетская улица, 13
 
-											.col-lg-4
+											.col-md-4
 												.order-item__ctrl
 
 													.order-item__price
-														input(type="text" value="4 576" disabled).order-item__input.order-item__input--price.js-autosize
+														input(type="text" value="4 576" disabled).order-item__input.order-item__input--price.js-autosize.js-change-input
 														label.order-item__label ₽
 
 													.order-item__action
-														button.btn.btn--small.btn--grey Изменить
+														button.btn.btn--small.btn--grey.js-change-trigger Изменить
 													.order-item__edit
-														button.btn.btn--small.btn--red Сохранить
-														button.btn.btn--small.btn--grey Отмена
+														button.btn.btn--small.btn--red.js-change-save Сохранить
+														button.btn.btn--small.btn--grey.js-change-cancel Отмена
 
 							.order-panel
 
 								.order-private
 									.row
-										.col-lg-8
-
+										.col-md-8
 											
 												label.form-label Юридическое лицо
-												.form-group
-													.row
-														.col
-															select.form-select.form-select--small.form-select--grey
-																option ООО «Вельвет-про»
-																option ООО «Вельвет-про»
-																option ООО «Вельвет-про»
-														.col
-															button.btn.btn--small.btn--red Применить
+												.form-group.form-group--nowrap
+													select.form-select.form-select--small.form-select--grey
+														option ООО «Вельвет-про»
+														option ООО «Вельвет-про»
+														option ООО «Вельвет-про»
 
-										.col-lg-4
+													button.btn.btn--small.btn--red Применить
+													
+															
+
+										.col-md-4
 											p.order-total
 												small Итого:
 												| 265 000 ₽
 
 							.order-panel
 
-								.order-payments
+								.order-payments.js-change
 									.row
-										.col-lg-8
+										.col-md-8
 											figure.order-payments__image
 												img(src="images/img-yandex.png", alt="")
-											p.order-payments__text Онлайн-оплата через Яндекс.Кассу
+											.order-payments__desc
+												p.order-payments__type Онлайн-оплата через Яндекс.Кассу
+										.col-md-4
+											button.btn.btn--small.btn--grey.js-change-open Изменить
+									.change
+										.row
+											.col-md-8
+												select.form-select.form-select--small.form-select--grey
+													option Банковский перевод по счету
+													option Онлайн-оплата через Яндекс.Кассу
+													option Онлайн-оплата через ApplePay
+													option Онлайн-оплата через МИР
+											.col-md-4
+
+												.change__ctrl
+													a(href="#").btn.btn--small.btn--red Сохранить
+													a(href="#").btn.btn--small.btn--grey.js-change-close Отмена
 											
-										.col-lg-4
-											button.btn.btn--small.btn--grey Изменить
+										
+										
+
 							
 							.order-panel
+
 
 								h2.order-heading-sub Данные о компании
 
@@ -205,130 +229,179 @@ block main
 								.form-group
 									label.form-label
 										b Название организации
-									input(type="text" value="ООО Компания по продажам").form-input
+									input(type="text" name="orgName" value="ООО Компания по продажам").form-input
 
 								.form-group
 									label.form-label
 										b Должность руководителя
-									input(type="text" placeholder="Укажите должность руководителя вашей организации").form-input
+									input(type="text" name="orgPosition" placeholder="Укажите должность руководителя вашей организации").form-input
 
 								button.btn.btn--grey Сохранено
 
 
-						.col-xl-4
+						.col-lg-4
 							.order-sidebar
 
-								.order-panel
+								.row.js-isotope
 
-									.order-user
-										figure.order-user__photo
-										p.order-user__position ООО «Компания по продажам»
-										b.order-user__name Антон Перепелов
-										dl.order-user__contacts
-											dt Email
-											dd
-												a(href="#") A.vorobiev@vevlet-pro.ru
-											dt Телефон
-											dd
-												a(href="#") 8 (999) 999 99 99
+									.col-md-6.col-lg-12
 
-									a(href="#").btn.btn--red.btn--chat Онлайн чат <mark>2</mark>
+										.order-panel
 
+											.order-user
+												figure.order-user__photo
+												p.order-user__position ООО «Компания по продажам»
+												b.order-user__name Антон Перепелов
+												dl.order-user__contacts
+													dt Email
+													dd
+														a(href="#") A.vorobiev@vevlet-pro.ru
+													dt Телефон
+													dd
+														a(href="#") 8 (999) 999 99 99
 
-								.order-panel
+											a(href="#").btn.btn--red.btn--chat Онлайн чат <mark>2</mark>
 
-									.order-user-group
+									
+									.col-md-6.col-lg-12
 
-										.order-user.js-change
-											figure.order-user__photo
-											p.order-user__position ООО «Компания по продажам»
-											b.order-user__name Антон Перепелов
-											button.order-user__change.js-change-open Сменить
-											.change
-												button.change__cancel.js-change-close Отмена
-												p.change__text Сменить сотрудника
-												label.form-field
-													input(type="text" placeholder="Искать").form-input.form-input--small.form-input--grey
-													span.form-field__icon
-														+sprite('icon-search')
+										.order-panel
 
-										.order-user.js-change
-											figure.order-user__photo
-											p.order-user__position ООО «Компания по продажам»
-											b.order-user__name Антон Перепелов
-											button.order-user__change.js-change-open Сменить
-											.change
-												button.change__cancel.js-change-close Отмена
-												p.change__text Сменить сотрудника
-												label.form-field
-													input(type="text" placeholder="Искать").form-input.form-input--small.form-input--grey
-													span.form-field__icon
-														+sprite('icon-search')
+											.order-user-group
 
-										.order-user.js-change
-											figure.order-user__photo
-											p.order-user__position ООО «Компания по продажам»
-											b.order-user__name Антон Перепелов
-											button.order-user__change.js-change-open Сменить
-											.change
-												button.change__cancel.js-change-close Отмена
-												p.change__text Сменить сотрудника
-												label.form-field
-													input(type="text" placeholder="Искать").form-input.form-input--small.form-input--grey
-													span.form-field__icon
-														+sprite('icon-search')
+												.order-user.js-change
+													figure.order-user__photo
+													p.order-user__position ООО «Компания по продажам»
+													b.order-user__name Антон Перепелов
+													button.order-user__change.js-change-open Сменить
+													.change
+														.change-in
+															button.change__cancel.js-change-close Отмена
+															p.change__text Сменить сотрудника
+															.form-field
+																select(data-placeholder="Выберите сотрудника").form-select.form-select--small
+																	option
+																	option Ширяева Майя
+																	option Зыкова Элеонора
+																	option Владимиров Артём
+																	option Большакова София
+																	option Юдин Роман
+																	option Майя Ширяева
+																	option Элеонора Зыкова
+																	option Артём Владимиров
+																	option София Большакова
+																	option Роман Юдин
+														//- label.form-field
+														//- 	input(type="text" placeholder="Искать").form-input.form-input--small.form-input--grey.js-autocomplete
+														//- 	span.form-field__icon
+														//- 		+sprite('icon-search')
 
+												.order-user.js-change
+													figure.order-user__photo
+													p.order-user__position ООО «Компания по продажам»
+													b.order-user__name Антон Перепелов
+													button.order-user__change.js-change-open Сменить
+													.change
+														.change-in
+															button.change__cancel.js-change-close Отмена
+															p.change__text Сменить сотрудника
+															.form-field
+																select(data-placeholder="Выберите сотрудника").form-select.form-select--small
+																	option
+																	option Ширяева Майя
+																	option Зыкова Элеонора
+																	option Владимиров Артём
+																	option Большакова София
+																	option Юдин Роман
+																	option Майя Ширяева
+																	option Элеонора Зыкова
+																	option Артём Владимиров
+																	option София Большакова
+																	option Роман Юдин
+														//- label.form-field
+														//- 	input(type="text" placeholder="Искать").form-input.form-input--small.form-input--grey.js-autocomplete
+														//- 	span.form-field__icon
+														//- 		+sprite('icon-search')
 
-								.order-info
-									figure.order-info__icon
-										img(src="svg/icon-files.svg", alt="")
-									.order-info__desc
-										span.order-info__title Файлы макетов
+												.order-user.js-change
+													figure.order-user__photo
+													p.order-user__position ООО «Компания по продажам»
+													b.order-user__name Антон Перепелов
+													button.order-user__change.js-change-open Сменить
+													.change
+														.change-in
+															button.change__cancel.js-change-close Отмена
+															p.change__text Сменить сотрудника
+															.form-field
+																select(data-placeholder="Выберите сотрудника").form-select.form-select--small
+																	option
+																	option Ширяева Майя
+																	option Зыкова Элеонора
+																	option Владимиров Артём
+																	option Большакова София
+																	option Юдин Роман
+																	option Майя Ширяева
+																	option Элеонора Зыкова
+																	option Артём Владимиров
+																	option София Большакова
+																	option Роман Юдин
+														//- label.form-field
+														//- 	input(type="text" placeholder="Искать").form-input.form-input--small.form-input--grey.js-autocomplete
+														//- 	span.form-field__icon
+														//- 		+sprite('icon-search')
 
-										.order-file
-											figure.order-file__icon
-												+sprite('icon-file-pdf')
-											span.order-file__name Backgroundimage.pdf
-											span.order-file__action
-												a(href="#").order-file__link скачать
-												a(href="#").order-file__link удалить
+									
+									.col-md-6.col-lg-12
+										.order-info
+											figure.order-info__icon
+												img(src="svg/icon-files.svg", alt="")
+											.order-info__desc
+												span.order-info__title Файлы макетов
 
-										label.btn.btn--red.btn--file
-											input(type="file")
-											| Добавить файл
+												.order-file
+													figure.order-file__icon
+														+sprite('icon-file-pdf')
+													span.order-file__name Backgroundimage.pdf
+													span.order-file__action
+														a(href="#").order-file__link скачать
+														a(href="#").order-file__link удалить
 
-								.order-info
-									figure.order-info__icon
-										img(src="svg/icon-docs.svg", alt="")
-									.order-info__desc
-										span.order-info__title Документы
-										label.form-check
-											input(type="checkbox").form-check__input
-											span.form-checkbox
-												+sprite('icon-check')
-											span.form-check__text Требуется отдельный договор
-
-								.order-info
-									figure.order-info__icon
-										img(src="svg/icon-docs.svg", alt="")
-									.order-info__desc
-										span.order-info__title Документы
-										.order-file
-											figure.order-file__icon
-												+sprite('icon-file-doc')
-											span.order-file__name Договор_13114.doc
-											span.order-file__action
-												a(href="#").order-file__link скачать
-										.order-info__ctrl
-											a(href="#").btn.btn--small.btn--grey Принять
-											a(href="#").btn.btn--small.btn--grey На доработку
-
-								.order-info
-									figure.order-info__icon
-										img(src="svg/icon-package.svg", alt="")
-									.order-info__desc
-										span.order-info__title Отслеживание заказа
-										p.order-info__text Отслеживайте выполнение ваших заказов на странице списка заказов. Хотите узнать на каком этапе производства сейчас ваш товар? Откройте страница заказа с наглядной схемой произсводства
+												label.btn.btn--red.btn--file
+													input(type="file")
+													| Добавить файл
+									.col-md-6.col-lg-12
+										.order-info
+											figure.order-info__icon
+												img(src="svg/icon-docs.svg", alt="")
+											.order-info__desc
+												span.order-info__title Документы
+												label.form-check
+													input(type="checkbox").form-check__input
+													span.form-checkbox
+														+sprite('icon-check')
+													span.form-check__text Требуется отдельный договор
+									.col-md-6.col-lg-12
+										.order-info
+											figure.order-info__icon
+												img(src="svg/icon-docs.svg", alt="")
+											.order-info__desc
+												span.order-info__title Документы
+												.order-file
+													figure.order-file__icon
+														+sprite('icon-file-doc')
+													span.order-file__name Договор_13114.doc
+													span.order-file__action
+														a(href="#").order-file__link скачать
+													.order-file__ctrl
+														a(href="#").btn.btn--small.btn--grey Принять
+														a(href="#").btn.btn--small.btn--grey На доработку
+									.col-md-6.col-lg-12
+										.order-info
+											figure.order-info__icon
+												img(src="svg/icon-package.svg", alt="")
+											.order-info__desc
+												span.order-info__title Отслеживание заказа
+												p.order-info__text Отслеживайте выполнение ваших заказов на странице списка заказов. Хотите узнать на каком этапе производства сейчас ваш товар? Откройте страница заказа с наглядной схемой произсводства
 
 
 
@@ -521,10 +594,10 @@ block main
 					.events-user
 						figure.events-user__photo
 						.row
-							.col-6
+							.col-sm-6
 								p.events-user__position Ваш персональный менеджер
 								b.events-user__name Воробьев Алексей
-							.col-6
+							.col-sm-6
 								dl.events-user__contacts
 									dt Email
 									dd
@@ -567,8 +640,8 @@ block main
 										.form-upload__icon
 											+sprite('icon-file-pdf')
 										.form-upload__name Backgroundimage.pdf
-										.form-upload__download скачать
-										.form-upload__delete удалить
+										a(href="#").form-upload__download скачать
+										a(href="#").form-upload__delete удалить
 
 								.form-upload
 									label.form-upload__drop
@@ -580,8 +653,8 @@ block main
 										.form-upload__icon
 											+sprite('icon-file-pdf')
 										.form-upload__name Backgroundimage.pdf
-										.form-upload__download скачать
-										.form-upload__delete удалить
+										a(href="#").form-upload__download скачать
+										a(href="#").form-upload__delete удалить
 
 
 							fieldset.events-card__comments
@@ -614,8 +687,8 @@ block main
 								.form-upload__icon
 									+sprite('icon-file-pdf')
 								.form-upload__name Макет_15332.pdf
-								.form-upload__download скачать
-								.form-upload__delete удалить
+								a(href="#").form-upload__download скачать
+								a(href="#").form-upload__delete удалить
 					
 					span.events-card__title Комментарий дизайнера
 
@@ -657,8 +730,8 @@ block main
 													.form-upload__icon
 														+sprite('icon-file-pdf')
 													.form-upload__name Backgroundimage.pdf
-													.form-upload__download скачать
-													.form-upload__delete удалить
+													a(href="#").form-upload__download скачать
+													a(href="#").form-upload__delete удалить
 
 											.form-upload
 												label.form-upload__drop
@@ -670,8 +743,8 @@ block main
 													.form-upload__icon
 														+sprite('icon-file-pdf')
 													.form-upload__name Backgroundimage.pdf
-													.form-upload__download скачать
-													.form-upload__delete удалить
+													a(href="#").form-upload__download скачать
+													a(href="#").form-upload__delete удалить
 
 
 							fieldset.events-card__comments

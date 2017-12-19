@@ -324,6 +324,6 @@ gulp.task('watch', function() {
 
 // Gulp
 
-gulp.task('default', ['clean', 'scss', 'html', 'js', 'fonts', 'images', 'spriteImages', 'spriteSvg', 'pages', 'watch']);
+gulp.task('default', ['clean', 'scss', 'html', 'js', 'fonts', 'images', 'svg', 'spriteImages', 'spriteSvg', 'pages', 'watch']);
 
 

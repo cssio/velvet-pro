@@ -8,8 +8,8 @@ $mfp-overlay-opacity:                 0.77 !default;                        // O
 $mfp-shadow:                          0 0 8px rgba(0, 0, 0, 0.6) !default; // Shadow on image or iframe
 
 // spacing
-$mfp-popup-padding-left:              8px !default;                        // Padding from left and from right side
-$mfp-popup-padding-left-mobile:       6px !default;                        // Same as above, but is applied when width of window is less than 800px
+$mfp-popup-padding-left:              20px !default;                        // Padding from left and from right side
+$mfp-popup-padding-left-mobile:       30px !default;                        // Same as above, but is applied when width of window is less than 800px
 
 $mfp-z-index-base:                    1040 !default;                       // Base z-index of popup
 
@@ -621,6 +621,26 @@ button {
 
 // -----
 
+.is-lockScroll {
+  @include breakpointMax(sm) {
+    // overflow: hidden;
+  }
+}
+
+.mfp-container {
+  @include breakpointMax(sm) {
+    padding: 0;
+    &:before {
+      vertical-align: top;
+    }
+  }
+}
+
+.mfp-content {
+  @include breakpointMax(sm) {
+    vertical-align: top;
+  }
+}
 
 .mfp-popup {
     position: relative;
@@ -630,6 +650,12 @@ button {
     padding: 30px;
     max-width: 860px;
     text-align: left;
+    
+    @include breakpointMax(sm) {
+      margin: 0;
+      border-radius: 0;
+      overflow: hidden;
+    }
 }
 
 .mfp-popup-close {
@@ -648,9 +674,6 @@ button {
     &:hover {
         opacity: 1;
     }
-}
-
-.mfp-popup--add {
    
 }
 
@@ -661,7 +684,13 @@ button {
 }
 
 .mfp-popup--task, .mfp-popup--add {
-  // padding: 0;
+  @include breakpointMax(sm) {
+    padding: 20px 10px;
+    min-height: 100vh;
+    .mfp-popup-close {
+      display: none;
+    }
+  }
 }
 
 .mfp-popup__icon {
@@ -695,3 +724,4 @@ button {
         }
     }
 }
+

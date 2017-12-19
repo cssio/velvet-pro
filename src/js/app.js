@@ -10,10 +10,13 @@ import Timeline     from './modules/timeline';
 import Range        from './modules/range';
 import Check        from './modules/check';
 import autosize     from './modules/autoSizeInput';
+import Autocomplete from './modules/autocomplete';
 import scrollbar    from './modules/scrollbar';
 import change       from './modules/change';
-import Autocomplete from './modules/autocomplete';
-
+import Validation   from './modules/validation';
+import Collapse     from './modules/collapse';
+import isotope      from './modules/isotope';
+import edit         from './modules/edit';
 
 // Preload
 document.addEventListener("DOMContentLoaded", function(){

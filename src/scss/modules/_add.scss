@@ -5,14 +5,45 @@
 
 
 .add {
-	.scroll-wrapper {
+
+	.back {
+		top: 0;
+		margin: 0 0 20px;
+	}
+	@include breakpoint(sm) {
+		.back {
+			display: none;
+		}
+	}
+
+	& > .scroll-wrapper {
 		max-height: 70vh;
 		margin: -30px -30px -30px 0;
 		padding: 0 30px 0 0;
+		& > .scroll-content {
+			padding: 30px 0;
+		}
 	}
-	.scroll-content {
-		padding: 30px 0;
+
+	@include breakpointMax(sm) {
+		& > .scroll-wrapper {
+			max-height: none;
+			margin: 0;
+			padding: 0;
+			overflow: visible;
+			&:after {
+				display: none;	
+			}
+			& > .scroll-content {
+				padding: 0;
+				overflow: visible;
+				max-height: none !important;
+				height: auto !important;
+			}
+		}
+		
 	}
+	
 }
 
 .add__heading {
@@ -36,6 +67,11 @@
 	position: relative;
 	margin: 0 30px 0 0;
 	float: left;
+	@include breakpointMax(sm) {
+		width: auto;	
+		margin: 0;
+		float: none;
+	}
 
 }
 
@@ -94,6 +130,10 @@
 		background: #e4eaeb;
 		border-color: #e4eaeb;
 		text-align: center;
+	}
+	@include breakpointMax(sm) {
+		padding: 0;
+		max-width: none;
 	}
 }
 

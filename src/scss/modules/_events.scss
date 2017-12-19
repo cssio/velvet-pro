@@ -3,7 +3,7 @@
 // --------------------------------------------------------------------------
 
 .events {
-	padding: 70px 0;
+	padding: 75px 0;
 }
 
 .events-heading {
@@ -18,25 +18,27 @@
 
 .events-card {
 	display: block;	
-	border-radius: 4px;
+	
 	background: #fff;
-	margin: 0 0 20px;
+	margin: 0 -10px 20px;
 	position: relative;
-	padding: 25px 30px 30px;
+	padding: 20px 10px;
 	overflow: hidden;
 	max-width: 700px;
 	font-size: 14px;
 	line-height: 17px;
 	letter-spacing: 0.3px;
 	transition: 0.25s;
+	min-width: 100%;
 	&:after {
 		content: '';
 		display: block;
 		position: absolute;
 		top: 0;
 		left: 0;
-		bottom: 0;
-		width: 6px;
+		width: 100%;
+		height: 5px;
+		
 		background: #d5d5d5;
 	}
 	&:hover {
@@ -50,6 +52,19 @@
 	}
 	.form-textarea {
 		max-width: 456px;
+	}
+	@include breakpoint(sm) {
+		padding: 25px 30px 30px;
+		margin: 0 0 20px;
+		border-radius: 4px;
+		&:after {
+			bottom: 0;
+			height: 100%;
+			width: 6px;
+		}
+	}
+	@include breakpoint(md) {
+		min-width: auto;
 	}
 
 }

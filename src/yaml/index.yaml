@@ -2,9 +2,9 @@ ProjectTitle: Velvet-pro
 
 PageList:
 - file: order-page.html
-  ready: 70
+  ready: 100
 - file: order-list.html
-  ready: 70
+  ready: 100
 - file: team.html
   ready: 100
 - file: team-profile.html

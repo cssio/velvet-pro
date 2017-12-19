@@ -1,7 +1,7 @@
 /*************** SCROLLBAR BASE CSS ***************/
 
 .scroll-wrapper {
-    overflow: hidden !important;
+    overflow: hidden;
     // padding: 0 30px !important;
     // margin: 0 -30px;
     position: relative;
@@ -24,7 +24,8 @@
         margin: 0;
         max-height: none;
         max-width: none !important;
-        overflow: scroll !important;
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
         // padding: 0;
         position: relative !important;
         top: 0;

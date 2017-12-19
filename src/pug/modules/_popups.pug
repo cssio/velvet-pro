@@ -43,6 +43,14 @@ include _mixins
 		+sprite('icon-close')
 
 	.add
+
+		// Back :: Start
+		.back
+			a(href="#" data-mfp-close).back__link
+				+sprite('icon-back')
+				| К списку сотрудников
+		// Back :: End
+		
 		span.add__heading Добавление товара
 		
 		.js-scrollbar
@@ -56,7 +64,7 @@ include _mixins
 							.form-group
 								label.form-label Поиск по артикулу
 								label.form-field
-									input(type="text" placeholder="Искать").form-input.form-input--small.form-input--grey
+									input(type="text" placeholder="Искать").form-input.form-input--small.form-input--grey.js-autocomplete-number
 									span.form-field__icon
 										+sprite('icon-search')
 
@@ -85,6 +93,8 @@ include _mixins
 									option Option 3
 									option Option 4
 									option Option 5
+
+							.form-group
 								.row
 									.col
 										input(type="text" placeholder="Длина").form-input
@@ -213,6 +223,14 @@ include _mixins
 		+sprite('icon-close')
 
 	.task
+
+		// Back :: Start
+		.back
+			a(href="#" data-mfp-close).back__link
+				+sprite('icon-back')
+				| К списку сотрудников
+		// Back :: End
+
 		a(href="#").task__date
 			| 25 минут назад
 			span.task__date-tooltip 12:55 22.03.2018
@@ -233,79 +251,185 @@ include _mixins
 						.tabs__panel.js-tabs-panel.is-active
 
 							.js-scrollbar
-
+									
 								.task-order
 
-									a(href="#").task-order__more
-										| Подробнее
-										+sprite('icon-arrow-right')
+									.task-order__info
 
-									span.task-order__number Заказ <mark>№4532</mark>
+										a(href="#").task-order__more
+											| Подробнее
+											+sprite('icon-arrow-right')
 
-									span.task-order__status
-										+sprite('icon-status-wait')
-										| Согласование граф. материалов
+										span.task-order__number Заказ <mark>№4532</mark>
 
-									span.task-order__date 12.01.18 – 25.01.18
+										span.task-order__status
+											+sprite('icon-status-wait')
+											| Согласование граф. материалов
 
-									table.task-order__table
-										tfoot
-											tr
-												td
-												td Доставка DPD
-												td.text-right <b>4 000 ₽</b>
-											tr
-												td(colspan="3")
-													p.task-order__payment
-														span.task-order__payment-text Оплата
-														span.task-order__payment-title Онлайн-оплата банковской картой
-														span.task-order__payment-status
-															+sprite('icon-status-success')
-															| Оплачено (13.01.2018)
-										tbody
-											tr
-												td <b>1.</b>
-												td Шторы премиум с логотипом<br>200 шт
-												td.text-right <b>145 000 ₽</b>
-											tr
-												td <b>2.</b>
-												td Шторы эконом<br>300 шт
-												td.text-right <b>120 000 ₽</b>
+										span.task-order__date 12.01.18 – 25.01.18
+		
+									.task-collapse.js-collapse
 
-									p.task-order__total
-										small Итого:
-										| 269 000 ₽
+										button.task-collapse__trigger.js-collapse-trigger
+											| Данные заказа
+											+sprite('icon-arrow-down')
+
+										.task-collapse__content.js-collapse-content
+
+											table.task-order__table
+												tfoot
+													tr
+														td
+														td Доставка DPD
+														td.text-right <b>4 000 ₽</b>
+													tr
+														td(colspan="3")
+															p.task-order__payment
+																span.task-order__payment-text Оплата
+																span.task-order__payment-title Онлайн-оплата банковской картой
+																span.task-order__payment-status
+																	+sprite('icon-status-success')
+																	| Оплачено (13.01.2018)
+												tbody
+													tr
+														td <b>1.</b>
+														td Шторы премиум с логотипом<br>200 шт
+														td.text-right <b>145 000 ₽</b>
+													tr
+														td <b>2.</b>
+														td Шторы эконом<br>300 шт
+														td.text-right <b>120 000 ₽</b>
+
+											p.task-order__total
+												small Итого:
+												| 269 000 ₽
+
 
 						.tabs__panel.js-tabs-panel
 							
 							.js-scrollbar
-								dl.task-client
-									dt Email
-									dd
-										a(href="#") A.perepelov@vevlet-pro.ru
-									dt Телефон
-									dd
-										a(href="#") 8 (999) 999 99 99
-									dt Название организации
-									dd ООО "Компания по продажам"
-									dt Юридический адрес
-									dd ул. Красная Пресня, 23с1А, Офис 200
-									dt ИНН
-									dd 5936602749
-									dt КПП
-									dd 459274512
-									dt Расчетный счет
-									dd 456.13.655.9678.23165678
-									dt Наименование банка 
-									dd ОАО "Сбербанк"
-									dt БИК
-									dd 12.6453.8765.234.654
-									dt Должность руководителя
-									dd Генеральный директор
-									dt ФИО руководителя
-									dd Соболев Михаил Юрьевич
-									dt Юридический адрес
-									dd ул. Красная Пресня, 23с1А, Офис 200
+
+
+								.task-collapse.js-collapse
+
+									button.task-collapse__trigger.js-collapse-trigger
+										| Данные клиента
+										+sprite('icon-arrow-down')
+
+									.task-collapse__content.js-collapse-content
+
+
+										.task-client
+
+											.task-data.js-edit
+												button.task-data__trigger.js-edit-trigger
+													+sprite('icon-edit')
+												label.task-data__label Email
+												input.task-data__input.task-data__input--orange.js-edit-input(type="text" value="A.perepelov@vevlet-pro.ru" disabled)
+												.task-data__ctrl
+													button.btn.btn--small.btn--red.js-edit-save Сохранить
+													button.btn.btn--small.btn--grey.js-edit-cancel Отмена
+
+											.task-data.js-edit
+												button.task-data__trigger.js-edit-trigger
+													+sprite('icon-edit')
+												label.task-data__label Телефон
+												input.task-data__input.task-data__input--orange.js-edit-input(type="text" value="8 (999) 999 99 99" disabled)
+												.task-data__ctrl
+													button.btn.btn--small.btn--red.js-edit-save Сохранить
+													button.btn.btn--small.btn--grey.js-edit-cancel Отмена
+
+											.task-data.js-edit
+												button.task-data__trigger.js-edit-trigger
+													+sprite('icon-edit')
+												label.task-data__label Название организации
+												input.task-data__input.js-edit-input(type="text" value="ООО Компания по продажам" disabled)
+												.task-data__ctrl
+													button.btn.btn--small.btn--red.js-edit-save Сохранить
+													button.btn.btn--small.btn--grey.js-edit-cancel Отмена
+
+											.task-data.js-edit
+												button.task-data__trigger.js-edit-trigger
+													+sprite('icon-edit')
+												label.task-data__label Юридический адрес
+												input.task-data__input.js-edit-input(type="text" value="ул. Красная Пресня, 23с1А, Офис 200" disabled)
+												.task-data__ctrl
+													button.btn.btn--small.btn--red.js-edit-save Сохранить
+													button.btn.btn--small.btn--grey.js-edit-cancel Отмена
+
+
+											.task-data.js-edit
+												button.task-data__trigger.js-edit-trigger
+													+sprite('icon-edit')
+												label.task-data__label ИНН
+												input.task-data__input.js-edit-input(type="text" value="5936602749" disabled)
+												.task-data__ctrl
+													button.btn.btn--small.btn--red.js-edit-save Сохранить
+													button.btn.btn--small.btn--grey.js-edit-cancel Отмена
+
+											.task-data.js-edit
+												button.task-data__trigger.js-edit-trigger
+													+sprite('icon-edit')
+												label.task-data__label КПП
+												input.task-data__input.js-edit-input(type="text" value="459274512" disabled)
+												.task-data__ctrl
+													button.btn.btn--small.btn--red.js-edit-save Сохранить
+													button.btn.btn--small.btn--grey.js-edit-cancel Отмена
+
+											.task-data.js-edit
+												button.task-data__trigger.js-edit-trigger
+													+sprite('icon-edit')
+												label.task-data__label Расчетный счет
+												input.task-data__input.js-edit-input(type="text" value="456.13.655.9678.23165678" disabled)
+												.task-data__ctrl
+													button.btn.btn--small.btn--red.js-edit-save Сохранить
+													button.btn.btn--small.btn--grey.js-edit-cancel Отмена
+
+											.task-data.js-edit
+												button.task-data__trigger.js-edit-trigger
+													+sprite('icon-edit')
+												label.task-data__label Наименование банка 
+												input.task-data__input.js-edit-input(type="text" value="ОАО Сбербанк" disabled)
+												.task-data__ctrl
+													button.btn.btn--small.btn--red.js-edit-save Сохранить
+													button.btn.btn--small.btn--grey.js-edit-cancel Отмена
+
+											.task-data.js-edit
+												button.task-data__trigger.js-edit-trigger
+													+sprite('icon-edit')
+												label.task-data__label БИК
+												input.task-data__input.js-edit-input(type="text" value="12.6453.8765.234.654" disabled)
+												.task-data__ctrl
+													button.btn.btn--small.btn--red.js-edit-save Сохранить
+													button.btn.btn--small.btn--grey.js-edit-cancel Отмена
+
+											.task-data.js-edit
+												button.task-data__trigger.js-edit-trigger
+													+sprite('icon-edit')
+												label.task-data__label Должность руководителя
+												input.task-data__input.js-edit-input(type="text" value="Генеральный директор" disabled)
+												.task-data__ctrl
+													button.btn.btn--small.btn--red.js-edit-save Сохранить
+													button.btn.btn--small.btn--grey.js-edit-cancel Отмена
+
+											.task-data.js-edit
+												button.task-data__trigger.js-edit-trigger
+													+sprite('icon-edit')
+												label.task-data__label ФИО руководителя
+												input.task-data__input.js-edit-input(type="text" value="Соболев Михаил Юрьевич" disabled)
+												.task-data__ctrl
+													button.btn.btn--small.btn--red.js-edit-save Сохранить
+													button.btn.btn--small.btn--grey.js-edit-cancel Отмена
+
+											.task-data.js-edit
+												button.task-data__trigger.js-edit-trigger
+													+sprite('icon-edit')
+												label.task-data__label  Юридический адрес
+												input.task-data__input.js-edit-input(type="text" value="ул. Красная Пресня, 23с1А, Офис 200" disabled)
+												.task-data__ctrl
+													button.btn.btn--small.btn--red.js-edit-save Сохранить
+													button.btn.btn--small.btn--grey.js-edit-cancel Отмена
+
 
 
 			.task__content
@@ -376,10 +500,11 @@ include _mixins
 						.form-group
 							label.form-label
 								b Дата оплаты
-							label.form-field
-								input(type="text" placeholder="" readonly data-position="bottom right").form-input.js-datepicker
+							.form-field.js-datepicker-trigger
+								input(type="text" placeholder="").form-input.js-datepicker-input
 								span.form-field__icon
 									+sprite('icon-calendar')
+								.form-datepicker.js-datepicker-inline
 
 						.form-group
 							label.form-label
@@ -417,7 +542,14 @@ include _mixins
 							label.form-check.form-check--trigger
 								input(type="radio" name="radioName2").form-check__input.js-check-trigger
 								span.form-radio
-								span.form-check__btn Делегировать
+								span.form-check__btn Утверждено
+
+						.form-check-group.js-check
+
+							label.form-check.form-check--trigger
+								input(type="radio" name="radioName2").form-check__input.js-check-trigger
+								span.form-radio
+								span.form-check__btn На доработку
 
 						
 						.form-check-group.js-check
@@ -437,12 +569,20 @@ include _mixins
 
 						hr
 
+
 						.form-check-group.js-check
 
 							label.form-check.form-check--trigger
 								input(type="radio" name="radioName3").form-check__input.js-check-trigger
 								span.form-radio
-								span.form-check__btn Связаться с клиентом снова
+								span.form-check__btn Заказ подтвержден
+
+						.form-check-group.js-check
+
+							label.form-check.form-check--trigger
+								input(type="radio" name="radioName3").form-check__input.js-check-trigger
+								span.form-radio
+								span.form-check__btn Отменить заказ
 
 						
 						.form-check-group.js-check
@@ -451,26 +591,26 @@ include _mixins
 								input(type="radio" name="radioName3").form-check__input.js-check-trigger
 								span.form-radio
 								span.form-check__btn Связаться с клиентом снова
-
-							.form-check-content.js-check-content
-								
+							
+							.form-check-content
 								.form-buttons
 									label.btn-check
-										input(type="radio" name="radioDate").btn-check__input
+										input(type="radio" name="radioDate" disabled).btn-check__input
 										span.btn.btn--small.btn--grey Завтра
 
 									label.btn-check
-										input(type="radio" name="radioDate").btn-check__input
+										input(type="radio" name="radioDate" disabled).btn-check__input
 										span.btn.btn--small.btn--grey Через неделю
 
-									label.btn-check
-										input(type="radio" name="radioDate").btn-check__input
+									label.btn-check.js-datepicker-trigger
+										input(type="radio" name="radioDate" disabled).btn-check__input
 										span.btn.btn--small.btn--grey
 											+sprite('icon-calendar')
-										span.form-datepicker.js-datepicker
+										input(type="text").btn-check__selected.js-datepicker-input
+										span.form-datepicker.js-datepicker-inline
 
 								label.form-check
-									input(type="checkbox").form-check__input
+									input(type="checkbox" disabled).form-check__input
 									span.form-checkbox
 										+sprite('icon-check')
 									span.form-check__text Отправить ссылку на оплату

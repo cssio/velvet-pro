@@ -16,54 +16,59 @@ block main
 					.team-sorting__search
 						label.form-label Поиск по имени
 						label.form-field
-							input(type="text").form-input.form-input--small.form-input--grey.js-autocomplete
+							input(type="search" placeholder="Искать").form-input.form-input--small.form-input--grey.js-isotope-autocomplete
 							span.form-field__icon
 								+sprite('icon-search')
+							button.form-field__clear.js-isotope-clear
+								+sprite('icon-close-min')
 					.team-sorting__buttons
 						.row
 							.col-auto
-								label.btn-check
-									input(type="radio" name="radioTeam").btn-check__input
+								label.btn-check(data-sort-by="*")
+									input(type="radio" name="radioTeam" checked).btn-check__input
 									span.btn.btn--small.btn--grey Все
 							.col-auto
-								label.btn-check
+								label.btn-check(data-sort-by=".is-director")
 									input(type="radio" name="radioTeam").btn-check__input
 									span.btn.btn--small.btn--grey Руководители ОП
 							.col-auto
-								label.btn-check
-									input(type="radio" checked).btn-check__input
+								label.btn-check(data-sort-by=".is-manager")
+									input(type="radio" name="radioTeam").btn-check__input
 									span.btn.btn--small.btn--grey Менеджеры
 							.col-auto
-								label.btn-check
+								label.btn-check(data-sort-by=".is-designer")
 									input(type="radio" name="radioTeam").btn-check__input
 									span.btn.btn--small.btn--grey Дизайнеры
 							.col-auto
-								label.btn-check
+								label.btn-check(data-sort-by=".is-booker")
 									input(type="radio" name="radioTeam").btn-check__input
 									span.btn.btn--small.btn--grey Бухгалтеры
 							.col-auto
-								label.btn-check
+								label.btn-check(data-sort-by=".is-printer")
 									input(type="radio" name="radioTeam").btn-check__input
 									span.btn.btn--small.btn--grey Печатники
 							.col-auto
-								label.btn-check
+								label.btn-check(data-sort-by=".is-logist")
 									input(type="radio" name="radioTeam").btn-check__input
 									span.btn.btn--small.btn--grey Логисты
 							.col-auto
-								label.btn-check
+								label.btn-check(data-sort-by=".is-admin")
 									input(type="radio" name="radioTeam").btn-check__input
 									span.btn.btn--small.btn--grey Администраторы
 							.col-auto
-								label.btn-check
+								label.btn-check(data-sort-by=".is-leader")
 									input(type="radio" name="radioTeam").btn-check__input
 									span.btn.btn--small.btn--grey Начальники цеха обработки
 
-			.team-grid
-				.team-grid__col
+
+			p.team-empty.js-isotope-empty Ничего не найдено
+
+			.team-grid.js-isotope-grid
+				.team-grid__item.is-director
 
 					.team-user
 						figure.team-user__photo
-						p.team-user__position Менеджер
+						p.team-user__position Руководитель ОП
 						b.team-user__name Воробьев Михаил
 						ul.team-user__contacts
 							li
@@ -72,7 +77,7 @@ block main
 								a(href="#") 8 (999) 999-99-99
 						a(href="#").btn.btn--small.btn--grey Редактировать
 
-				.team-grid__col
+				.team-grid__item.is-manager
 
 					.team-user
 						figure.team-user__photo
@@ -85,11 +90,11 @@ block main
 								a(href="#") 8 (999) 999-99-99
 						a(href="#").btn.btn--small.btn--grey Редактировать
 
-				.team-grid__col
+				.team-grid__item.is-designer
 
 					.team-user
 						figure.team-user__photo
-						p.team-user__position Менеджер
+						p.team-user__position Дизайнер
 						b.team-user__name Анастасия Ефимова
 						ul.team-user__contacts
 							li
@@ -98,11 +103,11 @@ block main
 								a(href="#") 8 (999) 999-99-99
 						a(href="#").btn.btn--small.btn--grey Редактировать
 
-				.team-grid__col
+				.team-grid__item.is-booker
 
 					.team-user
 						figure.team-user__photo
-						p.team-user__position Менеджер
+						p.team-user__position Бухгалтер
 						b.team-user__name Николай Куликов
 						ul.team-user__contacts
 							li
@@ -111,11 +116,11 @@ block main
 								a(href="#") 8 (999) 999-99-99
 						a(href="#").btn.btn--small.btn--grey Редактировать
 
-				.team-grid__col
+				.team-grid__item.is-printer
 
 					.team-user
 						figure.team-user__photo
-						p.team-user__position Менеджер
+						p.team-user__position Печатник
 						b.team-user__name Авдотья Ершова
 						ul.team-user__contacts
 							li
@@ -124,11 +129,11 @@ block main
 								a(href="#") 8 (999) 999-99-99
 						a(href="#").btn.btn--small.btn--grey Редактировать
 
-				.team-grid__col
+				.team-grid__item.is-logist
 
 					.team-user
 						figure.team-user__photo
-						p.team-user__position Менеджер
+						p.team-user__position Логист
 						b.team-user__name Милена Макарова
 						ul.team-user__contacts
 							li
@@ -137,11 +142,11 @@ block main
 								a(href="#") 8 (999) 999-99-99
 						a(href="#").btn.btn--small.btn--grey Редактировать
 
-				.team-grid__col
+				.team-grid__item.is-admin
 
 					.team-user
 						figure.team-user__photo
-						p.team-user__position Менеджер
+						p.team-user__position Администратор
 						b.team-user__name Динар Румянцев
 						ul.team-user__contacts
 							li
@@ -150,11 +155,11 @@ block main
 								a(href="#") 8 (999) 999-99-99
 						a(href="#").btn.btn--small.btn--grey Редактировать
 
-				.team-grid__col
+				.team-grid__item.is-leader
 
 					.team-user
 						figure.team-user__photo
-						p.team-user__position Менеджер
+						p.team-user__position Начальник цеха обработки
 						b.team-user__name Игнат Жуков
 						ul.team-user__contacts
 							li
@@ -163,7 +168,7 @@ block main
 								a(href="#") 8 (999) 999-99-99
 						a(href="#").btn.btn--small.btn--grey Редактировать
 
-				.team-grid__col
+				.team-grid__item.is-manager
 
 					.team-user
 						figure.team-user__photo
@@ -176,11 +181,11 @@ block main
 								a(href="#") 8 (999) 999-99-99
 						a(href="#").btn.btn--small.btn--grey Редактировать
 
-				.team-grid__col
+				.team-grid__item.is-designer
 
 					.team-user
 						figure.team-user__photo
-						p.team-user__position Менеджер
+						p.team-user__position Дизайнер
 						b.team-user__name Кристина Гриднева
 						ul.team-user__contacts
 							li

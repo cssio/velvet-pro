@@ -1,25 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="17px" height="31px" viewBox="0 0 17 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
-    <title>Triangle Copy</title>
+    <title>right-arrow-13 copy</title>
     <desc>Created with Sketch.</desc>
-    <defs>
-        <filter x="-18.3%" y="-13.0%" width="136.7%" height="133.7%" filterUnits="objectBoundingBox" id="filter-1">
-            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="13" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.192198822 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
-            <feMerge>
-                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
-                <feMergeNode in="SourceGraphic"></feMergeNode>
-            </feMerge>
-        </filter>
-    </defs>
-    <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1498.000000, -154.000000)">
-        <g id="calendar" transform="translate(1385.000000, 98.000000)" stroke="#232221">
-            <g id="calendar-active" transform="translate(75.000000, 0.000000)">
-                <g id="calendar" filter="url(#filter-1)" transform="translate(0.000000, 34.000000)">
-                    <polyline id="Triangle-Copy" transform="translate(63.000000, 37.142857) scale(-1, 1) rotate(-270.000000) translate(-63.000000, -37.142857) " points="57.8571429 40.1428571 63 34.1428571 63 34.1428571 68.1428571 40.1428571"></polyline>
-                </g>
+    <defs></defs>
+    <g id="768-список-заказов" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-17.000000, -437.000000)" opacity="0.400000006">
+        <g id="Group-4" transform="translate(-29.000000, 296.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="right-arrow-13-copy" transform="translate(54.500000, 156.500000) scale(-1, 1) translate(-54.500000, -156.500000) translate(46.000000, 141.000000)">
+                <path d="M1.91626409,30.6793103 C1.69726248,30.8931034 1.42351047,31 1.12238325,31 C0.821256039,31 0.547504026,30.8931034 0.328502415,30.6793103 C-0.109500805,30.2517241 -0.109500805,29.5568966 0.328502415,29.1293103 L14.2898551,15.5 L0.328502415,1.87068966 C-0.109500805,1.44310345 -0.109500805,0.748275862 0.328502415,0.320689655 C0.766505636,-0.106896552 1.47826087,-0.106896552 1.91626409,0.320689655 L16.6714976,14.725 C17.1095008,15.1525862 17.1095008,15.8474138 16.6714976,16.275 L1.91626409,30.6793103 Z" id="Shape"></path>
             </g>
         </g>
     </g>

@@ -46,31 +46,41 @@ block main
 									+sprite('icon-status-wait')
 									| В производстве
 								span.order-card__date 12.01.18 – 25.01.18
+							
+							
 
 							.order-card__body
-								table.order-card__table
-									tfoot
-										tr
-											td
-											td Доставка DPD
-											td <b>4 000 ₽</b>
-										tr
-											td(colspan="3")
-												p.order-card__payment
-													span.order-card__payment-text Оплата
-													span.order-card__payment-title Онлайн-оплата банковской картой
-													span.order-card__payment-status
-														+sprite('icon-status-success')
-														| Оплачено (13.01.2018)
-									tbody
-										tr
-											td <b>1.</b>
-											td Шторы премиум с логотипом<br>200 шт
-											td <b>145 000 ₽</b>
-										tr
-											td <b>2.</b>
-											td Шторы эконом<br>300 шт
-											td <b>120 000 ₽</b>
+
+								.order-collapse.js-collapse
+
+									button.order-collapse__trigger.js-collapse-trigger
+										| Состав заказа
+										+sprite('icon-arrow-down')
+									
+									.order-collapse__content.js-collapse-content
+										table.order-card__table
+											tfoot
+												tr
+													td
+													td Доставка DPD
+													td <b>4 000 ₽</b>
+												tr
+													td(colspan="3")
+														p.order-card__payment
+															span.order-card__payment-text Оплата
+															span.order-card__payment-title Онлайн-оплата банковской картой
+															span.order-card__payment-status
+																+sprite('icon-status-success')
+																| Оплачено (13.01.2018)
+											tbody
+												tr
+													td <b>1.</b>
+													td Шторы премиум с логотипом<br>200 шт
+													td <b>145 000 ₽</b>
+												tr
+													td <b>2.</b>
+													td Шторы эконом<br>300 шт
+													td <b>120 000 ₽</b>
 
 						.order-card__ctrl
 							.row
@@ -94,29 +104,37 @@ block main
 								span.order-card__date 12.01.18 – 25.01.18
 
 							.order-card__body
-								table.order-card__table
-									tfoot
-										tr
-											td
-											td Доставка DPD
-											td.text-right <b>4 000 ₽</b>
-										tr
-											td(colspan="3")
-												p.order-card__payment
-													span.order-card__payment-text Оплата
-													span.order-card__payment-title Онлайн-оплата банковской картой
-													span.order-card__payment-status
-														+sprite('icon-status-wait')
-														| Не оплачено
-									tbody
-										tr
-											td <b>1.</b>
-											td Шторы премиум с логотипом<br>200 шт
-											td.text-right <b>145 000 ₽</b>
-										tr
-											td <b>2.</b>
-											td Шторы эконом<br>300 шт
-											td.text-right <b>120 000 ₽</b>
+
+								.order-collapse.js-collapse
+
+									button.order-collapse__trigger.js-collapse-trigger
+										| Состав заказа
+										+sprite('icon-arrow-down')
+									
+									.order-collapse__content.js-collapse-content
+										table.order-card__table
+											tfoot
+												tr
+													td
+													td Доставка DPD
+													td <b>4 000 ₽</b>
+												tr
+													td(colspan="3")
+														p.order-card__payment
+															span.order-card__payment-text Оплата
+															span.order-card__payment-title Онлайн-оплата банковской картой
+															span.order-card__payment-status
+																+sprite('icon-status-success')
+																| Оплачено (13.01.2018)
+											tbody
+												tr
+													td <b>1.</b>
+													td Шторы премиум с логотипом<br>200 шт
+													td <b>145 000 ₽</b>
+												tr
+													td <b>2.</b>
+													td Шторы эконом<br>300 шт
+													td <b>120 000 ₽</b>
 
 						.order-card__ctrl
 							.row
@@ -210,7 +228,7 @@ block main
 						.form-upload__icon
 							+sprite('icon-file-pdf')
 						.form-upload__name Backgroundimage.pdf
-						.form-upload__download скачать
+						a(href="#").form-upload__download скачать
 						.form-upload__delete удалить
 
 
@@ -225,7 +243,7 @@ block main
 						.form-upload__icon
 							+sprite('icon-file-pdf')
 						.form-upload__name Backgroundimage.pdf
-						.form-upload__download скачать
+						a(href="#").form-upload__download скачать
 						.form-upload__delete удалить
 
 				label File Upload Success
@@ -239,7 +257,7 @@ block main
 						.form-upload__icon
 							+sprite('icon-file-pdf')
 						.form-upload__name Backgroundimage.pdf
-						.form-upload__download скачать
+						a(href="#").form-upload__download скачать
 						.form-upload__delete удалить
 		
 			.col-md-4
@@ -330,66 +348,66 @@ block main
 
 				label Search
 				label.form-field
-					input(type="text" placeholder="Искать").form-input
+					input(type="text" placeholder="Искать").form-input.js-autocomplete
 					span.form-field__icon
 						+sprite('icon-search')
 
 				label.form-field
-					input(type="text" placeholder="Искать").form-input.form-input--small.form-input--grey
+					input(type="text" placeholder="Искать").form-input.form-input--small.form-input--grey.js-autocomplete
 					span.form-field__icon
 						+sprite('icon-search')
 
 
 
 		.row(style="margin-bottom: 40px;")
-			.col-auto
+			.col-auto(style="margin-bottom: 5px;")
 				a(href="#").btn.btn--red__empty Button red empty
-			.col-auto
+			.col-auto(style="margin-bottom: 5px;")
 				a(href="#").btn.btn--red Button red
-			.col-auto
+			.col-auto(style="margin-bottom: 5px;")
 				a(href="#").btn.btn--green Button green
-			.col-auto
+			.col-auto(style="margin-bottom: 5px;")
 				a(href="#").btn.btn--grey Button grey
-			.col-auto
+			.col-auto(style="margin-bottom: 5px;")
 				a(href="#").btn.btn--more Button more
-			.col-auto
+			.col-auto(style="margin-bottom: 5px;")
 				a(href="#").btn.btn--more.is-loading Button more loading
 
 		.row(style="margin-bottom: 40px;")
-			.col-auto
+			.col-auto(style="margin-bottom: 5px;")
 				a(href="#").btn.btn--small.btn--red__empty Button red empty
-			.col-auto
+			.col-auto(style="margin-bottom: 5px;")
 				a(href="#").btn.btn--small.btn--red Button red
-			.col-auto
+			.col-auto(style="margin-bottom: 5px;")
 				a(href="#").btn.btn--small.btn--green Button green
-			.col-auto
+			.col-auto(style="margin-bottom: 5px;")
 				a(href="#").btn.btn--small.btn--grey Button grey
-			.col-auto
+			.col-auto(style="margin-bottom: 5px;")
 				a(href="#").btn.btn--small.btn--more Button more
-			.col-auto
+			.col-auto(style="margin-bottom: 5px;")
 				a(href="#").btn.btn--small.btn--more.is-loading Button more loading
 
 
 
 
 		.row(style="margin-bottom: 30px;")
-			.col-auto
+			.col-auto(style="margin-bottom: 5px;")
 				+sprite('icon-file-eps')
-			.col-auto
+			.col-auto(style="margin-bottom: 5px;")
 				+sprite('icon-file-doc')
-			.col-auto
+			.col-auto(style="margin-bottom: 5px;")
 				+sprite('icon-file-cdr')
-			.col-auto
+			.col-auto(style="margin-bottom: 5px;")
 				+sprite('icon-file-psd')
-			.col-auto
+			.col-auto(style="margin-bottom: 5px;")
 				+sprite('icon-file-jpg')
-			.col-auto
+			.col-auto(style="margin-bottom: 5px;")
 				+sprite('icon-file-tiff')
-			.col-auto
+			.col-auto(style="margin-bottom: 5px;")
 				+sprite('icon-file-pdf')
-			.col-auto
+			.col-auto(style="margin-bottom: 5px;")
 				+sprite('icon-file-ai')
-			.col-auto
+			.col-auto(style="margin-bottom: 5px;")
 				+sprite('icon-file-xlsx')
 			.col-auto.align-self-center
 				+sprite('icon-file-search')

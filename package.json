@@ -48,9 +48,11 @@
     "air-datepicker": "^2.2.3",
     "easy-autocomplete": "^1.3.5",
     "ion-rangeslider": "^2.2.0",
+    "isotope-layout": "^3.0.4",
     "jquery": "^3.2.1",
+    "jquery-validation": "^1.17.0",
     "magnific-popup": "^1.1.0",
-    "owl.carousel": "^2.2.0",
-    "slick-carousel": "^1.8.1"
+    "masonry-layout": "^4.2.0",
+    "owl.carousel": "^2.2.0"
   }
 }

@@ -144,9 +144,12 @@
 	border-color: rgba(0, 0, 0, 0.04);
 	color: #909090;
 	&:hover {
-		background: #f0605f;
-		border-color: #f0605f;
-		color: #fff;
+		// background: #f0605f;
+		// border-color: #f0605f;
+		// color: #fff;
+		border-color: #DBDBDB;
+		background: #DBDBDB;
+		color: #909090;
 	}
 }
 
@@ -170,6 +173,34 @@
 	.icon-calendar {
 		margin: 0 -5px;
 	}
+	.form-datepicker {
+	
+		&:after {
+			// right: 50%;
+			margin-right: 6px;
+			// left: 14px;
+		}
+	}
+}
+
+.btn-check__selected {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	border: none;
+	background: none;
+	padding: 0;
+	color: #909090;
+	font-size: 14px;
+	line-height: 29px;
+	transition: 0.25s;
+	width: 80px;
+	opacity: 0;
+	visibility: hidden;
+	text-align: center;
+	@include breakpointMax(xs) {
+		display: none;
+	}
 }
 
 .btn-check__input {
@@ -187,6 +218,27 @@
 		background: #6e6e6e;
 		border-color: #6e6e6e;
 		color: #fff;
+	}
+	&:checked ~ .btn-check__selected {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&:disabled ~ .btn--grey {
+		background-color: rgba(0, 0, 0, 0.04);
+  		border: solid 1px #dbdbdb;
+  		color: #909090;
+  		opacity: 0.5;
+  		transform: translate(0,0);
+  		cursor: default;
+	}
+	&:disabled ~ .btn--dark {
+		background-color: rgba(0, 0, 0, 0.04);
+  		border: solid 1px #dbdbdb;
+  		color: #909090;
+  		opacity: 0.5;
+  		transform: translate(0,0);
+  		cursor: default;
 	}
 
 }

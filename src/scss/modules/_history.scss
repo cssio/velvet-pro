@@ -3,7 +3,10 @@
 // --------------------------------------------------------------------------
 
 .history {
-
+	margin: 0 -11px;
+	@include breakpoint(sm) {
+		margin: 0;
+	}
 }
 
 .history__heading {
@@ -13,6 +16,7 @@
 	font-weight: 700;
 	padding: 0 12px;
 	margin: 0 0 10px;
+
 }
 
 .history__list {
@@ -25,15 +29,19 @@
 			margin: 0;
 		}
 	}
+
 }
 
 .history__item {
 	background-color: #f9f9f9;
 	border: solid 1px #ededed;
-	padding: 15px 20px;
+	padding: 15px 10px;
 	font-size: 13px;
 	line-height: 16px;
 	color: rgba(#232221,0.8);
+	@include breakpoint(sm) {
+		padding: 15px 20px;
+	}
 }
 
 .history__item-date {

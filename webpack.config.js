@@ -19,7 +19,7 @@ module.exports = {
                 options: { presets: ['env'] }
               }
             ],
-          exclude: [
+            exclude: [
                 path.resolve(__dirname, 'node_modules'),
                 path.resolve(__dirname, '/src/js/'),
             ],
@@ -27,12 +27,18 @@ module.exports = {
       ]
     },
     plugins: [
-      new webpack.ProvidePlugin({
+        new webpack.ProvidePlugin({
           $: "jquery",
           jQuery: "jquery",
           "window.jQuery": "jquery"
         })
-    ]
+    ],
+    resolve: {
+        alias: {
+          'masonry': 'masonry-layout',
+          'isotope': 'isotope-layout'
+        }
+      }
 };
 
 

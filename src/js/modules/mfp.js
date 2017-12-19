@@ -17,6 +17,7 @@ $(function() {
 		    easing: 'ease-in-out'
 		  },
 		  overflowY: 'scroll',
+		  fixedContentPos: true,
 
 		  callbacks: {
 		    open: function() {

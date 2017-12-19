@@ -31,22 +31,36 @@
 }
 
 
+.team-empty {
+	text-align: center;
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 600;
+	margin: 0 0 20px;
+	color: #909090;
+	display: none;
+}
+
 // ------
 
 .team-grid {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 -10px;
+	overflow: hidden;
 	.team-user {
 		min-height: 100%;
 		margin: 0;
 	}
 }
 
-.team-grid__col {
-	padding: 0 10px;
-	margin: 0 0 20px;
+.team-grid__item {
+	padding: 0 10px 20px;
+	margin: 0;
 	width: 100%;
+	.team-user {
+		margin: 0;
+	}
 	@include breakpoint(sm) {
 		width: 50%;
 	}
@@ -105,8 +119,11 @@
 	display: block;
 	font-size: 14px;
 	line-height: 18px;
-	margin: 0 0 2px;
+	margin: 0 0 2px 0;
 	opacity: 0.8;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .team-user__name {
@@ -275,6 +292,18 @@
 	line-height: 22px;
 	font-weight: 700;
 	margin: 0 0 20px;
+}
+
+.team-action__text {
+	font-size: 14px;
+	line-height: 20px;
+	b {
+		display: block;
+		font-size: 12px;
+		font-weight: 600;
+		margin: 0 0 5px;
+		text-transform: uppercase;
+	}
 }
 
 .team-action__comment {

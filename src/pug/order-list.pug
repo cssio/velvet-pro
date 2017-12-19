@@ -15,12 +15,27 @@ block main
 				b.team-user__name Воробьев Михаил
 				a(href="#").team-user__link.js-change-open Сменить специалиста
 				.change
-					button.change__cancel.js-change-close Отмена
-					p.change__text Сменить сотрудника
-					label.form-field
-						input(type="text" placeholder="Искать").form-input.form-input--small.form-input--grey
-						span.form-field__icon
-							+sprite('icon-search')
+					.change-in
+						button.change__cancel.js-change-close Отмена
+						p.change__text Сменить специалиста
+						
+						.form-field
+							select(data-placeholder="Выберите специалиста").form-select.form-select--small
+								option
+								option Ширяева Майя
+								option Зыкова Элеонора
+								option Владимиров Артём
+								option Большакова София
+								option Юдин Роман
+								option Майя Ширяева
+								option Элеонора Зыкова
+								option Артём Владимиров
+								option София Большакова
+								option Роман Юдин
+					//- label.form-field
+					//- 	input(type="text" placeholder="Искать").form-input.form-input--small.form-input--grey.js-autocomplete
+					//- 	span.form-field__icon
+					//- 		+sprite('icon-search')
 
 
 		// Timeline :: Start
@@ -29,12 +44,13 @@ block main
 			.container-fluid
 
 				.timeline-ctrl.js-timeline-ctrl
-					button.timeline-ctrl__btn.is-active Новые задачи <mark>2</mark>
-					button.timeline-ctrl__btn Отложенные <mark>1</mark>
-					button.timeline-ctrl__btn В работе <mark>2</mark>
-					button.timeline-ctrl__btn Завершенные <mark>2</mark>
-					button.timeline-ctrl__btn Ожидание <mark>1</mark>
-
+					a(href="#").timeline__btn.js-timeline-btn Новые задачи <mark>2</mark>
+					a(href="#").timeline__btn.js-timeline-btn Отложенные <mark>1</mark>
+					a(href="#").timeline__btn.js-timeline-btn В работе <mark>2</mark>
+					a(href="#").timeline__btn.js-timeline-btn Завершенные <mark>2</mark>
+					a(href="#").timeline__btn.js-timeline-btn Ожидание <mark>1</mark>
+				
+				
 				.timeline-carousel.owl-carousel.js-timeline-carousel
 					.timeline-group
 
@@ -163,31 +179,41 @@ block main
 										+sprite('icon-status-wait')
 										| В производстве
 									span.order-card__date 12.01.18 – 25.01.18
+								
+								
 
 								.order-card__body
-									table.order-card__table
-										tfoot
-											tr
-												td
-												td Доставка DPD
-												td <b>4 000 ₽</b>
-											tr
-												td(colspan="3")
-													p.order-card__payment
-														span.order-card__payment-text Оплата
-														span.order-card__payment-title Онлайн-оплата банковской картой
-														span.order-card__payment-status
-															+sprite('icon-status-success')
-															| Оплачено (13.01.2018)
-										tbody
-											tr
-												td <b>1.</b>
-												td Шторы премиум с логотипом<br>200 шт
-												td <b>145 000 ₽</b>
-											tr
-												td <b>2.</b>
-												td Шторы эконом<br>300 шт
-												td <b>120 000 ₽</b>
+
+									.order-collapse.js-collapse
+
+										button.order-collapse__trigger.js-collapse-trigger
+											| Состав заказа
+											+sprite('icon-arrow-down')
+										
+										.order-collapse__content.js-collapse-content
+											table.order-card__table
+												tfoot
+													tr
+														td
+														td Доставка DPD
+														td <b>4 000 ₽</b>
+													tr
+														td(colspan="3")
+															p.order-card__payment
+																span.order-card__payment-text Оплата
+																span.order-card__payment-title Онлайн-оплата банковской картой
+																span.order-card__payment-status
+																	+sprite('icon-status-success')
+																	| Оплачено (13.01.2018)
+												tbody
+													tr
+														td <b>1.</b>
+														td Шторы премиум с логотипом<br>200 шт
+														td <b>145 000 ₽</b>
+													tr
+														td <b>2.</b>
+														td Шторы эконом<br>300 шт
+														td <b>120 000 ₽</b>
 
 							.order-card__ctrl
 								.row
@@ -211,29 +237,37 @@ block main
 									span.order-card__date 12.01.18 – 25.01.18
 
 								.order-card__body
-									table.order-card__table
-										tfoot
-											tr
-												td
-												td Доставка DPD
-												td.text-right <b>4 000 ₽</b>
-											tr
-												td(colspan="3")
-													p.order-card__payment
-														span.order-card__payment-text Оплата
-														span.order-card__payment-title Онлайн-оплата банковской картой
-														span.order-card__payment-status
-															+sprite('icon-status-wait')
-															| Не оплачено
-										tbody
-											tr
-												td <b>1.</b>
-												td Шторы премиум с логотипом<br>200 шт
-												td.text-right <b>145 000 ₽</b>
-											tr
-												td <b>2.</b>
-												td Шторы эконом<br>300 шт
-												td.text-right <b>120 000 ₽</b>
+
+									.order-collapse.js-collapse
+
+										button.order-collapse__trigger.js-collapse-trigger
+											| Состав заказа
+											+sprite('icon-arrow-down')
+										
+										.order-collapse__content.js-collapse-content
+											table.order-card__table
+												tfoot
+													tr
+														td
+														td Доставка DPD
+														td <b>4 000 ₽</b>
+													tr
+														td(colspan="3")
+															p.order-card__payment
+																span.order-card__payment-text Оплата
+																span.order-card__payment-title Онлайн-оплата банковской картой
+																span.order-card__payment-status
+																	+sprite('icon-status-success')
+																	| Оплачено (13.01.2018)
+												tbody
+													tr
+														td <b>1.</b>
+														td Шторы премиум с логотипом<br>200 шт
+														td <b>145 000 ₽</b>
+													tr
+														td <b>2.</b>
+														td Шторы эконом<br>300 шт
+														td <b>120 000 ₽</b>
 
 							.order-card__ctrl
 								.row
@@ -262,7 +296,7 @@ block main
 									.form-group.form-group--number
 										label.form-label Номер заказа
 										label.form-field
-											input(type="text" placeholder="Искать").form-input.form-input--small.form-input--grey.js-autocomplete
+											input(type="text" placeholder="Искать").form-input.form-input--small.form-input--grey.js-autocomplete-number
 											span.form-field__icon
 												+sprite('icon-search')
 
@@ -279,14 +313,14 @@ block main
 										.row
 											.col
 												label.form-field
-													input(type="text" placeholder="дд.мм.гггг" readonly data-position="bottom right").form-input.form-input--small.form-input--grey.js-datepicker
+													input(type="text" placeholder="дд.мм.гггг" readonly data-position="bottom left").form-input.form-input--small.form-input--grey.js-datepicker
 													span.form-field__icon
 														+sprite('icon-calendar')
 											.col-auto
 												.form-separator
 											.col
 												label.form-field
-													input(type="text" placeholder="дд.мм.гггг" readonly data-position="bottom right").form-input.form-input--small.form-input--grey.js-datepicker
+													input(type="text" placeholder="дд.мм.гггг" readonly data-position="bottom left").form-input.form-input--small.form-input--grey.js-datepicker
 													span.form-field__icon
 														+sprite('icon-calendar')
 
@@ -321,7 +355,7 @@ block main
 											option Самовывоз
 											option Ожидается оплата
 
-								.col-auto
+								.col-auto.align-self-end
 									.form-group.form-group--buttons
 										.row
 											.col
@@ -329,31 +363,6 @@ block main
 											.col
 												button(type="submit").btn.btn--small.btn--red Применить
 						
-
-						//- .row.row-offset-40
-						//- 	.col-auto
-						//- 		label.form-label Стоимость заказа (руб.)
-						//- 		.form-range
-						//- 			.row
-						//- 				.col
-						//- 					input(type="text" value="-").form-input.form-from
-						//- 				.col-auto -
-						//- 				.col
-						//- 					input(type="text" value="-").form-input.form-to
-
-						//- 			input(type="range" data-min="0" data-max="100").form-input.form-range__input
-				                   
-
-						//- 	.col-auto
-						//- 		label.form-label Способ доставки
-						//- 		select.form-select.form-select--small.form-select--grey
-						//- 			option Самовывоз
-						//- 			option Ожидается оплата
-
-						//- 	.col-auto.align-self-end
-						//- 		.form-buttons
-						//- 			button(type="reset").btn.btn--small.btn--grey Сбросить
-						//- 			button(type="submit").btn.btn--small.btn--red Применить
 				
 				.order-grid
 					.order-grid__col
@@ -372,29 +381,36 @@ block main
 									span.order-card__date 12.01.18 – 25.01.18
 
 								.order-card__body
-									table.order-card__table
-										tfoot
-											tr
-												td
-												td Доставка DPD
-												td <b>4 000 ₽</b>
-											tr
-												td(colspan="3")
-													p.order-card__payment
-														span.order-card__payment-text Оплата
-														span.order-card__payment-title Онлайн-оплата банковской картой
-														span.order-card__payment-status
-															+sprite('icon-status-success')
-															| Оплачено (13.01.2018)
-										tbody
-											tr
-												td <b>1.</b>
-												td Шторы премиум с логотипом<br>200 шт
-												td <b>145 000 ₽</b>
-											tr
-												td <b>2.</b>
-												td Шторы эконом<br>300 шт
-												td <b>120 000 ₽</b>
+									.order-collapse.js-collapse
+
+										button.order-collapse__trigger.js-collapse-trigger
+											| Состав заказа
+											+sprite('icon-arrow-down')
+										
+										.order-collapse__content.js-collapse-content
+											table.order-card__table
+												tfoot
+													tr
+														td
+														td Доставка DPD
+														td <b>4 000 ₽</b>
+													tr
+														td(colspan="3")
+															p.order-card__payment
+																span.order-card__payment-text Оплата
+																span.order-card__payment-title Онлайн-оплата банковской картой
+																span.order-card__payment-status
+																	+sprite('icon-status-success')
+																	| Оплачено (13.01.2018)
+												tbody
+													tr
+														td <b>1.</b>
+														td Шторы премиум с логотипом<br>200 шт
+														td <b>145 000 ₽</b>
+													tr
+														td <b>2.</b>
+														td Шторы эконом<br>300 шт
+														td <b>120 000 ₽</b>
 
 							.order-card__ctrl
 								.row
@@ -420,29 +436,36 @@ block main
 									span.order-card__date 12.01.18 – 25.01.18
 
 								.order-card__body
-									table.order-card__table
-										tfoot
-											tr
-												td
-												td Доставка DPD
-												td.text-right <b>4 000 ₽</b>
-											tr
-												td(colspan="3")
-													p.order-card__payment
-														span.order-card__payment-text Оплата
-														span.order-card__payment-title Онлайн-оплата банковской картой
-														span.order-card__payment-status
-															+sprite('icon-status-wait')
-															| Не оплачено
-										tbody
-											tr
-												td <b>1.</b>
-												td Шторы премиум с логотипом<br>200 шт
-												td.text-right <b>145 000 ₽</b>
-											tr
-												td <b>2.</b>
-												td Шторы эконом<br>300 шт
-												td.text-right <b>120 000 ₽</b>
+									.order-collapse.js-collapse
+
+										button.order-collapse__trigger.js-collapse-trigger
+											| Состав заказа
+											+sprite('icon-arrow-down')
+										
+										.order-collapse__content.js-collapse-content
+											table.order-card__table
+												tfoot
+													tr
+														td
+														td Доставка DPD
+														td <b>4 000 ₽</b>
+													tr
+														td(colspan="3")
+															p.order-card__payment
+																span.order-card__payment-text Оплата
+																span.order-card__payment-title Онлайн-оплата банковской картой
+																span.order-card__payment-status
+																	+sprite('icon-status-success')
+																	| Оплачено (13.01.2018)
+												tbody
+													tr
+														td <b>1.</b>
+														td Шторы премиум с логотипом<br>200 шт
+														td <b>145 000 ₽</b>
+													tr
+														td <b>2.</b>
+														td Шторы эконом<br>300 шт
+														td <b>120 000 ₽</b>
 
 							.order-card__ctrl
 								.row
@@ -469,29 +492,36 @@ block main
 									span.order-card__date 12.01.18 – 25.01.18
 
 								.order-card__body
-									table.order-card__table
-										tfoot
-											tr
-												td
-												td Доставка DPD
-												td <b>4 000 ₽</b>
-											tr
-												td(colspan="3")
-													p.order-card__payment
-														span.order-card__payment-text Оплата
-														span.order-card__payment-title Онлайн-оплата банковской картой
-														span.order-card__payment-status
-															+sprite('icon-status-success')
-															| Оплачено (13.01.2018)
-										tbody
-											tr
-												td <b>1.</b>
-												td Шторы премиум с логотипом<br>200 шт
-												td <b>145 000 ₽</b>
-											tr
-												td <b>2.</b>
-												td Шторы эконом<br>300 шт
-												td <b>120 000 ₽</b>
+									.order-collapse.js-collapse
+
+										button.order-collapse__trigger.js-collapse-trigger
+											| Состав заказа
+											+sprite('icon-arrow-down')
+										
+										.order-collapse__content.js-collapse-content
+											table.order-card__table
+												tfoot
+													tr
+														td
+														td Доставка DPD
+														td <b>4 000 ₽</b>
+													tr
+														td(colspan="3")
+															p.order-card__payment
+																span.order-card__payment-text Оплата
+																span.order-card__payment-title Онлайн-оплата банковской картой
+																span.order-card__payment-status
+																	+sprite('icon-status-success')
+																	| Оплачено (13.01.2018)
+												tbody
+													tr
+														td <b>1.</b>
+														td Шторы премиум с логотипом<br>200 шт
+														td <b>145 000 ₽</b>
+													tr
+														td <b>2.</b>
+														td Шторы эконом<br>300 шт
+														td <b>120 000 ₽</b>
 
 							.order-card__ctrl
 								.row
@@ -517,29 +547,36 @@ block main
 									span.order-card__date 12.01.18 – 25.01.18
 
 								.order-card__body
-									table.order-card__table
-										tfoot
-											tr
-												td
-												td Доставка DPD
-												td.text-right <b>4 000 ₽</b>
-											tr
-												td(colspan="3")
-													p.order-card__payment
-														span.order-card__payment-text Оплата
-														span.order-card__payment-title Онлайн-оплата банковской картой
-														span.order-card__payment-status
-															+sprite('icon-status-wait')
-															| Не оплачено
-										tbody
-											tr
-												td <b>1.</b>
-												td Шторы премиум с логотипом<br>200 шт
-												td.text-right <b>145 000 ₽</b>
-											tr
-												td <b>2.</b>
-												td Шторы эконом<br>300 шт
-												td.text-right <b>120 000 ₽</b>
+									.order-collapse.js-collapse
+
+										button.order-collapse__trigger.js-collapse-trigger
+											| Состав заказа
+											+sprite('icon-arrow-down')
+										
+										.order-collapse__content.js-collapse-content
+											table.order-card__table
+												tfoot
+													tr
+														td
+														td Доставка DPD
+														td <b>4 000 ₽</b>
+													tr
+														td(colspan="3")
+															p.order-card__payment
+																span.order-card__payment-text Оплата
+																span.order-card__payment-title Онлайн-оплата банковской картой
+																span.order-card__payment-status
+																	+sprite('icon-status-success')
+																	| Оплачено (13.01.2018)
+												tbody
+													tr
+														td <b>1.</b>
+														td Шторы премиум с логотипом<br>200 шт
+														td <b>145 000 ₽</b>
+													tr
+														td <b>2.</b>
+														td Шторы эконом<br>300 шт
+														td <b>120 000 ₽</b>
 
 							.order-card__ctrl
 								.row
@@ -566,29 +603,36 @@ block main
 									span.order-card__date 12.01.18 – 25.01.18
 
 								.order-card__body
-									table.order-card__table
-										tfoot
-											tr
-												td
-												td Доставка DPD
-												td <b>4 000 ₽</b>
-											tr
-												td(colspan="3")
-													p.order-card__payment
-														span.order-card__payment-text Оплата
-														span.order-card__payment-title Онлайн-оплата банковской картой
-														span.order-card__payment-status
-															+sprite('icon-status-success')
-															| Оплачено (13.01.2018)
-										tbody
-											tr
-												td <b>1.</b>
-												td Шторы премиум с логотипом<br>200 шт
-												td <b>145 000 ₽</b>
-											tr
-												td <b>2.</b>
-												td Шторы эконом<br>300 шт
-												td <b>120 000 ₽</b>
+									.order-collapse.js-collapse
+
+										button.order-collapse__trigger.js-collapse-trigger
+											| Состав заказа
+											+sprite('icon-arrow-down')
+										
+										.order-collapse__content.js-collapse-content
+											table.order-card__table
+												tfoot
+													tr
+														td
+														td Доставка DPD
+														td <b>4 000 ₽</b>
+													tr
+														td(colspan="3")
+															p.order-card__payment
+																span.order-card__payment-text Оплата
+																span.order-card__payment-title Онлайн-оплата банковской картой
+																span.order-card__payment-status
+																	+sprite('icon-status-success')
+																	| Оплачено (13.01.2018)
+												tbody
+													tr
+														td <b>1.</b>
+														td Шторы премиум с логотипом<br>200 шт
+														td <b>145 000 ₽</b>
+													tr
+														td <b>2.</b>
+														td Шторы эконом<br>300 шт
+														td <b>120 000 ₽</b>
 
 							.order-card__ctrl
 								.row
@@ -614,29 +658,36 @@ block main
 									span.order-card__date 12.01.18 – 25.01.18
 
 								.order-card__body
-									table.order-card__table
-										tfoot
-											tr
-												td
-												td Доставка DPD
-												td.text-right <b>4 000 ₽</b>
-											tr
-												td(colspan="3")
-													p.order-card__payment
-														span.order-card__payment-text Оплата
-														span.order-card__payment-title Онлайн-оплата банковской картой
-														span.order-card__payment-status
-															+sprite('icon-status-wait')
-															| Не оплачено
-										tbody
-											tr
-												td <b>1.</b>
-												td Шторы премиум с логотипом<br>200 шт
-												td.text-right <b>145 000 ₽</b>
-											tr
-												td <b>2.</b>
-												td Шторы эконом<br>300 шт
-												td.text-right <b>120 000 ₽</b>
+									.order-collapse.js-collapse
+
+										button.order-collapse__trigger.js-collapse-trigger
+											| Состав заказа
+											+sprite('icon-arrow-down')
+										
+										.order-collapse__content.js-collapse-content
+											table.order-card__table
+												tfoot
+													tr
+														td
+														td Доставка DPD
+														td <b>4 000 ₽</b>
+													tr
+														td(colspan="3")
+															p.order-card__payment
+																span.order-card__payment-text Оплата
+																span.order-card__payment-title Онлайн-оплата банковской картой
+																span.order-card__payment-status
+																	+sprite('icon-status-success')
+																	| Оплачено (13.01.2018)
+												tbody
+													tr
+														td <b>1.</b>
+														td Шторы премиум с логотипом<br>200 шт
+														td <b>145 000 ₽</b>
+													tr
+														td <b>2.</b>
+														td Шторы эконом<br>300 шт
+														td <b>120 000 ₽</b>
 
 							.order-card__ctrl
 								.row

@@ -57,46 +57,54 @@ block main
 							.col-xl-8
 
 								.team-data
-									form(action="#")
+									form(action="#").js-validate
 										.row.row-offset-70
 											.col-md-6
 												fieldset.team-data__fieldset
 
 													b.form-legend Личные данные
-
-													label.form-label.form-label--600 Имя
-													input(type="text" value="Михаил").form-input
-
-													label.form-label.form-label--600 Фамилия
-													input(type="text" value="Воробьев").form-input
-
-													label.form-label.form-label--600 Отчество
-													input(type="text" value="Игоревич").form-input
-
-													label.form-label.form-label--600 Email
-													input(type="email" value="m.vorobiev@velvet-pro.ru").form-input
-
-													label.form-label.form-label--600 Роль сотрудника
-													select.form-select
-														option Руководитель ОП
-														option Менеджер
-														option(selected) Дизайнер
-														option Бухгалтер
-														option Печатник
-														option Логист
-														option Администратор
-														option Начальник цеха обработки
+													
+													.form-group
+														label.form-label.form-label--600 Имя
+														input(type="text" name="firstName" value="").form-input
+													
+													.form-group
+														label.form-label.form-label--600 Фамилия
+														input(type="text" name="lastName" value="Воробьев" required).form-input
+													
+													.form-group
+														label.form-label.form-label--600 Отчество
+														input(type="text" name="middleName" value="Игоревич").form-input
+													
+													.form-group
+														label.form-label.form-label--600 Email
+														input(type="email" name="email" value="m.vorobiev@velvet-pro.ru").form-input
+													
+													.form-group
+														label.form-label.form-label--600 Роль сотрудника
+														select(name="role" data-placeholder="Выберите роль сотрудника").form-select
+															option
+															option Руководитель ОП
+															option Менеджер
+															option Дизайнер
+															option Бухгалтер
+															option Печатник
+															option Логист
+															option Администратор
+															option Начальник цеха обработки
 
 											.col-md-6
 												fieldset.team-data__fieldset
 
 													b.form-legend Сменить пароль
-
-													label.form-label.form-label--600 Новый пароль
-													input(type="password" value="").form-input
-
-													label.form-label.form-label--600 Повторите новый пароль
-													input(type="password" value="").form-input
+													
+													.form-group
+														label(for="password").form-label.form-label--600 Новый пароль
+														input(type="password" name="password" value="").form-input#password
+													
+													.form-group
+														label.form-label.form-label--600 Повторите новый пароль
+														input(type="password" name="passwordConfirm" value="").form-input
 
 													.team-save
 														button.btn.btn--red Сохранить
@@ -123,7 +131,7 @@ block main
 										.form-upload__icon
 											+sprite('icon-file-pdf')
 										.form-upload__name Logo.pgf
-										.form-upload__download скачать
+										a(href="#").form-upload__download скачать
 
 							.team-action
 								span.team-action__date 12:55   22.03.2018
@@ -136,8 +144,9 @@ block main
 								span.team-action__number Заказ <a href="#">№5642</a>
 								span.team-action__status Выполнено
 								span.team-action__title Отметить получение заказа клиентом
-								label.form-label.form-label--600 Дата получения
-								input(type="text" value="14.11.2017").form-input
+								p.team-action__text
+									b Дата получения
+									| 14.11.2017
 
 							.team-action
 								span.team-action__date 12:55   22.03.2018

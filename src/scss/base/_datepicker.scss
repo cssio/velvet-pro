@@ -43,7 +43,7 @@ $datepickerNavigationHeight: 32px !default;
 $datepickerNavigationButtonsOffset: 2px !default;
 
 $datepickerPointerSize: 10px !default;
-$datepickerPointerOffset: 10px !default;
+$datepickerPointerOffset: 12px !default;
 
 // Transitions
 $datepickerTransitionSpeed: .3s !default;
@@ -465,16 +465,10 @@ $pointerHalfSize: $datepickerPointerSize / 2 - 1;
     visibility: hidden;
   }
 
-  svg {
-    width: 32px;
-    height: 32px;
-  }
-
-  path {
-    fill: none;
-    stroke: map_get($datepickerTextColor, navArrows);
-    stroke-width: 2px;
-  }
+  color: #232221;
+  width: 32px;
+  height: 32px;
+  transition: 0.25s;
 }
 
 .datepicker--nav-title {
@@ -776,9 +770,12 @@ $rangeThumbBg: #dedede;
 
 
 .datepicker {
-  padding: 10px 20px;
+  padding: 10px;
   width: 200px;
   box-shadow: 0 6px 11px 0 rgba(0, 0, 0, 0.13);
+  @include breakpoint(sm) {
+    padding: 10px 20px;
+  }
 }
 
 .datepicker--cell-day {
@@ -814,6 +811,7 @@ $rangeThumbBg: #dedede;
 
 .datepicker--nav-action {
   background: none;
+  color: rgba(0,0,0,0.45);
   &:hover {
     background: none;
     color: #f0605f;

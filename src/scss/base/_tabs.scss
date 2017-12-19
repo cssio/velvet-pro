@@ -8,17 +8,9 @@
 
 .tabs__ctrl {
 	position: relative;
-	// display: flex;
-	// flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 	margin: 0 0 10px;
-	display: inline-block;
-	vertical-align: top;
-	// width: 100%;
-	&:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
 	@include breakpoint(sm) {
 		border-bottom: 1px solid #e6e6e6;
 		margin: 0 0 20px;
@@ -26,15 +18,15 @@
 }
 
 .tabs__line {
-	display: none;
+	display: block;
+	visibility: hidden;
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	height: 2px;
+	background: #f0605f;
 	@include breakpoint(sm) {
-		display: block;
-		position: absolute;
-		bottom: -1px;
-		left: 0;
-		width: 0;
-		height: 2px;
-		background: #f0605f;
+		visibility: visible;
 	}
 }
 
@@ -51,7 +43,6 @@
 	// margin: 0 10px 10px;
 	margin: 0 20px 10px 0;
 	cursor: pointer;
-	float: left;
 	&:first-child {
 		margin-left: 0;
 	}

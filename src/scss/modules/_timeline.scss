@@ -5,40 +5,156 @@
 
 .timeline {
 	background: #fff;
-	padding: 20px 0 40px;
+	padding: 20px 0;
 	position: relative;
 	overflow: hidden;
 	.container-fluid {
-		padding-right: 0;
+		position: relative;
+	}
+
+	@include breakpoint(sm) {
+		padding: 20px 0;
+	}
+	
+	@include breakpoint(lg) {
+		.container-fluid {
+			padding-right: 0;
+		}
 	}
 }
 
 .timeline-ctrl {
-	display: none;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 0 20px;
+	margin: 0 -10px 0 0;
+	@include breakpoint(sm) {
+		display: none;
+	}
+}
+
+.timeline__btn {
+	display: block;
+	background-color: rgba(0, 0, 0, 0.04);
+	border: solid 1px #dbdbdb;
+	margin: 0 10px 10px 0;
+	font: 400 14px/17px $fontBase;
+	color: #909090;
+	padding: 5px 14px;
+	white-space: nowrap;
+	border-radius: 5px;
+	letter-spacing: 0;
+	transition: 0.25s;
+	mark {
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		top: -1px;
+		margin: -5px 0 -5px 5px;
+		min-width: 25px;
+		padding: 0 4px;
+		text-align: center;
+		background: #b6b6b6;
+		border-radius: 100px;
+		height: 21px;
+		line-height: 21px;
+		color: #fff;
+	}
+	&:hover {
+		color: #909090;
+	}
+	&.active {
+		background: #f0605f;
+		border-color: #f0605f;
+		color: #fff;
+		mark {
+			background: rgba(#cb4746,0.9);
+		}
+	}
 }
 
 .timeline-heading {
-	display: block;
-	font-size: 24px;
-	line-height: 30px;
-	font-weight: 400;
-	letter-spacing: -0.6px;
-	margin: 0 0 10px;
-	padding: 0 10px;
+	display: none;
+	@include breakpoint(sm) {
+		display: block;
+		font-size: 24px;
+		line-height: 30px;
+		font-weight: 400;
+		letter-spacing: -0.6px;
+		margin: 0 0 10px;
+		padding: 0 10px;
+	}
+	
 }
 
+.timeline-progress {
+	display: block;
+	height: 6px;
+	border-radius: 100px;
+	background: #e3e8e8;
+	width: 400px;
+	position: absolute;
+	top: -10px;
+	left: 0;
+	margin: -3px 0;
+}
+
+
+
 .timeline-carousel {
-	.owl-stage-outer {
-		overflow: visible;
+	position: relative;
+	margin: 0 -10px;
+	padding: 0 15px;
+	width: auto;
+	.owl-nav {
+		display: none;
 	}
-	.slick-slide {
-		width: 290px;
+	@include breakpoint(sm) {
+		padding: 0 90px;
+		.owl-stage-outer {
+			overflow: visible;
+		}
+		.owl-nav {
+			display: block;
+		}
+		.owl-prev, .owl-next {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 90px;
+			background-color: rgba(255,255,255,0.8);
+			transition: 0.25s;
+			&.disabled {
+				opacity: 0;
+			}
+		}
+		.owl-prev {
+			left: 0;
+			background: linear-gradient(to right, rgba(255,255,255,1) 20%,rgba(255,255,255,0) 100%);
+		}
+		.owl-next {
+			right: 0;
+			background: linear-gradient(to right, rgba(255,255,255,0) 20%,rgba(255,255,255,1) 100%);
+		}
+
+	}
+	@include breakpoint(md) {
+		padding: 0;
+		.owl-nav {
+			display: none;
+		}
 	}
 }
 
 .timeline-group {
-	width: 290px;
+	padding: 0;
 	margin: 0;
+	@include breakpoint(sm) {
+		width: 290px;
+	}
 }
 
 .timeline-col {

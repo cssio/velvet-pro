@@ -2,6 +2,14 @@
 // Forms
 // --------------------------------------------------------------------------
 
+.is-error {
+    .form-label {
+        color: $colorError !important;
+    }
+    .form-input {
+        border-color: $colorError !important;
+    }
+}
 
 
 .form-group {
@@ -18,7 +26,7 @@
     .form-field {
         margin: 0;
     }
-    .form-input {
+    .form-input, .form-select {
         margin: 0;
     }
     .form-separator {
@@ -33,6 +41,10 @@
     }
 }
 
+.form-group--nowrap {
+    flex-wrap: nowrap;
+}
+
 
 .form-group--number {
     width: 148px;
@@ -44,6 +56,10 @@
 
 .form-group--calendar {
     width: 270px;
+    .form-input {
+        text-align: center;
+        padding-right: 30px;
+    }
 }
 
 .form-group--client {
@@ -55,7 +71,7 @@
 }
 
 .form-group--buttons {
-    padding: 30px 0 0;
+    // padding: 25px 0 0;
 }
 
 // -----
@@ -66,6 +82,7 @@
     position: relative;
     .btn {
         margin: 0 5px 0 0;
+        white-space: nowrap;
     }
 }
 
@@ -108,11 +125,50 @@
     align-items: center;
     justify-content: center;
     padding: 0 12px;
+    transition: 0.25s;
     .icon-calendar {
         color: #b6b6b6;
     }
     .icon-search {
         color: #626262;
+    }
+}
+
+.is-length ~ .form-field__icon {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+}
+
+.is-length ~ .form-field__clear {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.form-field__clear {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+    border: none;
+    background: none;
+    z-index: 100;
+    transition: 0.25s;
+    cursor: pointer;
+    color: #626262;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    transform: scale(0);
+    [class^="icon-"] {
+        fill: none;
+        stroke-width: 1;
+        stroke: currentColor;
     }
 }
 
@@ -155,6 +211,7 @@
     font-size: 18px;
     line-height: 22px;
     font-weight: 700;
+    margin: 0 0 20px;
 }
 
 // ------
@@ -183,6 +240,7 @@
     cursor: pointer;
     display: block;
     &::placeholder {
+        transition: 0.25s;
         color: rgba(0,0,0, 0.45);
     }
     &:hover {
@@ -191,19 +249,21 @@
     &:focus {
         border-color: #b0bbc2;
         box-shadow: 0 6px 11px 0 rgba(0,0,0,.13);
+        
     }
     &:disabled {
         border-color: #e4ebf1;
         background: #e4ebf1;
     }
 
-    &.is-success {
-        border-color: #50d166;
-    }
+    // &.is-success {
+    //     border-color: #50d166;
+    // }
 
-    &.is-error {
-        border-color: #d0011b;
-    }
+    // &.is-error {
+    //     // border-color: #F0605F;
+    //     border-color: #ee1817;
+    // }
 }
 
 .form-input--small {
@@ -219,13 +279,18 @@
     &::placeholder {
         color: rgba(#909090,0.9);
     }
-    &:hover, &:focus {
+    &:hover {
         background: #dbdbdb;
         border-color: #dbdbdb;
         box-shadow: none;
         &::placeholder {
-            color: #626262;
+            // color: #626262;
         }
+    }
+    &:focus {
+        background-color: rgba(0, 0, 0, 0.05);
+        border-color: #dbdbdb;
+        box-shadow: none;
     }
 }
 
@@ -233,6 +298,8 @@
     @extend .form-input;
     min-height: 115px;
     max-width: 100%;
+    overflow-x: hidden;
+
 }
 
 
@@ -256,6 +323,12 @@
         &::placeholder {
             color: #626262;
         }
+    }
+    &:focus {
+        border-color: #f0605f;
+        box-shadow: inset 0 0 0 1px #f0605f;
+        background-color: rgba(0, 0, 0, 0.04);
+
     }
 }
 
@@ -309,7 +382,7 @@
         bottom: 0;
         margin: 0;
         padding: 0;
-        opacity: 0; visibility: hidden;
+        opacity: 0; visibility: hidden !important;
     }
     ul {
         margin: 0;
@@ -322,7 +395,7 @@
         margin: 0;
     }
     .placeholder {
-        color: rgba(0,0,0, 0.45);
+        color: rgba(0,0,0, 0.6);
     }
     .jq-selectbox__select {
         @extend .form-input;
@@ -369,6 +442,9 @@
         padding: 42px 0 5px;
         margin: 0;
         overflow: hidden;
+        .scroll-wrapper:after {
+            display: none;
+        }
         .app-scroll { margin: 0; }
         ul {
             position: relative;
@@ -442,6 +518,7 @@
         padding: 5px 10px;
         font-size: 14px;
         line-height: 17px;
+        padding-right: 30px;
     }
     .jq-selectbox__dropdown {
         padding-top: 29px;
@@ -514,6 +591,19 @@
             opacity: 1;
             background: #fff;
         }
+    }
+
+    &:disabled ~ .form-radio,
+    &:disabled ~ .form-checkbox {
+        opacity: 0.5;
+        background-color: rgba(0, 0, 0, 0.04);
+        border: solid 1px #dbdbdb;
+        [class^="icon-"], &:after { display: none; }
+    }
+
+     &:disabled ~ .form-check__text {
+        opacity: 0.5;
+        color: #909090;
     }
 
 }
@@ -731,6 +821,13 @@
     }
 }
 
+.form-upload__name {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 // ------
 
 
@@ -816,14 +913,47 @@
             visibility: visible;
             position: relative;
         }
+        .form-select {
+            opacity: 1;
+            visibility: visible;
+        }
     }
 }
 
 .form-check-content {
     transition: 0.25s;
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
+    // opacity: 0;
+    // visibility: hidden;
+    // position: absolute;
+    position: relative;
+    padding: 10px 40px 10px;
+    .form-upload {
+        background: #FFFFFF;
+        border-color: #e3e3e3;
+        &.is-loading, &.is-success {
+            border-color: #FFFFFF;
+        }
+    }
+    .form-buttons {
+        margin-bottom: 15px;
+    }
+    .form-select {
+        position: absolute;
+        top: -35px;
+        right: 5px;
+        width: 200px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.25s;
+        .jq-selectbox__select {
+            // background: #fff;
+        }
+    }
+}
+
+
+.form-check-disabled {
+    transition: 0.25s;
     padding: 10px 40px 10px;
     .form-upload {
         background: #FFFFFF;
@@ -849,11 +979,6 @@
 
 // -----
 
-// .form-input:focus ~ .form-datepicker {
-//     opacity: 1;
-//     visibility: visible;
-//     transform: translate(0,0);
-// }
 
 .form-datepicker {
     position: absolute;
@@ -862,10 +987,32 @@
     margin: 10px 0 0;
     z-index: 200;
     transition: 0.25s;
-    // opacity: 0;
-    // visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
     transform: translate(0,10px);
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 100%;
+        right: 14px;
+        background: #fff;
+        border-top: 1px solid #dedede;
+        border-right: 1px solid #dedede;
+        width: 10px;
+        height: 10px;
+        transform: rotate(315deg);
+        margin: 0 0 -4px;
+    }
 }
+
+.is-datepickerShow .form-datepicker,
+.is-datepickerShow ~ .form-datepicker {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0,0);
+}
+
 
 
 .form-comments {

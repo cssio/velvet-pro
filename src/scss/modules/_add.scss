@@ -131,7 +131,7 @@
 		border-color: #e4eaeb;
 		text-align: center;
 	}
-	@include breakpointMax(sm) {
+	@include breakpointMax(md) {
 		padding: 0;
 		max-width: none;
 	}
@@ -194,11 +194,24 @@
 .add__product-ctrl {
 	white-space: nowrap;
 	.row {
+		margin-top: -10px;
+		margin-bottom: -10px;
 		align-items: flex-end;
-		flex-wrap: nowrap;
+		& > [class^="col"] {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
 	}
 	.form-input {
 		margin: 0;
+	}
+	.btn {
+		width: 100%;
+	}
+	@include breakpoint(md) {
+		.row {
+			flex-wrap: nowrap;
+		}
 	}
 
 }

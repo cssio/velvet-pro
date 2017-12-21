@@ -31,6 +31,31 @@ $(function() {
 		  }
 	});
 
+	$('[data-mfp="full"]').magnificPopup({
+		type:'inline',
+		mainClass: 'mfp-with-zoom mfp-full',
+		showCloseBtn: false,
+		removalDelay: 300,
+		zoom: {
+		    enabled: true,
+		    duration: 300,
+		    easing: 'ease-in-out'
+		  },
+		  overflowY: 'scroll',
+		  fixedContentPos: true,
+
+		  callbacks: {
+		    open: function() {
+		    	$('html').addClass('is-lockScroll');
+		    	$('.header').css({'margin-right': $('html').css('margin-right') });
+		    },
+		    close: function() {
+		    	$('html').removeClass('is-lockScroll');
+		    	$('.header').css({'margin':'0'});
+		    }
+		  }
+	});
+
 	$('[data-mfp-close]').on('click', function(event) {
 		event.preventDefault();
 		$.magnificPopup.close();

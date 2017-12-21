@@ -627,19 +627,24 @@ button {
   }
 }
 
-.mfp-container {
-  @include breakpointMax(sm) {
-    padding: 0;
-    &:before {
-      vertical-align: top;
-    }
-  }
-}
 
-.mfp-content {
-  @include breakpointMax(sm) {
-    vertical-align: top;
-  }
+.mfp-full {
+    @include breakpointMax(sm) {
+        .mfp-container {
+            padding: 0;
+            &:before {
+                vertical-align: top;
+            }
+        }
+        .mfp-content {
+            vertical-align: top;
+        }
+        .mfp-popup {
+            margin: 0;
+            overflow: hidden;
+            border-radius: 0;
+        }
+    }
 }
 
 .mfp-popup {
@@ -650,12 +655,7 @@ button {
     padding: 30px;
     max-width: 860px;
     text-align: left;
-    
-    @include breakpointMax(sm) {
-      margin: 0;
-      border-radius: 0;
-      overflow: hidden;
-    }
+
 }
 
 .mfp-popup-close {

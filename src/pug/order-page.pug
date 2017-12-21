@@ -181,13 +181,18 @@ block main
 
 								.order-payments.js-change
 									.row
-										.col-md-8
+										.col-4.col-md-2
 											figure.order-payments__image
 												img(src="images/img-yandex.png", alt="")
+										.col-8.col-md-10
 											.order-payments__desc
-												p.order-payments__type Онлайн-оплата через Яндекс.Кассу
-										.col-md-4
-											button.btn.btn--small.btn--grey.js-change-open Изменить
+												.row
+													.col-md-7
+														p.order-payments__type Онлайн-оплата через Яндекс.Кассу
+													.col-md-5
+														.order-payments__action
+															button.btn.btn--small.btn--grey.js-change-open Изменить
+												
 									.change
 										.row
 											.col-md-8
